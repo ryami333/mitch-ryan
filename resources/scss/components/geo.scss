@@ -1,0 +1,25 @@
+
+.geo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__svg {
+        overflow: visible !important;
+        width: 50%;
+        vector-effect: non-scaling-stroke;
+    }
+
+    &__polygon {
+        vector-effect: non-scaling-stroke;
+        stroke-width: 10px;
+        stroke: #FFFF00;
+        stroke: linear-gradient(to right, #FFFF00, darken(#FFFF00, 10%));
+        box-shadow: 10px 10px 10px red;
+    }
+}
