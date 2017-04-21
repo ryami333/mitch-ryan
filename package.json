@@ -20,7 +20,9 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-hot-loader": "3",
+    "react-redux": "^5.0.3",
     "react-router-dom": "^4.1.1",
+    "redux": "^3.6.0",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.1",
     "uglifyjs-webpack-plugin": "^0.4.3",
@@ -30,5 +32,6 @@
   },
   "scripts": {
     "dev": "DEV=true HOT=true bin/browser-sync"
-  }
+  },
+  "dependencies": {}
 }
