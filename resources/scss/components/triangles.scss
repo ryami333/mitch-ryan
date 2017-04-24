@@ -2,9 +2,12 @@
     position: absolute;
     top: 0;
     left: 0;
+
     background-color: $light-grey;
+    background: linear-gradient(to bottom, $light-grey, darken($light-grey, 1%));
 
     &:before {
+
         display: block;
         content: '';
         width: 0; 
