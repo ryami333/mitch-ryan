@@ -1,0 +1,16 @@
+.triangles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $light-grey;
+
+    &:before {
+        display: block;
+        content: '';
+        width: 0; 
+        height: 0; 
+        border-left: 100vw solid transparent;
+        border-right: 100vw solid transparent;
+        border-top: 100vh solid $dark-grey;
+    }
+}

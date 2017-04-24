@@ -6,13 +6,18 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    mix-blend-mode: lighten;
+    mix-blend-mode: difference;
+    color: white; 
 
     h1 {
         text-transform: uppercase;
     }
 
+    p {
+
+    }
+
     &__inner {
-        width: 45%;
+        width: 55%;
     }
 }

@@ -11,6 +11,7 @@
 
     transition: transform 1600ms ease-out;
     backface-visibility: hidden;
+    mix-blend-mode: difference;
 
     &__svg {
         overflow: visible !important;
@@ -20,9 +21,7 @@
 
     &__polygon {
         vector-effect: non-scaling-stroke;
-        stroke-width: 10px;
-        stroke: #FFFF00;
-        stroke: linear-gradient(to right, #FFFF00, darken(#FFFF00, 10%));
-        box-shadow: 10px 10px 10px red;
+        stroke-width: 5vw;
+        stroke: white;
     }
 }

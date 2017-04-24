@@ -22,7 +22,8 @@ class App extends Component {
                 <div>
                     <WindowWatcher />
                     <MouseWatcher />
-                    <Geo />
+                    <div className="triangles" />
+                    {/*<Geo />*/}
                     <Panel />
                 </div>
             </Provider>
