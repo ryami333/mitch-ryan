@@ -9,6 +9,9 @@
     align-items: center;
     justify-content: center;
 
+    transition: transform 1600ms ease;
+    backface-visibility: hidden;
+
     &__svg {
         overflow: visible !important;
         width: 50%;

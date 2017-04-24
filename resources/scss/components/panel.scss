@@ -7,6 +7,10 @@
     justify-content: center;
     min-height: 100vh;
 
+    h1 {
+        text-transform: uppercase;
+    }
+
     &__inner {
         width: 45%;
     }
