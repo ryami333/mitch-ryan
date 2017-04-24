@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
 
-    transition: transform 1600ms ease;
+    transition: transform 1600ms ease-out;
     backface-visibility: hidden;
 
     &__svg {
