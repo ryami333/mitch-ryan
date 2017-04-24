@@ -2,18 +2,37 @@
     position: absolute;
     top: 0;
     left: 0;
-
+    width: 100vw;
+    height: 100vh;
     background-color: $light-grey;
     background: linear-gradient(to bottom, $light-grey, darken($light-grey, 1%));
 
+    @keyframes foo {
+        0% {
+            transform: scale(0.9);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(0.9);
+        }
+    }
+
     &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform-origin: top right;
+        animation-duration: 4000ms;
+        animation-name: foo;
+        animation-iteration-count: infinite;
 
         display: block;
         content: '';
         width: 0; 
         height: 0; 
         border-left: 100vw solid transparent;
-        border-right: 100vw solid transparent;
         border-top: 100vh solid $dark-grey;
     }
 }
