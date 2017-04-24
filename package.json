@@ -14,6 +14,7 @@
     "browser-sync": "^2.18.8",
     "css-loader": "^0.28.0",
     "cssnano": "^3.10.0",
+    "fastdom": "^1.0.5",
     "node-sass": "^4.5.2",
     "normalize.css": "^6.0.0",
     "postcss-loader": "^1.3.3",

@@ -3,6 +3,7 @@ import 'main.scss';
 import React, { Component } from 'react';
 import Geo from 'components/Geo';
 import Panel from 'components/Panel';
+import Triangle from 'components/Triangle';
 import WindowWatcher from 'components/WindowWatcher';
 import MouseWatcher from 'components/MouseWatcher';
 import { Provider } from 'react-redux';
@@ -10,19 +11,13 @@ import store from 'state/store';
 
 class App extends Component {
 
-    componentDidMount() {
-        window.addEventListener('mousemove', function() {
-
-        });
-    }
-
     render() {
         return (
             <Provider store={store}>
                 <div>
                     <WindowWatcher />
-                    <MouseWatcher />
-                    <div className="triangles" />
+                    <div className="bg" />
+                    <Triangle />
                     {/*<Geo />*/}
                     <Panel />
                 </div>
