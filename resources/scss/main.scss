@@ -1,7 +1,9 @@
+@import 'settings/colors.scss';
+@import 'settings/icons.scss';
+
 @import 'reset.scss';
 
-@import 'settings/colors.scss';
-
+@import 'components/container.scss';
 @import 'components/triangles.scss';
 @import 'components/geo.scss';
 @import 'components/panel.scss';

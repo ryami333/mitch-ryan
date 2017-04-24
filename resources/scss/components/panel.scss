@@ -20,4 +20,31 @@
     &__inner {
         width: 55%;
     }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__link {
+        font-family: $icomoon;
+        font-size: 3em;
+
+        & + & {
+            margin-left: 2vw;
+        }
+
+        &:after {
+            display: block;
+        }
+
+        &--linkedin:after {
+            content: $icon-linkedin;
+        }
+
+        &--email:after {
+            content: $icon-envelope;
+        }
+    }
 }
