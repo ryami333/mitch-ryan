@@ -36,7 +36,8 @@
     "webpack-hot-middleware": "^2.18.0"
   },
   "scripts": {
-    "dev": "DEV=true HOT=true bin/browser-sync"
+    "dev": "DEV=true HOT=true bin/browser-sync",
+    "deploy": "bin/webpack && bin/upload"
   },
   "dependencies": {}
 }
