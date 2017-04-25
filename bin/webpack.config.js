@@ -85,7 +85,7 @@ if (process.env.HOT) {
 
     config.output.filename = '[name]';
 } else {
-    config.plugins = config.plugins.concat([
+    config.plugins = (config.plugins || []).concat([
         function() {
             this.plugin("done", function(stats) {
                 require("fs").writeFileSync(
