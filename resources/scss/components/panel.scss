@@ -6,15 +6,18 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    mix-blend-mode: difference;
     color: white; 
 
     h1 {
         text-transform: uppercase;
+        font-weight: 500;
+        font-size: 4vw;
+        color: white;
+        mix-blend-mode: exclusion;
     }
 
     p {
-
+        mix-blend-mode: exclusion;
     }
 
     &__inner {
@@ -25,11 +28,12 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        mix-blend-mode: exclusion;
     }
 
     &__link {
         font-family: $icomoon;
-        font-size: 3em;
+        font-size: 2em;
 
         & + & {
             margin-left: 2vw;
