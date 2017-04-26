@@ -6,22 +6,26 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    color: white; 
+    color: white;
+
+    font-size: calc(14.05px + 0.52vw);
 
     h1 {
         text-transform: uppercase;
         font-weight: 500;
-        font-size: 4vw;
+        font-size: 2.66em;
         color: white;
         mix-blend-mode: exclusion;
     }
 
     p {
         mix-blend-mode: exclusion;
+        font-size: 1em;
     }
 
     &__inner {
         width: 55%;
+        width: 85%;
     }
 
     &__links {
