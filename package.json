@@ -37,7 +37,7 @@
   },
   "scripts": {
     "dev": "DEV=true HOT=true bin/browser-sync",
-    "deploy": "bin/webpack && bin/upload"
+    "deploy": "UGLIFY=true bin/webpack && bin/upload"
   },
   "dependencies": {}
 }
