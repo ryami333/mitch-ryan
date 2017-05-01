@@ -8,7 +8,7 @@
     min-height: 100vh;
     color: white;
 
-    font-size: calc(14.05px + 0.52vw);
+    font-size: between(16px, 22px, $viewport-420px, $viewport-1440px);
 
     h1 {
         text-transform: uppercase;
@@ -18,16 +18,22 @@
         mix-blend-mode: exclusion;
     }
 
-    p {
-        mix-blend-mode: exclusion;
-        font-size: 1em;
+    &__copy {
+        margin-top: $spacing-gutter-double;
+
+        p {
+            margin-top: $spacing-gutter;
+            mix-blend-mode: exclusion;
+            font-size: 1em;
+        }
     }
 
     &__inner {
-        width: calc(54.62vw + 105.425px);
+        width: between(334px, 890px, $viewport-420px, $viewport-1440px);
     }
 
     &__links {
+        margin-top: $spacing-gutter-double;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -36,10 +42,10 @@
 
     &__link {
         font-family: $icomoon;
-        font-size: 2em;
+        font-size: 1.8em;
 
         & + & {
-            margin-left: 2vw;
+            margin-left: $spacing-gutter;
         }
 
         &:after {
