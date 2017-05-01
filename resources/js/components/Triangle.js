@@ -7,22 +7,19 @@ class Triangle extends Component {
     _raf = false;
     _ref;
     _context;
-    _position;
+    _position = 0.5;
 
     componentDidMount() {
         window.addEventListener('mousemove', this.handleMove.bind(this));
 
         this._ref.width = this.props.innerWidth;
         this._ref.height = this.props.innerHeight;
+
+        fastdom.mutate(() => this.mutate());
     }
 
     componentWillUnmount() {
         window.removeEventListener('mousemove', this.handleMove);
-    }
-
-    componentDidUpdate() {
-        // this._ref.width = this.props.innerWidth;
-        // this._ref.height = this.props.innerHeight;
     }
 
     measure(e) {
