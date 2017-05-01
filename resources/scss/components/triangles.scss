@@ -1,33 +1,8 @@
-.bg {
-    position: absolute;
+.triangle {
+    background-color: $light-grey;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 25vw;
-    height: 25vh;    
-    transform: scale(4);
-    transform-origin: top left;
-    background-color: $light-grey;
-}
-
-.triangle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0; 
-    height: 0; 
-    border-left: 25vw solid transparent;
-    border-top: 25vh solid $dark-grey;
-    transform-origin: top right;
-
-    @keyframes foo {
-        0% {
-            transform: scale(0);
-        }
-        50% {
-            transform: scale(8);
-        }
-        100% {
-            transform: scale(0);
-        }
-    }
+    width: 100vw;
+    height: 100vh; 
 }

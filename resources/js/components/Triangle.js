@@ -6,34 +6,59 @@ class Triangle extends Component {
 
     _raf = false;
     _ref;
+    _context;
+    _position;
 
     componentDidMount() {
         window.addEventListener('mousemove', this.handleMove.bind(this));
+
+        this._ref.width = this.props.innerWidth;
+        this._ref.height = this.props.innerHeight;
     }
+
     componentWillUnmount() {
         window.removeEventListener('mousemove', this.handleMove);
     }
 
+    componentDidUpdate() {
+        // this._ref.width = this.props.innerWidth;
+        // this._ref.height = this.props.innerHeight;
+    }
+
+    measure(e) {
+        let rx = 1 - e.clientX / this.props.innerWidth;
+        let ry = e.clientY / this.props.innerHeight;
+        this._position = (rx + ry) - 0.5;
+    }
+
+    mutate() {
+        // Draw BG
+        this._context.fillStyle = '#DDD';
+        this._context.fillRect(0,0,this.props.innerWidth, this.props.innerHeight);
+
+        // Draw Triangle
+        this._context.beginPath();
+        this._context.fillStyle = '#333';
+        this._context.moveTo(0, (this._position - 0.5) * this.props.innerHeight);
+        this._context.lineTo(this.props.innerWidth, this.props.innerHeight * (this._position + 0.5));
+        this._context.lineTo(this.props.innerWidth, 0);
+        this._context.lineTo(0, 0);
+        this._context.lineTo(0, (this._position - 0.5) * this.props.innerHeight);
+        this._context.fill();      
+    }
+
     handleMove(e) {
         this._raf = this._raf || window.requestAnimationFrame(() => {
-            let scale;
+            fastdom.measure(() => this.measure(e));
+            fastdom.mutate(() => this.mutate());
 
-            fastdom.measure(() => {
-                let rx = e.clientX / this.props.innerWidth;
-                let ry = e.clientY / this.props.innerHeight;
-                scale = 4 * (1 - (rx - ry));
-            });
-
-            fastdom.mutate(() => {
-                this._ref.style.transform = `scale(${scale})`;
-                this._raf = false;                
-            });
+            this._raf = false;
         });
     }
 
     render() {
         return (
-            <div className="triangle" ref={ref => this._ref = ref}/>
+            <canvas className="triangle" ref={ref => {this._ref = ref; this._context = ref.getContext('2d', {alpha: false})}} />
         )
     }
 }
@@ -43,6 +68,7 @@ const mapStateToProps = function(state) {
     return {
         innerHeight,
         innerWidth,
+        gradient: innerHeight / innerWidth,
     }
 }
 

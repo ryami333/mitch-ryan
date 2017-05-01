@@ -16,9 +16,7 @@ class App extends Component {
             <Provider store={store}>
                 <div className="container">
                     <WindowWatcher />
-                    <div className="bg" />
                     <Triangle />
-                    {/*<Geo />*/}
                     <Panel />
                 </div>
             </Provider>
