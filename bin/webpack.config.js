@@ -1,18 +1,19 @@
 const webpack = require('webpack');
 const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
     entry: {
-        'main.js': [
+        'dist/main': [
             './resources/js/main.js',
         ],
     },
 
     output: { 
-        path: path.resolve(process.cwd(), 'public/dist'),
-        publicPath: 'http://localhost:3000/dist',
-        filename: '[name]',
+        path: path.resolve(process.cwd(), 'public'),
+        publicPath: process.env.DEV ? 'http://localhost:3000' : 'https://mitch-ryan.com/',
+        filename: '[name][chunkhash].js',
     },
 
     resolve: {
@@ -62,8 +63,19 @@ const config = {
                     'sass-loader',
                 ],
             },
+            {
+                test: /\.html$/,
+                loader: 'html-loader', 
+            },
         ],
     },
+
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: 'resources/index.html',
+            inject: 'head',
+        })
+    ]
 };
 
 if (process.env.HOT) {
