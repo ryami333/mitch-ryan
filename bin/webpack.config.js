@@ -73,7 +73,7 @@ const config = {
     plugins: [
         new HtmlWebpackPlugin({
             template: 'resources/index.html',
-            inject: 'head',
+            inject: 'body',
         })
     ]
 };
