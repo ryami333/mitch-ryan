@@ -21,6 +21,7 @@ const config = {
             'node_modules',
             path.join(process.cwd(), 'resources/js'),
             path.join(process.cwd(), 'resources/scss'),
+            path.join(process.cwd(), 'resources/fonts'),
         ]
     },
 
