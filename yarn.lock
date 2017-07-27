@@ -1834,6 +1834,12 @@ fbjs@^0.8.9:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.9"
 
+file-loader@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-1.0.0.tgz#08accf9631a0875e4ab7f209fc4db338604b3190"
+  dependencies:
+    loader-utils "^1.0.2"
+
 filename-regex@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/filename-regex/-/filename-regex-2.0.0.tgz#996e3e80479b98b9897f15a8a58b3d084e926775"

@@ -68,6 +68,10 @@ const config = {
                 test: /\.html$/,
                 loader: 'html-loader', 
             },
+            {
+                test: /\.woff|woff2$/,
+                loader: 'file-loader',
+            },
         ],
     },
 
