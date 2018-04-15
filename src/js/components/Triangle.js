@@ -1,18 +1,22 @@
+// @flow
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import fastdom from 'fastdom';
 
-class Triangle extends Component {
-    _raf = false;
-    _ref;
-    _context;
-    _position = 0.5;
+type TriangleProps = {
+    innerHeight: number,
+    innerWidth: number,
+};
 
+class Triangle extends Component<TriangleProps> {
     componentDidMount() {
-        window.addEventListener('mousemove', this.handleMove.bind(this));
+        window.addEventListener('mousemove', this.handleMove);
 
-        this._ref.width = this.props.innerWidth;
-        this._ref.height = this.props.innerHeight;
+        if (this.ref) {
+            this.ref.width = this.props.innerWidth;
+            this.ref.height = this.props.innerHeight;
+        }
 
         fastdom.mutate(() => this.mutate());
     }
@@ -21,67 +25,71 @@ class Triangle extends Component {
         window.removeEventListener('mousemove', this.handleMove);
     }
 
+    raf: ?Function;
+    ref: ?HTMLCanvasElement;
+    context: ?CanvasRenderingContext2D;
+    position: number = 0.5;
+
     measure(e) {
         const rx = 1 - e.clientX / this.props.innerWidth;
         const ry = e.clientY / this.props.innerHeight;
-        this._position = rx + ry - 0.5;
+        this.position = rx + ry - 0.5;
     }
 
     mutate() {
-        // Draw BG
-        this._context.fillStyle = '#DDD';
-        this._context.fillRect(
-            0,
-            0,
-            this.props.innerWidth,
-            this.props.innerHeight,
-        );
+        if (this.context) {
+            const { context } = this;
 
-        // Draw Triangle
-        this._context.beginPath();
-        this._context.fillStyle = '#333';
-        this._context.moveTo(
-            0,
-            (this._position - 0.5) * this.props.innerHeight,
-        );
-        this._context.lineTo(
-            this.props.innerWidth,
-            this.props.innerHeight * (this._position + 0.5),
-        );
-        this._context.lineTo(this.props.innerWidth, 0);
-        this._context.lineTo(0, 0);
-        this._context.lineTo(
-            0,
-            (this._position - 0.5) * this.props.innerHeight,
-        );
-        this._context.fill();
+            // Draw BG
+            context.fillStyle = '#DDD';
+            context.fillRect(
+                0,
+                0,
+                this.props.innerWidth,
+                this.props.innerHeight,
+            );
+            // Draw Triangle
+            context.beginPath();
+            context.fillStyle = '#333';
+            context.moveTo(0, (this.position - 0.5) * this.props.innerHeight);
+            context.lineTo(
+                this.props.innerWidth,
+                this.props.innerHeight * (this.position + 0.5),
+            );
+            context.lineTo(this.props.innerWidth, 0);
+            context.lineTo(0, 0);
+            context.lineTo(0, (this.position - 0.5) * this.props.innerHeight);
+            context.fill();
+        }
     }
 
-    handleMove(e) {
-        this._raf =
-            this._raf ||
+    handleMove = e => {
+        this.raf =
+            this.raf ||
             window.requestAnimationFrame(() => {
                 fastdom.measure(() => this.measure(e));
                 fastdom.mutate(() => this.mutate());
 
-                this._raf = false;
+                this.raf = null;
             });
-    }
+    };
 
     render() {
         return (
             <canvas
                 className="triangle"
                 ref={ref => {
-                    this._ref = ref;
-                    this._context = ref.getContext('2d', { alpha: false });
+                    this.ref = ref;
+                    this.context = ref
+                        ? ref.getContext('2d', { alpha: false })
+                        : null;
                 }}
             />
         );
     }
 }
 
-const mapStateToProps = function(state) {
+function mapStateToProps(state) {
     const {
         window: { innerHeight, innerWidth },
     } = state;
@@ -90,6 +98,6 @@ const mapStateToProps = function(state) {
         innerWidth,
         gradient: innerHeight / innerWidth,
     };
-};
+}
 
 export default connect(mapStateToProps)(Triangle);
