@@ -3,10 +3,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = (env, mode) => ({
-    entry: path.resolve(process.cwd(), "./resources/js/main.js"),
-
     output: {
-        path: path.resolve(process.cwd(), "public"),
         filename: mode === "development" ? "[name].js" : "[name][chunkhash].js"
     },
 
@@ -55,7 +52,7 @@ const config = (env, mode) => ({
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: "resources/index.html",
+            template: "src/index.html",
             inject: "body"
         }),
         mode === "development"
