@@ -1,10 +1,10 @@
-const webpack = require("webpack");
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require('webpack');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = (env, mode) => ({
     output: {
-        filename: mode === "development" ? "[name].js" : "[name][chunkhash].js"
+        filename: mode === 'development' ? '[name].js' : '[name][chunkhash].js',
     },
 
     module: {
@@ -14,51 +14,51 @@ const config = (env, mode) => ({
                 exclude: /(node_modules)/,
                 use: [
                     {
-                        loader: "babel-loader"
-                    }
-                ]
+                        loader: 'babel-loader',
+                    },
+                ],
             },
             {
                 test: /\.scss$/,
                 use: [
-                    "style-loader",
-                    "css-loader",
+                    'style-loader',
+                    'css-loader',
                     {
-                        loader: "postcss-loader",
+                        loader: 'postcss-loader',
                         options: {
                             plugins: function() {
                                 return [
-                                    require("autoprefixer"),
-                                    require("cssnano")
+                                    require('autoprefixer'),
+                                    require('cssnano'),
                                 ];
-                            }
-                        }
+                            },
+                        },
                     },
-                    "sass-loader"
-                ]
+                    'sass-loader',
+                ],
             },
             {
                 test: /\.html$/,
-                loader: "html-loader"
+                loader: 'html-loader',
             },
             {
                 test: /\.woff|woff2$/,
-                loader: "file-loader"
-            }
-        ]
+                loader: 'file-loader',
+            },
+        ],
     },
 
-    devtool: "source-map",
+    devtool: 'source-map',
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: "src/index.html",
-            inject: "body"
+            template: 'src/index.html',
+            inject: 'body',
         }),
-        mode === "development"
+        mode === 'development'
             ? new webpack.HotModuleReplacementPlugin()
-            : () => {}
-    ]
+            : () => {},
+    ],
 });
 
 module.exports = config;

@@ -1,14 +1,14 @@
-import { UPDATE_MOUSE_POSITION, UPDATE_WINDOW_DIMENSIONS } from "./actions";
+import { UPDATE_MOUSE_POSITION, UPDATE_WINDOW_DIMENSIONS } from './actions';
 
 const DEFAULTS = {
     window: {
         innerHeight: window.innerHeight,
-        innerWidth: window.innerWidth
+        innerWidth: window.innerWidth,
     },
     mouse: {
         x: null,
-        y: null
-    }
+        y: null,
+    },
 };
 
 export default function(state = DEFAULTS, action) {
@@ -17,16 +17,16 @@ export default function(state = DEFAULTS, action) {
             state = Object.assign({}, state, {
                 window: {
                     innerHeight: action.innerHeight,
-                    innerWidth: action.innerWidth
-                }
+                    innerWidth: action.innerWidth,
+                },
             });
             break;
         case UPDATE_MOUSE_POSITION:
             state = Object.assign({}, state, {
                 mouse: {
                     x: action.x,
-                    y: action.y
-                }
+                    y: action.y,
+                },
             });
             break;
     }

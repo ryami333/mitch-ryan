@@ -1,4 +1,3 @@
-
 @function between($to, $from, $toWidth, $fromWidth) {
     $slope: ($to - $from) / ($toWidth - $fromWidth);
     $base: $from - $slope * $fromWidth;
