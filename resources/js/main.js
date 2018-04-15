@@ -1,30 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { AppContainer } from 'react-hot-loader'
-import App from './components/App'
-    
-ReactDOM.render(
-    <AppContainer>
-        <App/>
-    </AppContainer>,
-    document.querySelector('[data-root]'),
-);
+// @flow
 
-// Hot Module Replacement API
-if (module.hot) {
-    module.hot.accept('main.scss', () => {
-        require('main.scss');
-    });
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
 
-    module.hot.accept('./components/App', () => {
+const rootEl = document.querySelector("[data-root]");
 
-        const NextApp = require('./components/App').default;
+if (rootEl) {
+	ReactDOM.render(<App />, rootEl);
 
-        ReactDOM.render(
-            <AppContainer>
-                <NextApp/>
-            </AppContainer>,
-            document.querySelector('[data-root]'),
-        );
-    });
+	if (module !== undefined && module.hot !== undefined) {
+		module.hot.accept("./components/App", () => {
+			// eslint-disable-next-line global-require
+			const NextApp = require("./components/App").default;
+			ReactDOM.render(<NextApp />, rootEl);
+		});
+	}
 }
