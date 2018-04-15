@@ -13,23 +13,25 @@ const DEFAULTS = {
 
 export default function(state = DEFAULTS, action) {
     switch (action.type) {
-        case UPDATE_WINDOW_DIMENSIONS:
-            state = Object.assign({}, state, {
+        case UPDATE_WINDOW_DIMENSIONS: {
+            return {
+                ...state,
                 window: {
                     innerHeight: action.innerHeight,
                     innerWidth: action.innerWidth,
                 },
-            });
-            break;
-        case UPDATE_MOUSE_POSITION:
-            state = Object.assign({}, state, {
+            };
+        }
+        case UPDATE_MOUSE_POSITION: {
+            return {
+                ...state,
                 mouse: {
                     x: action.x,
                     y: action.y,
                 },
-            });
-            break;
+            };
+        }
+        default:
+            return state;
     }
-
-    return state;
 }
