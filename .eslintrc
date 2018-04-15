@@ -10,7 +10,11 @@
     ],
     "plugins": ["react", "flowtype", "flowtype-errors", "prettier"],
     "rules": {
-        "flowtype-errors/show-errors": 2
+        "flowtype-errors/show-errors": 2,
+        "react/jsx-filename-extension": [
+            "error",
+            { "extensions": [".js", ".jsx"] }
+        ]
     },
     "env": {
         "es6": true,
