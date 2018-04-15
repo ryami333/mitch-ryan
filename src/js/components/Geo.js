@@ -1,15 +1,21 @@
+// @flow
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 const MAGNITUDE = 30;
 
-class Geo extends Component {
-    _raf;
-    _ref;
+type GeoProps = {
+    x: number,
+    y: number,
+    innerWidth: number,
+    innerHeight: number,
+};
 
+class Geo extends Component<GeoProps> {
     componentDidUpdate() {
-        this._raf =
-            this._raf ||
+        this.raf =
+            this.raf ||
             window.requestAnimationFrame(() => {
                 const rotation = {
                     x: 2 * (this.props.x / this.props.innerWidth - 0.5),
@@ -22,17 +28,20 @@ class Geo extends Component {
                     }, 0, ${MAGNITUDE}deg)`,
                 };
 
-                Object.assign(this._ref.style, style);
-                this._raf = false;
+                Object.assign(this.ref ? this.ref.style : {}, style);
+                this.raf = false;
             });
     }
+
+    raf;
+    ref: ?HTMLElement;
 
     render() {
         return (
             <div
                 className="geo"
                 ref={ref => {
-                    this._ref = ref;
+                    this.ref = ref;
                 }}
             >
                 <svg
@@ -53,7 +62,7 @@ class Geo extends Component {
     }
 }
 
-const mapStateToProps = function(state) {
+function mapStateToProps(state) {
     const {
         mouse: { x, y },
         window: { innerWidth, innerHeight },
@@ -64,6 +73,6 @@ const mapStateToProps = function(state) {
         innerWidth,
         innerHeight,
     };
-};
+}
 
 export default connect(mapStateToProps)(Geo);
