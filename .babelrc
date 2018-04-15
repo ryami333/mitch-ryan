@@ -1,0 +1,9 @@
+{
+    "presets": [
+        ["env", {
+            "useBuiltIns": "entry"
+        }],
+        "react",
+        "stage-2"
+    ]
+}

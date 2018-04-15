@@ -17,10 +17,7 @@ const config = (env, mode) => ({
                 exclude: /(node_modules)/,
                 use: [
                     {
-                        loader: "babel-loader",
-                        query: {
-                            presets: ["es2015", "stage-2", "react"]
-                        }
+                        loader: "babel-loader"
                     }
                 ]
             },
@@ -34,12 +31,7 @@ const config = (env, mode) => ({
                         options: {
                             plugins: function() {
                                 return [
-                                    require("autoprefixer")({
-                                        browsers: [
-                                            "last 2 versions",
-                                            "ie >= 10"
-                                        ]
-                                    }),
+                                    require("autoprefixer"),
                                     require("cssnano")
                                 ];
                             }
