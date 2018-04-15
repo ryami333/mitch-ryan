@@ -29,7 +29,7 @@ class MouseWatcher extends Component {
 
 const mapDispatchToProps = function(dispatch) {
     return {
-        updateMousePosition: function(...args) {
+        updateMousePosition(...args) {
             return dispatch(updateMousePosition(...args));
         },
     };

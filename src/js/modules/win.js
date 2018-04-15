@@ -1,7 +1,7 @@
-let win = {};
+const win = {};
 
 function update() {
-    let { innerHeight, innerWidth } = window;
+    const { innerHeight, innerWidth } = window;
 
     Object.assign(win, {
         innerHeight,

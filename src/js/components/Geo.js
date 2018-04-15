@@ -11,12 +11,12 @@ class Geo extends Component {
         this._raf =
             this._raf ||
             window.requestAnimationFrame(() => {
-                let rotation = {
+                const rotation = {
                     x: 2 * (this.props.x / this.props.innerWidth - 0.5),
                     y: 2 * (this.props.y / this.props.innerHeight - 0.5),
                 };
 
-                let style = {
+                const style = {
                     transform: `rotate3d(${rotation.x}, ${
                         rotation.y
                     }, 0, ${MAGNITUDE}deg)`,
@@ -54,7 +54,7 @@ class Geo extends Component {
 }
 
 const mapStateToProps = function(state) {
-    let {
+    const {
         mouse: { x, y },
         window: { innerWidth, innerHeight },
     } = state;

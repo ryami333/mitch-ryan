@@ -33,7 +33,7 @@ class WindowWatcher extends Component {
 
 const mapDispatchToProps = function(dispatch) {
     return {
-        updateWindowDimensions: function(...args) {
+        updateWindowDimensions(...args) {
             return dispatch(updateWindowDimensions(...args));
         },
     };

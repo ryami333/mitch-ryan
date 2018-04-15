@@ -1,5 +1,3 @@
-import '../../scss/main.scss';
-
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import Geo from './Geo';
@@ -8,6 +6,8 @@ import Triangle from './Triangle';
 import WindowWatcher from './WindowWatcher';
 import MouseWatcher from './MouseWatcher';
 import store from '../state/store';
+
+import '../../scss/main.scss';
 
 class App extends Component {
     render() {

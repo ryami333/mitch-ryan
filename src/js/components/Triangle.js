@@ -22,8 +22,8 @@ class Triangle extends Component {
     }
 
     measure(e) {
-        let rx = 1 - e.clientX / this.props.innerWidth;
-        let ry = e.clientY / this.props.innerHeight;
+        const rx = 1 - e.clientX / this.props.innerWidth;
+        const ry = e.clientY / this.props.innerHeight;
         this._position = rx + ry - 0.5;
     }
 
@@ -82,7 +82,7 @@ class Triangle extends Component {
 }
 
 const mapStateToProps = function(state) {
-    let {
+    const {
         window: { innerHeight, innerWidth },
     } = state;
     return {
