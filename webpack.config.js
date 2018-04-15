@@ -1,6 +1,7 @@
 const webpack = require('webpack');
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
 const config = (env, mode) => ({
     output: {
@@ -27,10 +28,7 @@ const config = (env, mode) => ({
                         loader: 'postcss-loader',
                         options: {
                             plugins() {
-                                return [
-                                    require('autoprefixer'),
-                                    require('cssnano'),
-                                ];
+                                return [autoprefixer, cssnano];
                             },
                         },
                     },
