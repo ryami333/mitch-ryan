@@ -42,7 +42,7 @@
         "start": "webpack-dev-server --mode=development",
         "build": "webpack --mode=production",
         "lint": "eslint .",
-        "deploy": "yarn build && gh-pages -d dist"
+        "deploy": "yarn build && yarn gh-pages -d build --message=\"[ci skip]\""
     },
     "dependencies": {
         "fastdom": "^1.0.5",

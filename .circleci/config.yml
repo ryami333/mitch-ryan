@@ -49,6 +49,8 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/repo
+      - run: git config --global user.email circleci@circleci
+      - run: git config --global user.name CircleCI
       - run: yarn deploy
 
 workflows:
