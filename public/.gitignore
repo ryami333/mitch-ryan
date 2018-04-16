@@ -1,5 +1,0 @@
-dist/*
-!dist/.gitignore
-!.gitignore
-index.html
-
