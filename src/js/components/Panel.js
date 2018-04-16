@@ -23,13 +23,13 @@ function Panel() {
                         target="_BLANK"
                         rel="noopener noreferrer"
                     >
-                        <FontAwesomeIcon icon={envelope} />
+                        <FontAwesomeIcon icon={linkedin} />
                     </a>
                     <a
                         href="mailto:ohai@mitch-ryan.com"
                         className="panel__link panel__link--email"
                     >
-                        <FontAwesomeIcon icon={linkedin} />
+                        <FontAwesomeIcon icon={envelope} />
                     </a>
                 </div>
             </div>
