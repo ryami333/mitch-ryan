@@ -1,4 +1,7 @@
 import React from 'react';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import envelope from '@fortawesome/fontawesome-free-solid/faEnvelope';
+import linkedin from '@fortawesome/fontawesome-free-brands/faLinkedin';
 
 function Panel() {
     return (
@@ -20,13 +23,13 @@ function Panel() {
                         target="_BLANK"
                         rel="noopener noreferrer"
                     >
-                        todo
+                        <FontAwesomeIcon icon={envelope} />
                     </a>
                     <a
                         href="mailto:ohai@mitch-ryan.com"
                         className="panel__link panel__link--email"
                     >
-                        todo
+                        <FontAwesomeIcon icon={linkedin} />
                     </a>
                 </div>
             </div>

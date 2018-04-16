@@ -41,23 +41,10 @@
     }
 
     &__link {
-        font-family: $icomoon;
         font-size: 1.8em;
 
         & + & {
             margin-left: $spacing-gutter;
-        }
-
-        &:after {
-            display: block;
-        }
-
-        &--linkedin:after {
-            content: $icon-linkedin;
-        }
-
-        &--email:after {
-            content: $icon-envelope;
         }
     }
 }

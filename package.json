@@ -45,6 +45,10 @@
         "deploy": "yarn build && yarn gh-pages -d dist --message=\"[ci skip]\""
     },
     "dependencies": {
+        "@fortawesome/fontawesome": "^1.1.5",
+        "@fortawesome/fontawesome-free-brands": "^5.0.10",
+        "@fortawesome/fontawesome-free-solid": "^5.0.10",
+        "@fortawesome/react-fontawesome": "^0.0.18",
         "fastdom": "^1.0.5",
         "react": "^16.3.1",
         "react-dom": "^16.3.1",
