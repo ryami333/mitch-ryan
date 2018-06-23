@@ -1,6 +1,7 @@
 // @flow
 
 import React, { Component, createContext, type Node } from 'react';
+import throttled from '../utilities/raf-throttled';
 
 type ContainerState = {
 	innerHeight: number,
@@ -29,23 +30,18 @@ export class WindowProvider extends Component<ContainerProps, ContainerState> {
 		window.removeEventListener('resize', this.handleResize);
 	}
 
-	raf: ?number;
-
-	handleResize = () => {
-		this.raf =
-			this.raf ||
-			window.requestAnimationFrame(() => {
+	handleResize = throttled(
+		e =>
+			new Promise(resolve => {
 				this.setState(
 					{
 						innerHeight: window.innerHeight,
 						innerWidth: window.innerWidth,
 					},
-					() => {
-						this.raf = null;
-					},
+					resolve,
 				);
-			});
-	};
+			}),
+	);
 
 	render() {
 		const { children } = this.props;
