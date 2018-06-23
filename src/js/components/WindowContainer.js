@@ -1,11 +1,6 @@
 // @flow
 
-import React, {
-	Component,
-	createContext,
-	type Node,
-	type Context,
-} from 'react';
+import React, { Component, createContext, type Node } from 'react';
 
 type ContainerState = {
 	innerHeight: number,
@@ -16,14 +11,12 @@ type ContainerProps = {
 	children: Node,
 };
 
-const initialState = {
+const initialState: ContainerState = {
 	innerHeight: window.innerHeight,
 	innerWidth: window.innerWidth,
 };
 
-const { Provider, Consumer }: Context<ContainerState> = createContext(
-	initialState,
-);
+const { Provider, Consumer } = createContext(initialState);
 
 export class WindowProvider extends Component<ContainerProps, ContainerState> {
 	state = initialState;
