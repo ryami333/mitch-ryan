@@ -1,7 +1,6 @@
 // @flow
 
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import fastdom from 'fastdom';
 
 type TriangleProps = {
@@ -89,15 +88,4 @@ class Triangle extends Component<TriangleProps> {
     }
 }
 
-function mapStateToProps(state) {
-    const {
-        window: { innerHeight, innerWidth },
-    } = state;
-    return {
-        innerHeight,
-        innerWidth,
-        gradient: innerHeight / innerWidth,
-    };
-}
-
-export default connect(mapStateToProps)(Triangle);
+export default Triangle;
