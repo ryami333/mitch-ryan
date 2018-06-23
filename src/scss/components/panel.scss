@@ -47,4 +47,16 @@
             margin-left: $spacing-gutter;
         }
     }
+
+    &__icon {
+        display: block;
+
+        &--linked-in {
+            width: 0.875em;
+        }
+
+        &--email {
+            width: 1em;
+        }
+    }
 }
