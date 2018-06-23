@@ -32,6 +32,10 @@ export class WindowProvider extends Component<ContainerProps, ContainerState> {
 		window.addEventListener('resize', this.handleResize);
 	}
 
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.handleResize);
+	}
+
 	handleResize = () => {
 		this.setState({
 			innerHeight: window.innerHeight,
