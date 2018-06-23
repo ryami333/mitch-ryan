@@ -13,7 +13,7 @@ type ContainerState = {
 };
 
 type ContainerProps = {
-	children: ContainerState => Node,
+	children: Node,
 };
 
 const initialState = {
