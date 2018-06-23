@@ -1,11 +1,15 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
-const config = (env, mode) => ({
+const config = (env, options) => ({
     output: {
-        filename: mode === 'development' ? '[name].js' : '[name][chunkhash].js',
+        filename:
+            options.mode === 'development'
+                ? '[name].js'
+                : '[name][chunkhash].js',
     },
 
     module: {
@@ -22,7 +26,9 @@ const config = (env, mode) => ({
             {
                 test: /\.scss$/,
                 use: [
-                    'style-loader',
+                    options.mode === 'production'
+                        ? MiniCssExtractPlugin.loader
+                        : 'style-loader',
                     'css-loader',
                     {
                         loader: 'postcss-loader',
@@ -49,11 +55,14 @@ const config = (env, mode) => ({
     devtool: 'source-map',
 
     plugins: [
+        new MiniCssExtractPlugin({
+            //
+        }),
         new HtmlWebpackPlugin({
             template: 'src/index.html',
             inject: 'body',
         }),
-        mode === 'development'
+        options.mode === 'development'
             ? new webpack.HotModuleReplacementPlugin()
             : () => {},
     ],
