@@ -1,8 +1,10 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const path = require('path');
 
 const config = (env, options) => ({
     output: {
@@ -55,6 +57,16 @@ const config = (env, options) => ({
     devtool: 'source-map',
 
     plugins: [
+        options.mode === 'production'
+            ? new BundleAnalyzerPlugin({
+                  analyzerMode: 'static',
+                  openAnalyzer: false,
+                  reportFilename: path.resolve(
+                      __dirname,
+                      './stats/report.html',
+                  ),
+              })
+            : () => {},
         new MiniCssExtractPlugin({
             filename: '[name][contenthash].css',
         }),

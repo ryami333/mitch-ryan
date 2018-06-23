@@ -3,3 +3,4 @@ stats.json
 .env
 yarn-error.log
 dist/
+stats/
