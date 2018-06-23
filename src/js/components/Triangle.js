@@ -11,16 +11,10 @@ type TriangleProps = {
 class Triangle extends Component<TriangleProps> {
     componentDidMount() {
         window.addEventListener('mousemove', this.handleMove);
-
-        fastdom.mutate(this.mutate);
     }
 
     componentWillUnmount() {
         window.removeEventListener('mousemove', this.handleMove);
-    }
-
-    componentDidUpdate() {
-        fastdom.mutate(this.mutate);
     }
 
     ref: ?HTMLCanvasElement;
@@ -72,6 +66,7 @@ class Triangle extends Component<TriangleProps> {
                     this.context = ref
                         ? ref.getContext('2d', { alpha: false })
                         : null;
+                    fastdom.mutate(() => this.mutate());
                 }}
             />
         );
