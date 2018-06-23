@@ -74,8 +74,12 @@ class Triangle extends Component<TriangleProps> {
     };
 
     render() {
+        const { innerWidth, innerHeight } = this.props;
+
         return (
             <canvas
+                width={innerWidth}
+                height={innerHeight}
                 className="triangle"
                 ref={ref => {
                     this.ref = ref;
