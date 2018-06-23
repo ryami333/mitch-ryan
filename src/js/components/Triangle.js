@@ -21,13 +21,14 @@ class Triangle extends Component<TriangleProps> {
     context: ?CanvasRenderingContext2D;
     position: number = 0.5;
 
-    measure = (e: SyntheticMouseEvent<*>) => {
-        const rx = 1 - e.clientX / this.props.innerWidth;
-        const ry = e.clientY / this.props.innerHeight;
-        this.position = rx + ry - 0.5;
-    };
+    measure = (e: SyntheticMouseEvent<*>) =>
+        fastdom.measure(() => {
+            const rx = 1 - e.clientX / this.props.innerWidth;
+            const ry = e.clientY / this.props.innerHeight;
+            this.position = rx + ry - 0.5;
+        });
 
-    mutate = () => {
+    mutate = fastdom.mutate(() => {
         if (this.context) {
             const { context, position } = this;
             const { innerHeight, innerWidth } = this.props;
@@ -46,11 +47,11 @@ class Triangle extends Component<TriangleProps> {
             context.lineTo(0, (position - 0.5) * innerHeight);
             context.fill();
         }
-    };
+    });
 
     handleMove = (e: SyntheticMouseEvent<*>) => {
-        fastdom.measure(() => this.measure(e));
-        fastdom.mutate(() => this.mutate());
+        this.measure(e);
+        this.mutate();
     };
 
     render() {
@@ -66,7 +67,7 @@ class Triangle extends Component<TriangleProps> {
                     this.context = ref
                         ? ref.getContext('2d', { alpha: false })
                         : null;
-                    fastdom.mutate(() => this.mutate());
+                    this.mutate();
                 }}
             />
         );
