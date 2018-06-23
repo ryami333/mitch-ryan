@@ -56,7 +56,7 @@ const config = (env, options) => ({
 
     plugins: [
         new MiniCssExtractPlugin({
-            //
+            filename: '[name][contenthash].css',
         }),
         new HtmlWebpackPlugin({
             template: 'src/index.html',
