@@ -36,11 +36,22 @@ export class WindowProvider extends Component<ContainerProps, ContainerState> {
 		window.removeEventListener('resize', this.handleResize);
 	}
 
+	raf: ?number;
+
 	handleResize = () => {
-		this.setState({
-			innerHeight: window.innerHeight,
-			innerWidth: window.innerWidth,
-		});
+		this.raf =
+			this.raf ||
+			window.requestAnimationFrame(() => {
+				this.setState(
+					{
+						innerHeight: window.innerHeight,
+						innerWidth: window.innerWidth,
+					},
+					() => {
+						this.raf = null;
+					},
+				);
+			});
 	};
 
 	render() {
