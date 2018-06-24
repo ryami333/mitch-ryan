@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const path = require('path');
@@ -73,6 +74,10 @@ const config = (env, options) => ({
         new HtmlWebpackPlugin({
             template: 'src/index.html',
             inject: 'body',
+        }),
+        new PrerenderSPAPlugin({
+            staticDir: path.join(__dirname, 'dist'),
+            routes: ['/'],
         }),
         options.mode === 'development'
             ? new webpack.HotModuleReplacementPlugin()
