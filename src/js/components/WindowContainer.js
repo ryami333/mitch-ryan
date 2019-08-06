@@ -22,6 +22,15 @@ const { Provider, Consumer } = createContext(initialState);
 export class WindowProvider extends Component<ContainerProps, ContainerState> {
 	state = initialState;
 
+	handleResize = throttle(() =>
+		this.setState({
+			// eslint-disable-next-line react/no-unused-state
+			innerHeight: window.innerHeight,
+			// eslint-disable-next-line react/no-unused-state
+			innerWidth: window.innerWidth,
+		}),
+	);
+
 	componentDidMount() {
 		window.addEventListener('resize', this.handleResize);
 	}
@@ -29,13 +38,6 @@ export class WindowProvider extends Component<ContainerProps, ContainerState> {
 	componentWillUnmount() {
 		window.removeEventListener('resize', this.handleResize);
 	}
-
-	handleResize = throttle(() =>
-		this.setState({
-			innerHeight: window.innerHeight,
-			innerWidth: window.innerWidth,
-		}),
-	);
 
 	render() {
 		const { children } = this.props;
