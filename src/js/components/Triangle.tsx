@@ -10,7 +10,7 @@ function getPosition({
     innerWidth,
     innerHeight,
 }: {
-    e: React.SyntheticEvent<MouseEvent>;
+    e: MouseEvent;
     innerHeight: number;
     innerWidth: number;
 }): number {
@@ -30,7 +30,7 @@ function Triangle({
             canvasRef.current &&
             canvasRef.current.getContext('2d', { alpha: false });
 
-        const handleMove = (e?: React.SyntheticEvent<MouseEvent>): void => {
+        const handleMove = (e?: MouseEvent): void => {
             const position = e
                 ? getPosition({ e, innerHeight, innerWidth })
                 : 0.5;
