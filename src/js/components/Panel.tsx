@@ -1,8 +1,6 @@
-// @flow
-
 import React from 'react';
 
-function Panel() {
+function Panel(): React.ReactElement {
     return (
         <div className="panel">
             <div className="panel__inner">

@@ -1,23 +1,23 @@
 {
-    "parser": "babel-eslint",
-    "extends": [
-        "airbnb",
-        "plugin:react/recommended",
-        "plugin:flowtype/recommended",
-        "prettier",
-        "prettier/react",
-        "prettier/flowtype"
-    ],
-    "plugins": ["react", "flowtype", "flowtype-errors", "prettier"],
-    "rules": {
-        "flowtype-errors/show-errors": 2,
-        "react/jsx-filename-extension": [
-            "error",
-            { "extensions": [".js", ".jsx"] }
-        ]
-    },
-    "env": {
-        "es6": true,
-        "browser": true
-    }
+	"parser": "@typescript-eslint/parser",
+	"extends": [
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier",
+		"prettier/react",
+		"prettier/@typescript-eslint"
+	],
+	"plugins": ["@typescript-eslint", "react", "prettier"],
+	"env": {
+		"es6": true,
+		"browser": true
+	},
+	"overrides": [
+		{
+			"files": ["*.js"],
+			"rules": {
+				"@typescript-eslint/no-var-requires": "off"
+			}
+		}
+	]
 }

@@ -4,3 +4,4 @@ stats.json
 yarn-error.log
 dist/
 stats/
+.tscache/

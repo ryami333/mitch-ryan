@@ -15,10 +15,14 @@ const config = (env, options) => ({
                 : '[name][chunkhash].js',
     },
 
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js', '.jsx', '.json'],
+    },
+
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.tsx?$/,
                 exclude: /(node_modules)/,
                 use: [
                     {
