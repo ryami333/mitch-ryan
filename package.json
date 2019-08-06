@@ -51,6 +51,7 @@
         "deploy": "yarn build && yarn gh-pages -d dist --message=\"[ci skip]\""
     },
     "dependencies": {
+        "core-js": "^3.1.4",
         "fastdom": "^1.0.5",
         "lodash": "^4.17.10",
         "react": "^16.4.1",
