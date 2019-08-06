@@ -9,24 +9,11 @@ type TriangleProps = {
 };
 
 class Triangle extends Component<TriangleProps> {
-    componentDidMount() {
-        window.addEventListener('mousemove', this.handleMove);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('mousemove', this.handleMove);
-    }
-
     ref: ?HTMLCanvasElement;
-    context: ?CanvasRenderingContext2D;
-    position: number = 0.5;
 
-    measure = (e: SyntheticMouseEvent<*>) =>
-        fastdom.measure(() => {
-            const rx = 1 - e.clientX / this.props.innerWidth;
-            const ry = e.clientY / this.props.innerHeight;
-            this.position = rx + ry - 0.5;
-        });
+    context: ?CanvasRenderingContext2D;
+
+    position: number = 0.5;
 
     mutate = fastdom.mutate(() => {
         if (this.context) {
@@ -49,10 +36,26 @@ class Triangle extends Component<TriangleProps> {
         }
     });
 
+    componentDidMount() {
+        window.addEventListener('mousemove', this.handleMove);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('mousemove', this.handleMove);
+    }
+
     handleMove = (e: SyntheticMouseEvent<*>) => {
         this.measure(e);
         this.mutate();
     };
+
+    measure = (e: SyntheticMouseEvent<*>) =>
+        fastdom.measure(() => {
+            const { innerHeight, innerWidth } = this.props;
+            const rx = 1 - e.clientX / innerWidth;
+            const ry = e.clientY / innerHeight;
+            this.position = rx + ry - 0.5;
+        });
 
     render() {
         const { innerWidth, innerHeight } = this.props;
