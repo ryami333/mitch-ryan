@@ -18,7 +18,7 @@ const Container = styled.div`
 `;
 
 const Heading = styled.h1`
-    font-weight: 500;
+    font-weight: 900;
     font-size: 2.66em;
     color: white;
     mix-blend-mode: exclusion;
@@ -47,6 +47,7 @@ const CopyWrapper = styled.div`
 
 const Inner = styled.div`
     width: 100%;
+    padding: 0 var(--spacing2);
     max-width: 890px;
 
     @media (max-width: 420px) {

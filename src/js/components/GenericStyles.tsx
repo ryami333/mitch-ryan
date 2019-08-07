@@ -11,6 +11,12 @@ const styles = css`
 		color: var(--colorGrey);
 		font-family: 'Raleway';
 	}
+
+	*,
+	*:before,
+	*:after {
+		box-sizing: border-box;
+	}
 `;
 
 export default createGlobalStyle`${styles}`;
