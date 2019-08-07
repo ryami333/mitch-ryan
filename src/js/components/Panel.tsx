@@ -25,10 +25,10 @@ const Heading = styled.h1`
 `;
 
 const CopyWrapper = styled.div`
-    margin-top: var(--spacingGutterDouble);
+    margin-top: var(--spacing3);
     display: grid;
     grid-template-columns: 100%;
-    grid-row-gap: var(--spacingGutter);
+    grid-row-gap: var(--spacing2);
 
     p {
         mix-blend-mode: exclusion;
@@ -55,7 +55,7 @@ const Inner = styled.div`
 `;
 
 const LinksWrapper = styled.div`
-    margin-top: var(--spacingGutterDouble);
+    margin-top: var(--spacing3);
     display: flex;
     align-items: center;
     justify-content: flex-start;

@@ -7,14 +7,14 @@ const styles = css`
 		/* SPACING */
 		/* ----------------------------------------------------------------- */
 
-		--spacingGutter: 22px;
-		--spacingGutterHalf: 11px;
-		--spacingGutterDouble: 44px;
+		--spacing1: 11px;
+		--spacing2: 22px;
+		--spacing3: 44px;
 
 		@media (max-width: 420px) {
-			--spacingGutter: 16px;
-			--spacingGutterHalf: 8px;
-			--spacingGutterDouble: 32px;
+			--spacing1: 8px;
+			--spacing2: 16px;
+			--spacing3: 32px;
 		}
 
 		/* ----------------------------------------------------------------- */
