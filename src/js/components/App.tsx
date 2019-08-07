@@ -8,8 +8,6 @@ import GenericStyles from './GenericStyles';
 import Triangle from './Triangle';
 import { Provider as WindowProvider, useWindow } from './WindowContainer';
 
-import '../../scss/main.scss';
-
 const Container = styled.div`
 	overflow: hidden;
 `;
