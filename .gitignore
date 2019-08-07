@@ -2,6 +2,7 @@ node_modules/*
 stats.json
 .env
 yarn-error.log
-dist/
+public/
 stats/
 .tscache/
+.cache/
