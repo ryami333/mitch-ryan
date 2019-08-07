@@ -82,10 +82,16 @@ function Panel(): React.ReactElement {
                     </p>
                     <div>
                         <a
-                            href="https://www.linkedin.com/in/mitch-ryan-dev/"
+                            href="https://github.com/ryami333"
+                            className="panel__link panel__link--email"
+                        >
+                            github.com/ryami333
+                        </a>
+                    </div>
+                    <div>
+                        <a
+                            href="https://github.com/ryami333"
                             className="panel__link panel__link--linkedin"
-                            target="_BLANK"
-                            rel="noopener noreferrer"
                         >
                             linkedin.com/in/mitch-ryan-dev
                         </a>
