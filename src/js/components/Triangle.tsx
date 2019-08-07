@@ -1,4 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Canvas = styled.canvas`
+    background-color: var(--colorLightGrey);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+`;
 
 interface TriangleProps {
     innerHeight: number;
@@ -59,7 +69,7 @@ function Triangle({
     }, [innerWidth, innerHeight]);
 
     return (
-        <canvas
+        <Canvas
             width={innerWidth}
             height={innerHeight}
             className="triangle"

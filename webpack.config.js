@@ -1,10 +1,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
-const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
 const path = require('path');
 
 const config = (env, options) => ({
@@ -31,24 +28,6 @@ const config = (env, options) => ({
                 ],
             },
             {
-                test: /\.scss$/,
-                use: [
-                    options.mode === 'production'
-                        ? MiniCssExtractPlugin.loader
-                        : 'style-loader',
-                    'css-loader',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins() {
-                                return [autoprefixer, cssnano];
-                            },
-                        },
-                    },
-                    'sass-loader',
-                ],
-            },
-            {
                 test: /\.html$/,
                 loader: 'html-loader',
             },
@@ -72,9 +51,6 @@ const config = (env, options) => ({
                   ),
               })
             : () => {},
-        new MiniCssExtractPlugin({
-            filename: '[name][contenthash].css',
-        }),
         new HtmlWebpackPlugin({
             template: 'src/index.html',
             inject: 'body',
