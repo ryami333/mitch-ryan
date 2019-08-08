@@ -4,7 +4,7 @@ module.exports = {
             'babel-preset-gatsby',
             {
                 targets: {
-                    browsers: ['last 4 versions', 'not ie <= 10'],
+                    browsers: ['last 4 versions', 'not ie <= 11'],
                 },
             },
         ],
