@@ -11,6 +11,7 @@ const Container = styled.div`
     min-height: 100vh;
     color: white;
     font-size: 22px;
+    mix-blend-mode: exclusion;
 
     @media (max-width: 420px) {
         font-size: 16px;
@@ -21,7 +22,6 @@ const Heading = styled.h1`
     font-weight: 900;
     font-size: 2.66em;
     color: white;
-    mix-blend-mode: exclusion;
 `;
 
 const CopyWrapper = styled.div`
@@ -31,7 +31,6 @@ const CopyWrapper = styled.div`
     grid-row-gap: var(--spacing2);
 
     p {
-        mix-blend-mode: exclusion;
         font-size: 1em;
         line-height: 1.5;
     }
@@ -39,7 +38,6 @@ const CopyWrapper = styled.div`
     a {
         font-size: 1em;
         line-height: 1.5;
-        mix-blend-mode: exclusion;
         color: inherit;
         text-decoration: underline;
     }
