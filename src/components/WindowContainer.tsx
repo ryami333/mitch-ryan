@@ -19,10 +19,14 @@ export function Provider({
 }: {
 	children: React.ReactNode;
 }): React.ReactElement {
-	const [state, setState] = React.useState<ContextType>({
-		innerWidth: window.innerWidth,
-		innerHeight: window.innerHeight,
-	});
+	const [state, setState] = React.useState<ContextType>(
+		typeof window !== 'undefined'
+			? {
+					innerWidth: window.innerWidth,
+					innerHeight: window.innerHeight,
+			  }
+			: { innerWidth: 0, innerHeight: 0 },
+	);
 
 	React.useEffect((): (() => void) => {
 		const handleResize = throttle((): void =>
@@ -51,4 +55,3 @@ export function useWindow(): ContextType {
 
 	return context;
 }
-
