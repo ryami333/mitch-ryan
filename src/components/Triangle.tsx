@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Canvas = styled.canvas`
+    display: block;
     background-color: var(--colorLightGrey);
     position: fixed;
     top: 0;
@@ -33,12 +34,19 @@ function Triangle({
     innerWidth,
     innerHeight,
 }: TriangleProps): React.ReactElement {
-    const canvasRef = React.useRef<HTMLCanvasElement | null>(null);
+    const [canvas, setCanvas] = React.useState<HTMLCanvasElement | null>(null);
+
+    const context = React.useMemo(
+        (): CanvasRenderingContext2D | null =>
+            canvas && canvas.getContext('2d', { alpha: false }),
+        [canvas],
+    );
 
     React.useLayoutEffect((): (() => void) => {
-        const context =
-            canvasRef.current &&
-            canvasRef.current.getContext('2d', { alpha: false });
+        if (canvas) {
+            canvas.height = innerHeight;
+            canvas.width = innerWidth;
+        }
 
         const handleMove = (e?: MouseEvent): void => {
             const position = e
@@ -66,16 +74,16 @@ function Triangle({
         handleMove();
 
         return (): void => window.removeEventListener('mousemove', handleMove);
-    }, [innerWidth, innerHeight]);
+    }, [context, innerWidth, innerHeight]);
 
-    return (
-        <Canvas
-            width={innerWidth}
-            height={innerHeight}
-            className="triangle"
-            ref={canvasRef}
-        />
+    const ref = React.useCallback(
+        (canvas: HTMLCanvasElement): void => {
+            setCanvas(canvas);
+        },
+        [setCanvas],
     );
+
+    return <Canvas ref={ref} />;
 }
 
 export default React.memo(Triangle);
