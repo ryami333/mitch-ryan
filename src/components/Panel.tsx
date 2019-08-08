@@ -66,7 +66,7 @@ function Panel(): React.ReactElement {
         <Container>
             <Inner>
                 <Heading>Mitch Ryan.</Heading>
-                <CopyWrapper className="panel__copy">
+                <CopyWrapper>
                     <p>
                         New Zealand based full-stack web developer, specialising
                         in interactive media and particularly interested in
@@ -79,28 +79,13 @@ function Panel(): React.ReactElement {
                         “Awwwards”, “The FWA” and “The Webby Awards”.
                     </p>
                     <div>
-                        <a
-                            href="https://github.com/ryami333"
-                            className="panel__link panel__link--email"
-                        >
-                            Github.
-                        </a>
+                        <a href="https://github.com/ryami333">Github.</a>
                     </div>
                     <div>
-                        <a
-                            href="https://github.com/ryami333"
-                            className="panel__link panel__link--linkedin"
-                        >
-                            LinkedIn.
-                        </a>
+                        <a href="https://github.com/ryami333">LinkedIn.</a>
                     </div>
                     <div>
-                        <a
-                            href="mailto:ohai@mitch-ryan.com"
-                            className="panel__link panel__link--email"
-                        >
-                            Email.
-                        </a>
+                        <a href="mailto:ohai@mitch-ryan.com">Email.</a>
                     </div>
                 </CopyWrapper>
             </Inner>
