@@ -76,14 +76,14 @@ function Panel(): React.ReactElement {
                         Mitch has experience working with major domestic and
                         international organisations, and his work has been
                         recognised by such reputable institutions as “W3”,
-                        “Awwwards”, “The FWA” and “The Webby Awards”
+                        “Awwwards”, “The FWA” and “The Webby Awards”.
                     </p>
                     <div>
                         <a
                             href="https://github.com/ryami333"
                             className="panel__link panel__link--email"
                         >
-                            github.com/ryami333
+                            Github
                         </a>
                     </div>
                     <div>
