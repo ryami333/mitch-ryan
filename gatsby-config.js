@@ -7,12 +7,12 @@ module.exports = {
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-styled-components',
         'gatsby-plugin-typescript',
-        // {
-        //   resolve: `gatsby-plugin-favicon`,
-        //   options: {
-        //     logo: './src/images/favicon.png',
-        //   },
-        // },
+        {
+            resolve: `gatsby-plugin-favicon`,
+            options: {
+                logo: './src/favicon.png',
+            },
+        },
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
