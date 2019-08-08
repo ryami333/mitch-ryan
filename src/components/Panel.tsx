@@ -83,7 +83,7 @@ function Panel(): React.ReactElement {
                             href="https://github.com/ryami333"
                             className="panel__link panel__link--email"
                         >
-                            Github
+                            Github.
                         </a>
                     </div>
                     <div>
@@ -91,7 +91,7 @@ function Panel(): React.ReactElement {
                             href="https://github.com/ryami333"
                             className="panel__link panel__link--linkedin"
                         >
-                            LinkedIn
+                            LinkedIn.
                         </a>
                     </div>
                     <div>
@@ -99,7 +99,7 @@ function Panel(): React.ReactElement {
                             href="mailto:ohai@mitch-ryan.com"
                             className="panel__link panel__link--email"
                         >
-                            Email
+                            Email.
                         </a>
                     </div>
                 </CopyWrapper>
