@@ -82,7 +82,9 @@ function Panel(): React.ReactElement {
                         <a href="https://github.com/ryami333">Github.</a>
                     </div>
                     <div>
-                        <a href="https://github.com/ryami333">LinkedIn.</a>
+                        <a href="https://www.linkedin.com/in/mitch-ryan-dev/">
+                            LinkedIn.
+                        </a>
                     </div>
                     <div>
                         <a href="mailto:ohai@mitch-ryan.com">Email.</a>
