@@ -1,0 +1,22 @@
+name: Push
+
+on: push
+
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checking out git
+              uses: actions/checkout@v2
+            - name: Setup node
+              shell: bash -l {0}
+              run: nvm install
+            - name: Print Node vserion
+              run: node -v
+            - name: Install Dependencies
+              run: yarn install --frozen-lockfile
+            - name: Lint
+              run: yarn lint
+            - name: Typecheck
+              run: yarn typecheck
