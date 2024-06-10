@@ -1,15 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
+import classNames from 'classnames/bind';
+import styles from './Triangle.module.css';
 
-const Canvas = styled.canvas`
-    display: block;
-    background-color: var(--colorLightGrey);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-`;
+const cx = classNames.bind(styles);
 
 interface TriangleProps {
     innerHeight: number;
@@ -21,9 +14,9 @@ function getPosition({
     innerWidth,
     innerHeight,
 }: {
-    e: MouseEvent,
-    innerHeight: number,
-    innerWidth: number,
+    e: MouseEvent;
+    innerHeight: number;
+    innerWidth: number;
 }): number {
     const rx = 1 - e.clientX / innerWidth;
     const ry = e.clientY / innerHeight;
@@ -83,7 +76,7 @@ function Triangle({
         [setCanvas],
     );
 
-    return <Canvas ref={ref} />;
+    return <canvas className={cx('canvas')} ref={ref} />;
 }
 
 export default React.memo(Triangle);
