@@ -37,12 +37,12 @@
     grid-template-columns: 100%;
     grid-row-gap: var(--spacing2);
 
-    p {
+    & p {
         font-size: 1em;
         line-height: 1.5;
     }
 
-    a {
+    & a {
         font-size: 1em;
         line-height: 1.5;
         color: inherit;
