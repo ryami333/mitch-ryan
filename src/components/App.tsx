@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import Panel from './Panel';
 import FontStyles from './FontStyles';
 import Triangle from './Triangle';
