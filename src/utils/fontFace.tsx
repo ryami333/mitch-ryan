@@ -20,7 +20,8 @@ export default function fontFace({
             font-family: ${JSON.stringify(fontFamily)};
             font-style: ${fontStyle};
             font-weight: ${String(fontWeight)};
-            src: url(${JSON.stringify(woff2)}) format('woff2'),
+            src:
+                url(${JSON.stringify(woff2)}) format('woff2'),
                 url(${JSON.stringify(woff)}) format('woff');
         }
     `;
