@@ -1,26 +1,26 @@
 {
-    "compilerOptions": {
-        "esModuleInterop": true,
-        "outDir": ".tscache",
-        "incremental": true,
-        "jsx": "preserve",
-        "baseUrl": "./",
-        "strict": true,
-        "lib": ["dom", "es6"],
-        "allowJs": true,
-        "checkJs": true,
-        "skipLibCheck": true,
-        "noEmit": true,
-        "module": "esnext",
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "plugins": [
-            {
-                "name": "next"
-            }
-        ]
-    },
-    "include": ["src/**/*", "next-env.d.ts", ".next/types/**/*.ts"],
-    "exclude": ["node_modules"]
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "outDir": ".tscache",
+    "incremental": true,
+    "jsx": "preserve",
+    "baseUrl": "./",
+    "strict": true,
+    "lib": ["dom", "es6"],
+    "allowJs": true,
+    "checkJs": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": ["src/**/*", "next-env.d.ts", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }

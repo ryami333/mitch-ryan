@@ -1,40 +1,40 @@
 {
-    "name": "mitch-ryan",
-    "version": "1.0.0",
-    "main": "index.js",
-    "author": "<mitch.ryan@outlook.co.nz>",
-    "license": "UNLICENSED",
-    "devDependencies": {
-        "@types/lodash": "^4.17.5",
-        "@types/node": "20.14.2",
-        "@types/react": "^18.3.3",
-        "@types/react-dom": "^18.3.0",
-        "@typescript-eslint/eslint-plugin": "^7.12.0",
-        "@typescript-eslint/parser": "^7.12.0",
-        "eslint": "8",
-        "eslint-config-next": "^14.2.3",
-        "prettier": "^3.3.1",
-        "typescript": "^5.4.5"
-    },
-    "scripts": {
-        "dev": "next dev",
-        "start": "next start",
-        "build": "next build",
-        "lint": "eslint .",
-        "typecheck": "tsc"
-    },
-    "dependencies": {
-        "classnames": "^2.5.1",
-        "lodash": "^4.17.21",
-        "next": "^14.2.3",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1"
-    },
-    "browserslist": [
-        "last 2 Chrome versions",
-        "last 2 Firefox versions",
-        "last 2 Safari versions",
-        "last 2 iOS versions",
-        "last 2 Edge versions"
-    ]
+  "name": "mitch-ryan",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "<mitch.ryan@outlook.co.nz>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/lodash": "^4.17.5",
+    "@types/node": "20.14.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.12.0",
+    "@typescript-eslint/parser": "^7.12.0",
+    "eslint": "8",
+    "eslint-config-next": "^14.2.3",
+    "prettier": "^3.3.1",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build",
+    "lint": "eslint .",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "lodash": "^4.17.21",
+    "next": "^14.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 iOS versions",
+    "last 2 Edge versions"
+  ]
 }
