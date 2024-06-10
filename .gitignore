@@ -2,9 +2,7 @@ node_modules/*
 stats.json
 .env
 yarn-error.log
-public/
 stats/
 .tscache/
 .cache/
-public/
 .next/
