@@ -14,8 +14,18 @@
         "module": "esnext",
         "moduleResolution": "node",
         "resolveJsonModule": true,
-        "isolatedModules": true
+        "isolatedModules": true,
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ]
     },
-    "include": ["src/**/*", "custom.d.ts", "next-env.d.ts"],
+    "include": [
+        "src/**/*",
+        "custom.d.ts",
+        "next-env.d.ts",
+        ".next/types/**/*.ts"
+    ],
     "exclude": ["node_modules"]
 }
