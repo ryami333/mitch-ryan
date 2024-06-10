@@ -8,9 +8,7 @@ export default function Layout({
 }): React.ReactElement {
     return (
         <html>
-            <head>
-                <title>Mitch Ryan | Kiwi Developer</title>
-            </head>
+            <head></head>
             <body>{children}</body>
         </html>
     );
