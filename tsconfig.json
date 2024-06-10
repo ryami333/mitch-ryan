@@ -3,10 +3,18 @@
         "esModuleInterop": true,
         "outDir": ".tscache",
         "incremental": true,
-        "jsx": "react",
+        "jsx": "preserve",
         "baseUrl": "./",
         "strict": true,
-        "lib": ["dom", "es6"]
+        "lib": ["dom", "es6"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "noEmit": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true
     },
-    "include": ["src/**/*.ts", "src/**/*.tsx", "custom.d.ts"]
+    "include": ["src/**/*.ts", "src/**/*.tsx", "custom.d.ts"],
+    "exclude": ["node_modules"]
 }
