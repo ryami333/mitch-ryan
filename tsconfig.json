@@ -16,6 +16,6 @@
         "resolveJsonModule": true,
         "isolatedModules": true
     },
-    "include": ["src/**/*", "custom.d.ts"],
+    "include": ["src/**/*", "custom.d.ts", "next-env.d.ts"],
     "exclude": ["node_modules"]
 }
