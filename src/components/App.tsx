@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Panel from './Panel';
-import CSSVariables from './CSSVariables';
 import FontStyles from './FontStyles';
-import GenericStyles from './GenericStyles';
 import Triangle from './Triangle';
 import { Provider as WindowProvider, useWindow } from './WindowContainer';
 import styles from './App.module.css';
@@ -25,10 +23,7 @@ function App(): React.ReactElement {
 export default function AppWrapper(): React.ReactElement {
     return (
         <WindowProvider>
-            <Reset />
-            <CSSVariables />
             <FontStyles />
-            <GenericStyles />
             <App />
         </WindowProvider>
     );
