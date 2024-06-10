@@ -6,10 +6,6 @@ interface ContextType {
   innerWidth: number;
 }
 
-interface ContainerProps {
-  children: React.ReactNode;
-}
-
 const Context = React.createContext<ContextType | null>(null);
 
 export default Context;
