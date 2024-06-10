@@ -8,6 +8,7 @@
         "strict": true,
         "lib": ["dom", "es6"],
         "allowJs": true,
+        "checkJs": true,
         "skipLibCheck": true,
         "noEmit": true,
         "module": "esnext",
@@ -15,6 +16,6 @@
         "resolveJsonModule": true,
         "isolatedModules": true
     },
-    "include": ["src/**/*.ts", "src/**/*.tsx", "custom.d.ts"],
+    "include": ["src/**/*", "custom.d.ts"],
     "exclude": ["node_modules"]
 }
