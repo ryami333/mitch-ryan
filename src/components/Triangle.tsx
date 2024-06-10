@@ -21,9 +21,9 @@ function getPosition({
     innerWidth,
     innerHeight,
 }: {
-    e: MouseEvent;
-    innerHeight: number;
-    innerWidth: number;
+    e: MouseEvent,
+    innerHeight: number,
+    innerWidth: number,
 }): number {
     const rx = 1 - e.clientX / innerWidth;
     const ry = e.clientY / innerHeight;

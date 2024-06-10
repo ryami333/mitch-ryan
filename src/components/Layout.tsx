@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 export default function Layout({
     children,
 }: {
-    children: React.ReactNode;
+    children: React.ReactNode,
 }): React.ReactElement {
     return (
         <React.Fragment>

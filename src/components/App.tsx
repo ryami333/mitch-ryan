@@ -9,28 +9,28 @@ import Triangle from './Triangle';
 import { Provider as WindowProvider, useWindow } from './WindowContainer';
 
 const Container = styled.div`
-	overflow: hidden;
+    overflow: hidden;
 `;
 
 function App(): React.ReactElement {
-	const windowState = useWindow();
+    const windowState = useWindow();
 
-	return (
-		<Container>
-			<Triangle {...windowState} />
-			<Panel />
-		</Container>
-	);
+    return (
+        <Container>
+            <Triangle {...windowState} />
+            <Panel />
+        </Container>
+    );
 }
 
 export default function AppWrapper(): React.ReactElement {
-	return (
-		<WindowProvider>
-			<Reset />
-			<CSSVariables />
-			<FontStyles />
-			<GenericStyles />
-			<App />
-		</WindowProvider>
-	);
+    return (
+        <WindowProvider>
+            <Reset />
+            <CSSVariables />
+            <FontStyles />
+            <GenericStyles />
+            <App />
+        </WindowProvider>
+    );
 }
