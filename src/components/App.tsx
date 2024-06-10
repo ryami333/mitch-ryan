@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Reset } from 'styled-reset';
 import Panel from './Panel';
 import CSSVariables from './CSSVariables';
 import FontStyles from './FontStyles';
