@@ -5,7 +5,7 @@
   "author": "<mitch.ryan@outlook.co.nz>",
   "license": "UNLICENSED",
   "engines": {
-    "node": "^20.19.5"
+    "node": "^22.21.1"
   },
   "devDependencies": {
     "@types/lodash": "^4.17.5",
