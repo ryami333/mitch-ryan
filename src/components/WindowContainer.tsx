@@ -27,9 +27,7 @@ export function Provider({
   React.useEffect((): (() => void) => {
     const handleResize = throttle((): void =>
       setState({
-        // eslint-disable-next-line react/no-unused-state
         innerHeight: window.innerHeight,
-        // eslint-disable-next-line react/no-unused-state
         innerWidth: window.innerWidth,
       }),
     );
