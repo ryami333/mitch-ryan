@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "outDir": ".tscache",
     "incremental": true,
     "jsx": "preserve",
     "baseUrl": "./",
     "strict": true,
     "lib": ["dom", "es6"],
+    "noEmit": true,
     "allowJs": true,
     "checkJs": true,
     "skipLibCheck": true,
