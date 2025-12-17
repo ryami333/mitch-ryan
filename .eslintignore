@@ -1,3 +1,4 @@
 public/
 .cache/
 .tscache/
+next-env.d.ts
