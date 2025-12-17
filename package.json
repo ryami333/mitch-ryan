@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "<mitch.ryan@outlook.co.nz>",
   "license": "UNLICENSED",
+  "engines": {
+    "node": "^18.20.2"
+  },
   "devDependencies": {
     "@types/lodash": "^4.17.5",
     "@types/node": "20.14.2",
