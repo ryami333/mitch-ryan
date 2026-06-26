@@ -86,6 +86,11 @@ dist
 # Nitro
 .nitro
 
+# Wrangler / Cloudflare
+.wrangler
+.dev.vars
+.dev.vars.*
+
 # TanStack Router (generated)
 src/routeTree.gen.ts
 

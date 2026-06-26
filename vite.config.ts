@@ -20,6 +20,19 @@ export default defineConfig({
       presets: [reactCompilerPreset()],
     }),
     nitro({
+      // Deploy to Cloudflare Workers with Static Assets (the unified
+      // Workers + Pages platform). Nitro emits a Worker entry plus a
+      // `.wrangler/deploy/config.json` that points Wrangler at the build
+      // output, so `wrangler deploy` works with no extra flags.
+      preset: "cloudflare_module",
+      // Required for the Static Assets binding (must be 2024-09-19 or later).
+      compatibilityDate: "2024-09-19",
+      cloudflare: {
+        // Generate the Wrangler deploy config from this build.
+        deployConfig: true,
+        // Use workerd's native Node.js compat (nodejs_compat flag).
+        nodeCompat: true,
+      },
       /**
        * Bundle src/assets as Nitro server assets so files like the Ausweis logo
        * are emitted into .output and readable at runtime via
