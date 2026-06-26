@@ -2,3 +2,7 @@ node_modules/**/*
 public/**/*
 .cache/**/*
 .tscache/**/*
+dist/**/*
+.output/**/*
+.nitro/**/*
+src/routeTree.gen.ts

@@ -3,24 +3,20 @@
     "esModuleInterop": true,
     "outDir": ".tscache",
     "incremental": true,
-    "jsx": "preserve",
+    "target": "ES2022",
+    "jsx": "react-jsx",
     "strict": true,
-    "lib": ["dom", "es6"],
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "allowJs": true,
     "checkJs": true,
     "skipLibCheck": true,
     "noEmit": true,
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "types": ["node"],
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "types": ["node", "vite/client"]
   },
-  "include": ["src/**/*", "next-env.d.ts", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*", "vite.config.ts"],
+  "exclude": ["node_modules", ".output", ".nitro", ".tscache"]
 }
