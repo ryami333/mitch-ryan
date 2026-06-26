@@ -1,0 +1,155 @@
+.hero {
+  position: relative;
+  min-height: calc(100vh - 61px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 56px var(--gutter) 72px;
+}
+
+.metaTop,
+.metaBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+
+.metaTop {
+  border-bottom: 1px solid var(--rule-ink);
+  padding-bottom: 18px;
+  margin-bottom: auto;
+}
+
+.metaBottom {
+  align-items: center;
+  border-top: 1px solid var(--rule-ink);
+  padding-top: 18px;
+  letter-spacing: 0.14em;
+}
+
+.metaStrong {
+  color: var(--color-ink);
+  font-weight: 500;
+}
+
+.metaLink {
+  color: var(--color-ink);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.metaLink:hover {
+  color: var(--color-rust);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 64px;
+  align-items: center;
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 48px auto;
+}
+
+.role {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--color-rust);
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: clamp(64px, 11vw, 122px);
+  line-height: 0.88;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  margin: 0 0 34px;
+}
+
+.intro {
+  font-size: 21px;
+  line-height: 1.55;
+  max-width: 46ch;
+  color: var(--color-ink-strong);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 42px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.socialLink {
+  color: var(--color-ink);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 23, 20, 0.35);
+  padding-bottom: 3px;
+  transition:
+    color 0.18s,
+    border-color 0.18s;
+}
+
+.socialLink:hover {
+  color: var(--color-rust);
+  border-bottom-color: var(--color-rust);
+}
+
+.portrait {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.portraitFrame {
+  position: relative;
+  border: 1px solid rgba(26, 23, 20, 0.28);
+  padding: 10px;
+  background: #e6dfd0;
+}
+
+.portraitImg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 380 / 506;
+  object-fit: cover;
+}
+
+.portraitCaption {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+
+.captionAccent {
+  color: var(--color-rust);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin: 36px auto;
+  }
+
+  .portrait {
+    max-width: 400px;
+  }
+}

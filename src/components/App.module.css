@@ -1,3 +1,6 @@
-.container {
-  overflow: hidden;
+.page {
+  width: 100%;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  overflow-x: hidden;
 }

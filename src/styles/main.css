@@ -1,5 +1,3 @@
-@import "./fonts.css";
 @import "./reset.css";
+@import "./tokens.css";
 @import "./base.css";
-@import "./spacing.css";
-@import "./colors.css";
