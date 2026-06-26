@@ -27,15 +27,18 @@ function Triangle({
   innerWidth,
   innerHeight,
 }: TriangleProps): React.ReactElement {
-  const [canvas, setCanvas] = React.useState<HTMLCanvasElement | null>(null);
-
-  const context = React.useMemo(
-    (): CanvasRenderingContext2D | null =>
-      canvas && canvas.getContext("2d", { alpha: false }),
-    [canvas],
-  );
+  const canvasRef = React.useRef<HTMLCanvasElement | null>(null);
+  const contextRef = React.useRef<CanvasRenderingContext2D | null>(null);
+  const [isCanvasReady, setIsCanvasReady] = React.useState(false);
 
   React.useLayoutEffect((): (() => void) => {
+    if (!isCanvasReady) {
+      return (): void => {};
+    }
+
+    const canvas = canvasRef.current;
+    const context = contextRef.current;
+
     if (canvas) {
       canvas.height = innerHeight;
       canvas.width = innerWidth;
@@ -45,11 +48,9 @@ function Triangle({
       const position = e ? getPosition({ e, innerHeight, innerWidth }) : 0.5;
 
       if (context) {
-        // Draw BG
         context.fillStyle = "#DDD";
         context.fillRect(0, 0, innerWidth, innerHeight);
 
-        // Draw Triangle
         context.beginPath();
         context.fillStyle = "#333";
         context.moveTo(0, (position - 0.5) * innerHeight);
@@ -65,14 +66,13 @@ function Triangle({
     handleMove();
 
     return (): void => window.removeEventListener("mousemove", handleMove);
-  }, [context, innerWidth, innerHeight]);
+  }, [isCanvasReady, innerWidth, innerHeight]);
 
-  const ref = React.useCallback(
-    (canvas: HTMLCanvasElement): void => {
-      setCanvas(canvas);
-    },
-    [setCanvas],
-  );
+  const ref = React.useCallback((el: HTMLCanvasElement | null): void => {
+    canvasRef.current = el;
+    contextRef.current = el ? el.getContext("2d", { alpha: false }) : null;
+    setIsCanvasReady(el !== null);
+  }, []);
 
   return <canvas className={cx("canvas")} ref={ref} />;
 }
