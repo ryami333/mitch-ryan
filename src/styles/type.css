@@ -6,18 +6,19 @@
   --font-family-display: "Berlin Type", system-ui, sans-serif;
   --font-family-mono: "JetBrains Mono", ui-monospace, monospace;
 
-  /* `font` shorthands: font-size / line-height font-family */
-  --font-mono-12px: var(--font-size-12px) / 1.5 var(--font-family-mono);
-  --font-mono-14px: var(--font-size-14px) / 1.5 var(--font-family-mono);
-  --font-mono-18px: var(--font-size-18px) / 1.5 var(--font-family-mono);
+  /* `font` shorthands: font-weight font-size / line-height font-family */
+  --font-mono-12px: 400 var(--font-size-12px) / 1.5 var(--font-family-mono);
+  --font-mono-14px: 400 var(--font-size-14px) / 1.5 var(--font-family-mono);
+  --font-mono-14px-bold: 600 var(--font-size-14px) / 1.5 var(--font-family-mono);
+  --font-mono-18px: 400 var(--font-size-18px) / 1.5 var(--font-family-mono);
 
-  --font-display-18px: var(--font-size-18px) / 1.62 var(--font-family-display);
-  --font-display-21px: var(--font-size-21px) / 1.55 var(--font-family-display);
-  --font-display-24px: var(--font-size-24px) / 1.5 var(--font-family-display);
-  --font-display-26px: var(--font-size-26px) / 1.5 var(--font-family-display);
+  --font-display-18px: 400 var(--font-size-18px) / 1.62 var(--font-family-display);
+  --font-display-21px: 400 var(--font-size-21px) / 1.55 var(--font-family-display);
+  --font-display-24px: 500 var(--font-size-24px) / 1.5 var(--font-family-display);
+  --font-display-26px: 600 var(--font-size-26px) / 1.5 var(--font-family-display);
 
-  --font-display-sm: var(--font-size-display-sm) / 1.5 var(--font-family-display);
-  --font-display-md: var(--font-size-display-md) / 1.04 var(--font-family-display);
-  --font-display-lg: var(--font-size-display-lg) / 1 var(--font-family-display);
-  --font-display-xl: var(--font-size-display-xl) / 0.88 var(--font-family-display);
+  --font-display-sm: 600 var(--font-size-display-sm) / 1.5 var(--font-family-display);
+  --font-display-md: 600 var(--font-size-display-md) / 1.04 var(--font-family-display);
+  --font-display-lg: 600 var(--font-size-display-lg) / 1 var(--font-family-display);
+  --font-display-xl: 600 var(--font-size-display-xl) / 0.88 var(--font-family-display);
 }

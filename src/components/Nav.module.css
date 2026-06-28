@@ -13,8 +13,7 @@
 }
 
 .brand {
-  font: var(--font-mono-14px);
-  font-weight: 600;
+  font: var(--font-mono-14px-bold);
   letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--color-ink);

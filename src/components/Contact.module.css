@@ -28,7 +28,6 @@
 
 .prompt {
   font: var(--font-display-24px);
-  font-weight: 500;
   color: var(--color-ink-strong);
   margin-bottom: var(--spacing-md);
 }
@@ -36,7 +35,6 @@
 .email {
   display: inline-block;
   font: var(--font-display-lg);
-  font-weight: 600;
   letter-spacing: -0.03em;
   color: var(--color-ink);
   text-decoration: none;
