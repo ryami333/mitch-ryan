@@ -56,7 +56,7 @@
   margin: var(--spacing-xl) auto;
 
   @media (width > 900px) {
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: auto minmax(0, 1fr);
     gap: var(--spacing-3xl);
     margin: var(--spacing-2xl) auto;
   }
