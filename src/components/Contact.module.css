@@ -72,7 +72,7 @@
   font-size: 13px;
 }
 
-.socialLink {
+.social-link {
   color: var(--color-ink);
   text-decoration: none;
   border-bottom: 1px solid rgba(26, 23, 20, 0.35);
@@ -82,7 +82,7 @@
     border-color 0.18s;
 }
 
-.socialLink:hover {
+.social-link:hover {
   color: var(--color-rust);
   border-bottom-color: var(--color-rust);
 }

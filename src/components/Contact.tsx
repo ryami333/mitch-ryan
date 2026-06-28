@@ -33,7 +33,7 @@ export default function Contact() {
                 href={href}
                 target="_blank"
                 rel="noreferrer"
-                className={cx("socialLink")}
+                className={cx("social-link")}
               >
                 {label}
               </a>

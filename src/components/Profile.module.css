@@ -30,7 +30,7 @@
   mix-blend-mode: multiply;
 }
 
-.topRule {
+.top-rule {
   position: absolute;
   left: 0;
   right: 0;
@@ -89,7 +89,7 @@
   margin: 0;
 }
 
-.sheetRow {
+.sheet-row {
   display: grid;
   grid-template-columns: 130px 1fr;
   gap: 18px;
@@ -98,12 +98,12 @@
   font-size: 14px;
 }
 
-.sheetKey {
+.sheet-key {
   color: var(--color-cream-faint);
   letter-spacing: 0.08em;
 }
 
-.sheetVal {
+.sheet-val {
   color: var(--color-paper-alt);
   margin: 0;
   line-height: 1.5;
@@ -121,7 +121,7 @@
 }
 
 @media (max-width: 460px) {
-  .sheetRow {
+  .sheet-row {
     grid-template-columns: 110px 1fr;
     gap: 12px;
   }

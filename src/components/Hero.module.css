@@ -7,8 +7,8 @@
   padding: 56px var(--gutter) 72px;
 }
 
-.metaTop,
-.metaBottom {
+.meta-top,
+.meta-bottom {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -19,31 +19,31 @@
   color: var(--color-ink-faint);
 }
 
-.metaTop {
+.meta-top {
   border-bottom: 1px solid var(--rule-ink);
   padding-bottom: 18px;
   margin-bottom: auto;
 }
 
-.metaBottom {
+.meta-bottom {
   align-items: center;
   border-top: 1px solid var(--rule-ink);
   padding-top: 18px;
   letter-spacing: 0.14em;
 }
 
-.metaStrong {
+.meta-strong {
   color: var(--color-ink);
   font-weight: 500;
 }
 
-.metaLink {
+.meta-link {
   color: var(--color-ink);
   text-decoration: none;
   transition: color 0.18s;
 }
 
-.metaLink:hover {
+.meta-link:hover {
   color: var(--color-rust);
 }
 
@@ -91,7 +91,7 @@
   font-size: 13px;
 }
 
-.socialLink {
+.social-link {
   color: var(--color-ink);
   text-decoration: none;
   border-bottom: 1px solid rgba(26, 23, 20, 0.35);
@@ -101,7 +101,7 @@
     border-color 0.18s;
 }
 
-.socialLink:hover {
+.social-link:hover {
   color: var(--color-rust);
   border-bottom-color: var(--color-rust);
 }
@@ -113,14 +113,14 @@
   gap: 14px;
 }
 
-.portraitFrame {
+.portrait-frame {
   position: relative;
   border: 1px solid rgba(26, 23, 20, 0.28);
   padding: 10px;
   background: #e6dfd0;
 }
 
-.portraitImg {
+.portrait-img {
   display: block;
   width: 100%;
   height: auto;
@@ -128,7 +128,7 @@
   object-fit: cover;
 }
 
-.portraitCaption {
+.portrait-caption {
   display: flex;
   justify-content: space-between;
   font-family: var(--font-mono);
@@ -138,7 +138,7 @@
   color: var(--color-ink-faint);
 }
 
-.captionAccent {
+.caption-accent {
   color: var(--color-rust);
 }
 

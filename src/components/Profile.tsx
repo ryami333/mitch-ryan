@@ -39,7 +39,7 @@ export default function Profile() {
         className={cx("bg")}
       />
       <div className={cx("scanlines")} aria-hidden="true" />
-      <div className={cx("topRule")} aria-hidden="true" />
+      <div className={cx("top-rule")} aria-hidden="true" />
 
       <div className={cx("inner")}>
         <div className={cx("eyebrow")}>02 — Profile</div>
@@ -64,9 +64,9 @@ export default function Profile() {
 
           <dl className={cx("sheet")}>
             {ROWS.map((row) => (
-              <div key={row.key} className={cx("sheetRow")}>
-                <dt className={cx("sheetKey")}>{row.key}</dt>
-                <dd className={cx("sheetVal", { accent: row.accent })}>
+              <div key={row.key} className={cx("sheet-row")}>
+                <dt className={cx("sheet-key")}>{row.key}</dt>
+                <dd className={cx("sheet-val", { accent: row.accent })}>
                   {row.value}
                 </dd>
               </div>

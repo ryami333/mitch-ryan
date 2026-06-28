@@ -62,20 +62,20 @@
   padding-right: 6px;
 }
 
-.rowNum {
+.row-num {
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--color-rust);
 }
 
-.rowName {
+.row-name {
   font-size: 26px;
   font-weight: 600;
   letter-spacing: -0.01em;
   margin-bottom: 6px;
 }
 
-.rowDesc {
+.row-desc {
   font-family: var(--font-mono);
   font-size: 13px;
   line-height: 1.5;
@@ -83,14 +83,14 @@
   max-width: 42ch;
 }
 
-.rowStack {
+.row-stack {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.06em;
   color: var(--color-ink-muted);
 }
 
-.rowKind {
+.row-kind {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.12em;
@@ -98,7 +98,7 @@
   color: var(--color-ink-ghost);
 }
 
-.rowArrow {
+.row-arrow {
   font-family: var(--font-mono);
   font-size: 18px;
   color: var(--color-rust);
@@ -117,23 +117,23 @@
     align-items: start;
   }
 
-  .rowNum {
+  .row-num {
     grid-area: num;
   }
 
-  .rowBody {
+  .row-body {
     grid-area: body;
   }
 
-  .rowStack {
+  .row-stack {
     grid-area: stack;
   }
 
-  .rowKind {
+  .row-kind {
     grid-area: kind;
   }
 
-  .rowArrow {
+  .row-arrow {
     grid-area: arrow;
     align-self: start;
   }

@@ -74,14 +74,14 @@ export default function Work() {
               rel="noreferrer"
               className={cx("row")}
             >
-              <span className={cx("rowNum")}>{p.n}</span>
-              <div className={cx("rowBody")}>
-                <div className={cx("rowName")}>{p.name}</div>
-                <div className={cx("rowDesc")}>{p.desc}</div>
+              <span className={cx("row-num")}>{p.n}</span>
+              <div className={cx("row-body")}>
+                <div className={cx("row-name")}>{p.name}</div>
+                <div className={cx("row-desc")}>{p.desc}</div>
               </div>
-              <div className={cx("rowStack")}>{p.stack}</div>
-              <div className={cx("rowKind")}>{p.kind}</div>
-              <span className={cx("rowArrow")}>↗</span>
+              <div className={cx("row-stack")}>{p.stack}</div>
+              <div className={cx("row-kind")}>{p.kind}</div>
+              <span className={cx("row-arrow")}>↗</span>
             </a>
           ))}
         </div>

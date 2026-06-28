@@ -14,8 +14,8 @@ const SOCIALS = [
 export default function Hero() {
   return (
     <section id="top" className={cx("hero")}>
-      <div className={cx("metaTop")}>
-        <span className={cx("metaStrong")}>Homepage — 2026</span>
+      <div className={cx("meta-top")}>
+        <span className={cx("meta-strong")}>Homepage — 2026</span>
         <span>Developer — Berlin, DE</span>
       </div>
 
@@ -40,7 +40,7 @@ export default function Hero() {
               <a
                 key={label}
                 href={href}
-                className={cx("socialLink")}
+                className={cx("social-link")}
                 {...(href.startsWith("http")
                   ? { target: "_blank", rel: "noreferrer" }
                   : {})}
@@ -52,25 +52,25 @@ export default function Hero() {
         </div>
 
         <figure className={cx("portrait")}>
-          <div className={cx("portraitFrame")}>
+          <div className={cx("portrait-frame")}>
             <img
               src="/images/portrait.jpg"
               alt="Mitch Ryan"
               width={380}
               height={506}
-              className={cx("portraitImg")}
+              className={cx("portrait-img")}
             />
           </div>
-          <figcaption className={cx("portraitCaption")}>
+          <figcaption className={cx("portrait-caption")}>
             <span>Fig.01 — Self</span>
-            <span className={cx("captionAccent")}>Berlin, DE</span>
+            <span className={cx("caption-accent")}>Berlin, DE</span>
           </figcaption>
         </figure>
       </div>
 
-      <div className={cx("metaBottom")}>
+      <div className={cx("meta-bottom")}>
         <span>Full-stack · Interactive media</span>
-        <Link to="/" hash="work" className={cx("metaLink")}>
+        <Link to="/" hash="work" className={cx("meta-link")}>
           Selected work ↓
         </Link>
       </div>
