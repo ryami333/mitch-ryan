@@ -1,0 +1,8 @@
+:root {
+  /* ----------------------------------------------------------------- */
+  /* TYPE */
+  /* ----------------------------------------------------------------- */
+
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
