@@ -1,0 +1,17 @@
+:root {
+  --font-size-2xs: 11px;
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+  --font-size-md: 14px;
+  --font-size-lg: 18px;
+  --font-size-xl: 19px;
+  --font-size-2xl: 21px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 26px;
+
+  /* Fluid display sizes */
+  --font-size-display-sm: clamp(32px, 5vw, 46px);
+  --font-size-display-md: clamp(34px, 4.4vw, 52px);
+  --font-size-display-lg: clamp(40px, 6.4vw, 92px);
+  --font-size-display-xl: clamp(64px, 11vw, 122px);
+}
