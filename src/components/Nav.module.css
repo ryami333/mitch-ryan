@@ -9,7 +9,7 @@
   background: color-mix(in srgb, var(--color-paper), transparent 18%);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--rule-ink);
+  border-bottom: 1px solid var(--color-ink);
 }
 
 .brand {
