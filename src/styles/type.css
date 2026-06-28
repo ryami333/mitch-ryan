@@ -11,6 +11,11 @@
   --font-mono-14px: var(--font-size-14px) / 1.5 var(--font-family-mono);
   --font-mono-18px: var(--font-size-18px) / 1.5 var(--font-family-mono);
 
+  --font-display-18px: var(--font-size-18px) / 1.62 var(--font-family-display);
+  --font-display-21px: var(--font-size-21px) / 1.55 var(--font-family-display);
+  --font-display-24px: var(--font-size-24px) / 1.5 var(--font-family-display);
+  --font-display-26px: var(--font-size-26px) / 1.5 var(--font-family-display);
+
   --font-display-sm: var(--font-size-display-sm) / 1.5 var(--font-family-display);
   --font-display-md: var(--font-size-display-md) / 1.04 var(--font-family-display);
   --font-display-lg: var(--font-size-display-lg) / 1 var(--font-family-display);

@@ -27,10 +27,10 @@
 }
 
 .prompt {
-  font-size: var(--font-size-24px);
+  font: var(--font-display-24px);
+  font-weight: 500;
   color: var(--color-ink-strong);
   margin-bottom: var(--spacing-md);
-  font-weight: 500;
 }
 
 .email {
