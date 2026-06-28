@@ -1,8 +1,0 @@
-:root {
-  /* ----------------------------------------------------------------- */
-  /* HAIRLINE RULES — borders + outlines
-  /* ----------------------------------------------------------------- */
-  --rule-ink: color-mix(in srgb, var(--color-ink), transparent 84%);
-  --rule-ink-strong: color-mix(in srgb, var(--color-ink), transparent 78%);
-  --rule-cream: color-mix(in srgb, var(--color-paper-alt), transparent 82%);
-}
