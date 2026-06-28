@@ -64,7 +64,7 @@
 
 .row-num {
   font-family: var(--font-mono);
-  font-size: var(--font-size-13px);
+  font-size: var(--font-size-14px);
   color: var(--color-rust);
 }
 
@@ -77,7 +77,7 @@
 
 .row-desc {
   font-family: var(--font-mono);
-  font-size: var(--font-size-13px);
+  font-size: var(--font-size-14px);
   line-height: 1.5;
   color: var(--color-ink-faint);
   max-width: 42ch;
