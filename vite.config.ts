@@ -20,18 +20,17 @@ export default defineConfig({
       presets: [reactCompilerPreset()],
     }),
     nitro({
-      // Deploy to Cloudflare Workers with Static Assets (the unified
-      // Workers + Pages platform). Nitro emits a Worker entry plus a
-      // `.wrangler/deploy/config.json` that points Wrangler at the build
-      // output, so `wrangler deploy` works with no extra flags.
-      preset: "cloudflare_module",
-      // Required for the Static Assets binding (must be 2024-09-19 or later).
-      compatibilityDate: "2024-09-19",
-      cloudflare: {
-        // Generate the Wrangler deploy config from this build.
-        deployConfig: true,
-        // Use workerd's native Node.js compat (nodejs_compat flag).
-        nodeCompat: true,
+      // Deploy to AWS Amplify Hosting (Web Compute / SSR). Nitro emits a
+      // `deploy-manifest.json` bundle under `.amplify-hosting/` — a static
+      // dir plus a Lambda-style compute handler — which Amplify consumes
+      // directly (see amplify.yml).
+      preset: "aws-amplify",
+      // Pin the compute Lambda runtime; the preset otherwise defaults to
+      // nodejs20.x. nodejs22.x is the newest runtime Amplify Web Compute
+      // supports (Amplify has no Node 24 runtime yet — see note below about
+      // the gap with this project's `engines: node ^24.18.0`).
+      awsAmplify: {
+        runtime: "nodejs22.x",
       },
       /**
        * Bundle src/assets as Nitro server assets so files like the Ausweis logo
