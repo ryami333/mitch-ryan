@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px var(--gutter);
+  padding: var(--spacing-md) var(--gutter);
   background: rgba(215, 210, 196, 0.82);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -24,7 +24,7 @@
 
 .links {
   display: flex;
-  gap: 34px;
+  gap: var(--spacing-xl);
   align-items: center;
   font-family: var(--font-mono);
   font-size: 12px;
@@ -32,7 +32,7 @@
   text-transform: uppercase;
 
   @media (max-width: 600px) {
-    gap: 18px;
+    gap: var(--spacing-md);
   }
 }
 

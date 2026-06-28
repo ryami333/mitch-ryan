@@ -28,13 +28,13 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-rust);
-  margin-bottom: 30px;
+  margin-bottom: var(--spacing-xl);
 }
 
 .prompt {
   font-size: 24px;
   color: var(--color-ink-strong);
-  margin-bottom: 14px;
+  margin-bottom: var(--spacing-md);
   font-weight: 500;
 }
 
@@ -46,7 +46,7 @@
   color: var(--color-ink);
   text-decoration: none;
   line-height: 1;
-  margin-bottom: 64px;
+  margin-bottom: var(--spacing-3xl);
   word-break: break-word;
   transition: color 0.18s;
 
@@ -60,9 +60,9 @@
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: var(--spacing-lg);
   border-top: 1px solid rgba(26, 23, 20, 0.2);
-  padding-top: 24px;
+  padding-top: var(--spacing-lg);
 }
 
 .social {
@@ -76,7 +76,7 @@
   color: var(--color-ink);
   text-decoration: none;
   border-bottom: 1px solid rgba(26, 23, 20, 0.35);
-  padding-bottom: 3px;
+  padding-bottom: var(--spacing-xs);
   transition:
     color 0.18s,
     border-color 0.18s;

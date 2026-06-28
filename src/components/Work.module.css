@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 8px;
+  margin-bottom: var(--spacing-sm);
 }
 
 .eyebrow {
@@ -47,7 +47,7 @@
   grid-template-columns: 54px 1.5fr 1fr 150px 32px;
   gap: 28px;
   align-items: center;
-  padding: 26px 14px;
+  padding: var(--spacing-lg) var(--spacing-md);
   border-bottom: 1px solid var(--rule-ink);
   text-decoration: none;
   color: var(--color-ink);
@@ -57,7 +57,7 @@
 
   &:hover {
     background: rgba(26, 23, 20, 0.05);
-    padding-left: 22px;
+    padding-left: var(--spacing-lg);
     padding-right: 6px;
   }
 }
@@ -112,8 +112,8 @@
       "num body arrow"
       ".   stack arrow"
       ".   kind arrow";
-    column-gap: 16px;
-    row-gap: 8px;
+    column-gap: var(--spacing-md);
+    row-gap: var(--spacing-sm);
     align-items: start;
   }
 
@@ -139,7 +139,7 @@
   }
 
   .row:hover {
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
   }
 }

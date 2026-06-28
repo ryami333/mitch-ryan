@@ -21,14 +21,14 @@
 
 .meta-top {
   border-bottom: 1px solid var(--rule-ink);
-  padding-bottom: 18px;
+  padding-bottom: var(--spacing-md);
   margin-bottom: auto;
 }
 
 .meta-bottom {
   align-items: center;
   border-top: 1px solid var(--rule-ink);
-  padding-top: 18px;
+  padding-top: var(--spacing-md);
   letter-spacing: 0.14em;
 }
 
@@ -50,16 +50,16 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr 400px;
-  gap: 64px;
+  gap: var(--spacing-3xl);
   align-items: center;
   max-width: var(--max-width);
   width: 100%;
-  margin: 48px auto;
+  margin: var(--spacing-2xl) auto;
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
     gap: 40px;
-    margin: 36px auto;
+    margin: var(--spacing-xl) auto;
   }
 }
 
@@ -68,7 +68,7 @@
   font-size: 13px;
   letter-spacing: 0.04em;
   color: var(--color-rust);
-  margin-bottom: 24px;
+  margin-bottom: var(--spacing-lg);
 }
 
 .title {
@@ -76,7 +76,7 @@
   line-height: 0.88;
   font-weight: 600;
   letter-spacing: -0.035em;
-  margin: 0 0 34px;
+  margin: 0 0 var(--spacing-xl);
 }
 
 .intro {
@@ -92,7 +92,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 28px;
-  margin-top: 42px;
+  margin-top: var(--spacing-2xl);
   font-family: var(--font-mono);
   font-size: 13px;
 }
@@ -101,7 +101,7 @@
   color: var(--color-ink);
   text-decoration: none;
   border-bottom: 1px solid rgba(26, 23, 20, 0.35);
-  padding-bottom: 3px;
+  padding-bottom: var(--spacing-xs);
   transition:
     color 0.18s,
     border-color 0.18s;
@@ -116,7 +116,7 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: var(--spacing-md);
 
   @media (max-width: 900px) {
     max-width: 400px;
@@ -126,7 +126,7 @@
 .portrait-frame {
   position: relative;
   border: 1px solid rgba(26, 23, 20, 0.28);
-  padding: 10px;
+  padding: var(--spacing-sm);
   background: #e6dfd0;
 }
 

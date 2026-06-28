@@ -62,7 +62,7 @@
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: var(--spacing-2xl);
   }
 }
 
@@ -71,7 +71,7 @@
   line-height: 1.04;
   font-weight: 600;
   letter-spacing: -0.025em;
-  margin: 0 0 30px;
+  margin: 0 0 var(--spacing-xl);
   text-wrap: balance;
 }
 
@@ -97,8 +97,8 @@
 .sheet-row {
   display: grid;
   grid-template-columns: 130px 1fr;
-  gap: 18px;
-  padding: 16px 0;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) 0;
   border-bottom: 1px solid rgba(239, 233, 221, 0.12);
   font-size: 14px;
 

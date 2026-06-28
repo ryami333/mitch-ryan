@@ -1,7 +1,7 @@
 .marquee {
   background: var(--color-ink);
   overflow: hidden;
-  padding: 17px 0;
+  padding: var(--spacing-md) 0;
 }
 
 .track {
@@ -23,8 +23,8 @@
 .item {
   display: inline-flex;
   align-items: center;
-  gap: 30px;
-  padding: 0 30px;
+  gap: var(--spacing-xl);
+  padding: 0 var(--spacing-xl);
   font-family: var(--font-mono);
   font-size: 13px;
   letter-spacing: 0.18em;
