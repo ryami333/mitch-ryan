@@ -23,7 +23,7 @@
 }
 
 .title {
-  font-size: var(--font-size-display-sm);
+  font: var(--font-display-sm);
   font-weight: 600;
   letter-spacing: -0.02em;
   margin: 0 0 40px;

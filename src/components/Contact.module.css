@@ -35,12 +35,11 @@
 
 .email {
   display: inline-block;
-  font-size: var(--font-size-display-lg);
+  font: var(--font-display-lg);
   font-weight: 600;
   letter-spacing: -0.03em;
   color: var(--color-ink);
   text-decoration: none;
-  line-height: 1;
   margin-bottom: var(--spacing-3xl);
   word-break: break-word;
   transition: color 0.18s;

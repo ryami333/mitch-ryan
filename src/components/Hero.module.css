@@ -67,8 +67,7 @@
 }
 
 .title {
-  font-size: var(--font-size-display-xl);
-  line-height: 0.88;
+  font: var(--font-display-xl);
   font-weight: 600;
   letter-spacing: -0.035em;
   margin: 0 0 var(--spacing-xl);
