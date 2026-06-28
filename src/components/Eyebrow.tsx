@@ -14,7 +14,7 @@ interface EyebrowProps {
 export default function Eyebrow({
   children,
   color = "rust",
-  transformUppercase = true,
+  transformUppercase = false,
   className,
 }: EyebrowProps) {
   return (

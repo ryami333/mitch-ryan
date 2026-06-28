@@ -22,7 +22,7 @@ export default function Hero() {
 
       <div className={cx("grid")}>
         <div className={cx("lead")}>
-          <Eyebrow transformUppercase={false} className={cx("role")}>
+          <Eyebrow className={cx("role")}>
             Head of Development — Diesdas Digital
           </Eyebrow>
           <h1 className={cx("title")}>

@@ -20,7 +20,9 @@ export default function Contact() {
         className={cx("bg")}
       />
       <div className={cx("inner")}>
-        <Eyebrow className={cx("eyebrow")}>03 — Contact</Eyebrow>
+        <Eyebrow transformUppercase className={cx("eyebrow")}>
+          03 — Contact
+        </Eyebrow>
         <div className={cx("prompt")}>Got something worth building?</div>
         <a href="mailto:ohai@mitch-ryan.com" className={cx("email")}>
           ohai@mitch-ryan.com

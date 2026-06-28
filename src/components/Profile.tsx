@@ -43,7 +43,7 @@ export default function Profile() {
       <div className={cx("top-rule")} aria-hidden="true" />
 
       <div className={cx("inner")}>
-        <Eyebrow color="clay" className={cx("eyebrow")}>
+        <Eyebrow color="clay" transformUppercase className={cx("eyebrow")}>
           02 — Profile
         </Eyebrow>
 
