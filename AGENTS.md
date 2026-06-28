@@ -5,16 +5,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Overview
 
 Personal portfolio site (mitch-ryan) — a single-page React 19 app rendered with
-TanStack Start (SSR) and deployed to Cloudflare Workers via Nitro.
+TanStack Start (SSR) and deployed to AWS Amplify Hosting (Web Compute) via Nitro.
 
 ## Commands
 
 Package manager is **Yarn 4** (`packageManager: yarn@4.17.0`); Node `^24.18.0`.
 
 - `yarn dev` — Vite dev server on http://localhost:3000
-- `yarn build` — production build to `.output/`
-- `yarn preview` — run the built Worker locally with `wrangler dev`
-- `yarn deploy` — `vite build && wrangler deploy` to Cloudflare
+- `yarn build` — production build to `.amplify-hosting/` (Nitro aws-amplify preset)
+- `yarn preview` — run the built compute server locally (`node .amplify-hosting/compute/default/server.js`)
 - `yarn lint` — ESLint over the repo
 - `yarn typecheck` — `tsc` (no-emit type check)
 
@@ -29,11 +28,13 @@ There is no test runner configured.
 - **Page structure**: The site is one page. `components/App.tsx` composes the sections
   in order: `Nav`, `Hero`, `Marquee`, `Work`, `Profile`, `Contact`.
 - **Build/deploy pipeline**: `vite.config.ts` wires TanStack Start + the React Compiler
-  (via Babel) + Nitro's `cloudflare_module` preset. Nitro generates the Worker entry and
-  `.wrangler/deploy/config.json`, merging in project fields from `wrangler.jsonc`, so
-  `wrangler deploy` needs no extra flags. Server-side assets are bundled via Nitro
-  `serverAssets` (read at runtime through `useStorage("assets/static")`), because Vite's
-  `?url`/`?inline` don't reliably emit assets referenced only from server code.
+  (via Babel) + Nitro's `aws-amplify` preset. Nitro emits a `.amplify-hosting/` bundle
+  (a `static/` dir, a `compute/default/server.js` handler, and `deploy-manifest.json`)
+  that AWS Amplify Hosting consumes directly. Deploys run in Amplify's CI on git push,
+  driven by `amplify.yml` (install/build steps); there is no local deploy command. The
+  compute Lambda runtime is pinned via `awsAmplify.runtime`. Server-side assets are
+  bundled via Nitro `serverAssets` (read at runtime through `useStorage("assets/static")`),
+  because Vite's `?url`/`?inline` don't reliably emit assets referenced only from server code.
 
 ## Styling conventions
 
