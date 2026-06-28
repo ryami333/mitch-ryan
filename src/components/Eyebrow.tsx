@@ -19,12 +19,9 @@ export default function Eyebrow({
 }: EyebrowProps) {
   return (
     <div
-      className={cx(
-        "eyebrow",
-        transformUppercase && "uppercase",
-        color === "clay" && "clay",
-        className,
-      )}
+      className={cx("eyebrow", className)}
+      data-color={color}
+      data-uppercase={JSON.stringify(!!transformUppercase)}
     >
       {children}
     </div>

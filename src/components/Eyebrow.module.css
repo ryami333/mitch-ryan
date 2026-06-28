@@ -1,14 +1,17 @@
 .eyebrow {
   font: var(--font-mono-14px);
   letter-spacing: 0.04em;
-  color: var(--color-rust);
-}
 
-.uppercase {
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-}
+  &[data-color="clay"] {
+    color: var(--color-clay);
+  }
 
-.clay {
-  color: var(--color-clay);
+  &[data-color="rust"] {
+    color: var(--color-rust);
+  }
+
+  &[data-uppercase="true"] {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
 }
