@@ -22,7 +22,14 @@ export const Route = createRootRoute({
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap",
+      },
+      {
+        rel: "preload",
+        href: "/fonts/BerlinTypeWeb-Regular.woff2",
+        as: "font",
+        type: "font/woff2",
+        crossOrigin: "anonymous",
       },
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico" },

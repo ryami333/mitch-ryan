@@ -42,7 +42,7 @@ export default function Contact() {
           <div className={cx("colophon")}>
             © 2026 Mitch Ryan — Berlin, DE
             <br />
-            Set in Space Grotesk &amp; JetBrains Mono
+            Set in Berlin Type &amp; JetBrains Mono
           </div>
         </div>
       </div>

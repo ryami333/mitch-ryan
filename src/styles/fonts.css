@@ -1,0 +1,24 @@
+/* ------------------------------------------------------------------- */
+/* Berlin Type — the official Berlin font (self-hosted)                 */
+/* https://wir.berlin/en/be-a-part/the-new-berlin-font                  */
+/* ------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Berlin Type";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("/fonts/BerlinTypeWeb-Regular.woff2") format("woff2"),
+    url("/fonts/BerlinTypeWeb-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Berlin Type";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("/fonts/BerlinTypeWeb-Bold.woff2") format("woff2"),
+    url("/fonts/BerlinTypeWeb-Bold.woff") format("woff");
+}
