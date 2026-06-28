@@ -64,10 +64,6 @@
 }
 
 .role {
-  font-family: var(--font-mono);
-  font-size: var(--font-size-14px);
-  letter-spacing: 0.04em;
-  color: var(--color-rust);
   margin-bottom: var(--spacing-lg);
 }
 

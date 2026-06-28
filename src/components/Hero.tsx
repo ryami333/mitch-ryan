@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import classNames from "classnames/bind";
+import Eyebrow from "./Eyebrow";
 import styles from "./Hero.module.css";
 
 const cx = classNames.bind(styles);
@@ -21,9 +22,9 @@ export default function Hero() {
 
       <div className={cx("grid")}>
         <div className={cx("lead")}>
-          <div className={cx("role")}>
+          <Eyebrow transformUppercase={false} className={cx("role")}>
             Head of Development — Diesdas Digital
-          </div>
+          </Eyebrow>
           <h1 className={cx("title")}>
             Mitch
             <br />
