@@ -8,6 +8,10 @@
   display: flex;
   width: max-content;
   animation: mr-marquee 34s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 }
 
 .group {
@@ -39,11 +43,5 @@
   }
   to {
     transform: translateX(-50%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .track {
-    animation: none;
   }
 }

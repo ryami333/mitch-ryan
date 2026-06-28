@@ -41,10 +41,10 @@
   color: var(--color-ink);
   text-decoration: none;
   transition: color 0.18s;
-}
 
-.meta-link:hover {
-  color: var(--color-rust);
+  &:hover {
+    color: var(--color-rust);
+  }
 }
 
 .grid {
@@ -55,6 +55,12 @@
   max-width: var(--max-width);
   width: 100%;
   margin: 48px auto;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin: 36px auto;
+  }
 }
 
 .role {
@@ -99,11 +105,11 @@
   transition:
     color 0.18s,
     border-color 0.18s;
-}
 
-.social-link:hover {
-  color: var(--color-rust);
-  border-bottom-color: var(--color-rust);
+  &:hover {
+    color: var(--color-rust);
+    border-bottom-color: var(--color-rust);
+  }
 }
 
 .portrait {
@@ -111,6 +117,10 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
+
+  @media (max-width: 900px) {
+    max-width: 400px;
+  }
 }
 
 .portrait-frame {
@@ -140,16 +150,4 @@
 
 .caption-accent {
   color: var(--color-rust);
-}
-
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    margin: 36px auto;
-  }
-
-  .portrait {
-    max-width: 400px;
-  }
 }

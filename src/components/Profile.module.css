@@ -59,6 +59,11 @@
   grid-template-columns: 1.05fr 0.95fr;
   gap: 80px;
   align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
 }
 
 .title {
@@ -77,10 +82,10 @@
   margin: 0 0 20px;
   max-width: 50ch;
   text-wrap: pretty;
-}
 
-.body:last-child {
-  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .sheet {
@@ -96,6 +101,11 @@
   padding: 16px 0;
   border-bottom: 1px solid rgba(239, 233, 221, 0.12);
   font-size: 14px;
+
+  @media (max-width: 460px) {
+    grid-template-columns: 110px 1fr;
+    gap: 12px;
+  }
 }
 
 .sheet-key {
@@ -111,18 +121,4 @@
 
 .accent {
   color: var(--color-clay);
-}
-
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-}
-
-@media (max-width: 460px) {
-  .sheet-row {
-    grid-template-columns: 110px 1fr;
-    gap: 12px;
-  }
 }

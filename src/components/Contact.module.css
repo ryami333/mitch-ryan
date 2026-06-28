@@ -49,10 +49,10 @@
   margin-bottom: 64px;
   word-break: break-word;
   transition: color 0.18s;
-}
 
-.email:hover {
-  color: var(--color-rust);
+  &:hover {
+    color: var(--color-rust);
+  }
 }
 
 .footer {
@@ -80,11 +80,11 @@
   transition:
     color 0.18s,
     border-color 0.18s;
-}
 
-.social-link:hover {
-  color: var(--color-rust);
-  border-bottom-color: var(--color-rust);
+  &:hover {
+    color: var(--color-rust);
+    border-bottom-color: var(--color-rust);
+  }
 }
 
 .colophon {

@@ -30,20 +30,18 @@
   font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+
+  @media (max-width: 600px) {
+    gap: 18px;
+  }
 }
 
 .link {
   color: var(--color-ink-muted);
   text-decoration: none;
   transition: color 0.18s;
-}
 
-.link:hover {
-  color: var(--color-rust);
-}
-
-@media (max-width: 600px) {
-  .links {
-    gap: 18px;
+  &:hover {
+    color: var(--color-rust);
   }
 }
