@@ -1,8 +1,8 @@
 :root {
   /* Hairline rules */
-  --rule-ink: rgba(26, 23, 20, 0.16);
-  --rule-ink-strong: rgba(26, 23, 20, 0.22);
-  --rule-cream: rgba(239, 233, 221, 0.18);
+  --rule-ink: color-mix(in srgb, var(--color-ink), transparent 84%);
+  --rule-ink-strong: color-mix(in srgb, var(--color-ink), transparent 78%);
+  --rule-cream: color-mix(in srgb, var(--color-paper-alt), transparent 82%);
 
   /* ----------------------------------------------------------------- */
   /* LAYOUT */

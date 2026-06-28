@@ -84,7 +84,7 @@
 }
 
 .sheet {
-  border-top: 1px solid rgba(239, 233, 221, 0.22);
+  border-top: 1px solid color-mix(in srgb, var(--color-paper-alt), transparent 78%);
   font-family: var(--font-mono);
   margin: 0;
 }
@@ -94,7 +94,7 @@
   grid-template-columns: 130px 1fr;
   gap: var(--spacing-md);
   padding: var(--spacing-md) 0;
-  border-bottom: 1px solid rgba(239, 233, 221, 0.12);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-paper-alt), transparent 88%);
   font-size: var(--font-size-14px);
 
   @media (max-width: 460px) {

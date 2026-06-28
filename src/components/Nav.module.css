@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-md) var(--gutter);
-  background: rgba(215, 210, 196, 0.82);
+  background: color-mix(in srgb, var(--color-paper), transparent 18%);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--rule-ink);

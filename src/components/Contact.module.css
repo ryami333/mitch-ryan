@@ -56,7 +56,7 @@
   align-items: flex-end;
   flex-wrap: wrap;
   gap: var(--spacing-lg);
-  border-top: 1px solid rgba(26, 23, 20, 0.2);
+  border-top: 1px solid color-mix(in srgb, var(--color-ink), transparent 80%);
   padding-top: var(--spacing-lg);
 }
 
@@ -70,7 +70,7 @@
 .social-link {
   color: var(--color-ink);
   text-decoration: none;
-  border-bottom: 1px solid rgba(26, 23, 20, 0.35);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-ink), transparent 65%);
   padding-bottom: var(--spacing-xs);
   transition:
     color 0.18s,

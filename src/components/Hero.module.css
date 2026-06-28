@@ -96,7 +96,7 @@
 .social-link {
   color: var(--color-ink);
   text-decoration: none;
-  border-bottom: 1px solid rgba(26, 23, 20, 0.35);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-ink), transparent 65%);
   padding-bottom: var(--spacing-xs);
   transition:
     color 0.18s,
@@ -121,7 +121,7 @@
 
 .portrait-frame {
   position: relative;
-  border: 1px solid rgba(26, 23, 20, 0.28);
+  border: 1px solid color-mix(in srgb, var(--color-ink), transparent 72%);
   padding: var(--spacing-sm);
   background: #e6dfd0;
 }
