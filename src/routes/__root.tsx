@@ -4,7 +4,7 @@ import {
   Scripts,
   createRootRoute,
 } from "@tanstack/react-router";
-import type { ReactElement, ReactNode } from "react";
+import type { ReactNode } from "react";
 import appCss from "../styles/main.css?url";
 
 export const Route = createRootRoute({
@@ -31,7 +31,7 @@ export const Route = createRootRoute({
   component: RootComponent,
 });
 
-function RootComponent(): ReactElement {
+function RootComponent() {
   return (
     <RootDocument>
       <Outlet />
@@ -39,7 +39,7 @@ function RootComponent(): ReactElement {
   );
 }
 
-function RootDocument({ children }: { children: ReactNode }): ReactElement {
+function RootDocument({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>

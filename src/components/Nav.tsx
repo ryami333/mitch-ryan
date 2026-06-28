@@ -1,22 +1,22 @@
-import type { ReactElement } from "react";
+import { Link } from "@tanstack/react-router";
 import styles from "./Nav.module.css";
 
-export default function Nav(): ReactElement {
+export default function Nav() {
   return (
     <nav className={styles.nav}>
-      <a href="#top" className={styles.brand}>
+      <Link to="/" hash="top" className={styles.brand}>
         Mitch Ryan
-      </a>
+      </Link>
       <div className={styles.links}>
-        <a href="#work" className={styles.link}>
+        <Link to="/" hash="work" className={styles.link}>
           Work
-        </a>
-        <a href="#profile" className={styles.link}>
+        </Link>
+        <Link to="/" hash="profile" className={styles.link}>
           Profile
-        </a>
-        <a href="#contact" className={styles.link}>
+        </Link>
+        <Link to="/" hash="contact" className={styles.link}>
           Contact
-        </a>
+        </Link>
       </div>
     </nav>
   );

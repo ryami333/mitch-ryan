@@ -1,4 +1,3 @@
-import type { ReactElement } from "react";
 import styles from "./Work.module.css";
 
 interface Project {
@@ -53,7 +52,7 @@ const PROJECTS: Project[] = [
   },
 ];
 
-export default function Work(): ReactElement {
+export default function Work() {
   return (
     <section id="work" className={styles.work}>
       <div className={styles.inner}>

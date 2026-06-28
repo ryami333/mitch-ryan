@@ -1,4 +1,4 @@
-import type { ReactElement, ReactNode } from "react";
+import type { ReactNode } from "react";
 import classNames from "classnames/bind";
 import styles from "./Profile.module.css";
 
@@ -29,7 +29,7 @@ const ROWS: Row[] = [
   { key: "RECOGNITION", value: "Awwwards · FWA · Webby · W3", accent: true },
 ];
 
-export default function Profile(): ReactElement {
+export default function Profile() {
   return (
     <section id="profile" className={styles.profile}>
       <img

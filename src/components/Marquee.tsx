@@ -1,4 +1,3 @@
-import type { ReactElement } from "react";
 import styles from "./Marquee.module.css";
 
 const ITEMS = [
@@ -15,7 +14,7 @@ const ITEMS = [
   "Mobile Games",
 ];
 
-function Group({ hidden = false }: { hidden?: boolean }): ReactElement {
+function Group({ hidden = false }: { hidden?: boolean }) {
   return (
     <div className={styles.group} aria-hidden={hidden || undefined}>
       {ITEMS.map((item) => (
@@ -28,7 +27,7 @@ function Group({ hidden = false }: { hidden?: boolean }): ReactElement {
   );
 }
 
-export default function Marquee(): ReactElement {
+export default function Marquee() {
   return (
     <div className={styles.marquee}>
       <div className={styles.track}>

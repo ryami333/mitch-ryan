@@ -1,4 +1,3 @@
-import type { ReactElement } from "react";
 import Nav from "./Nav";
 import Hero from "./Hero";
 import Marquee from "./Marquee";
@@ -7,7 +6,7 @@ import Profile from "./Profile";
 import Contact from "./Contact";
 import styles from "./App.module.css";
 
-export default function App(): ReactElement {
+export default function App() {
   return (
     <div className={styles.page}>
       <Nav />

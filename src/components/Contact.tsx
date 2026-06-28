@@ -1,4 +1,3 @@
-import type { ReactElement } from "react";
 import styles from "./Contact.module.css";
 
 const SOCIALS = [
@@ -7,7 +6,7 @@ const SOCIALS = [
   { label: "Instagram", href: "https://instagram.com/dev.mitch" },
 ];
 
-export default function Contact(): ReactElement {
+export default function Contact() {
   return (
     <section id="contact" className={styles.contact}>
       <img

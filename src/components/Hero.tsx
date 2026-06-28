@@ -1,4 +1,4 @@
-import type { ReactElement } from "react";
+import { Link } from "@tanstack/react-router";
 import styles from "./Hero.module.css";
 
 const SOCIALS = [
@@ -8,7 +8,7 @@ const SOCIALS = [
   { label: "Email", href: "mailto:ohai@mitch-ryan.com" },
 ];
 
-export default function Hero(): ReactElement {
+export default function Hero() {
   return (
     <section id="top" className={styles.hero}>
       <div className={styles.metaTop}>
@@ -67,9 +67,9 @@ export default function Hero(): ReactElement {
 
       <div className={styles.metaBottom}>
         <span>Full-stack · Interactive media</span>
-        <a href="#work" className={styles.metaLink}>
+        <Link to="/" hash="work" className={styles.metaLink}>
           Selected work ↓
-        </a>
+        </Link>
       </div>
     </section>
   );
