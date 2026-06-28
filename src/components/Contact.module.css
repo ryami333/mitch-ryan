@@ -24,7 +24,7 @@
 
 .eyebrow {
   font-family: var(--font-mono);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-12px);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-rust);
@@ -32,7 +32,7 @@
 }
 
 .prompt {
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-24px);
   color: var(--color-ink-strong);
   margin-bottom: var(--spacing-md);
   font-weight: 500;
@@ -69,7 +69,7 @@
   display: flex;
   gap: 28px;
   font-family: var(--font-mono);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-13px);
 }
 
 .social-link {
@@ -89,7 +89,7 @@
 
 .colophon {
   font-family: var(--font-mono);
-  font-size: var(--font-size-2xs);
+  font-size: var(--font-size-11px);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-ink-faint);
