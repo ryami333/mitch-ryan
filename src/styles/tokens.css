@@ -4,9 +4,9 @@
   /* ----------------------------------------------------------------- */
 
   --max-width: 1340px;
-  --gutter: 48px;
+  --gutter: 22px;
 
-  @media (width <= 720px) {
-    --gutter: 22px;
+  @media (width > 720px) {
+    --gutter: 48px;
   }
 }

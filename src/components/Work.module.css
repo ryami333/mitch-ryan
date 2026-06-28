@@ -34,9 +34,14 @@
 
 .row {
   display: grid;
-  grid-template-columns: 54px 1.5fr 1fr 150px 32px;
-  gap: 28px;
-  align-items: center;
+  grid-template-columns: 36px 1fr auto;
+  grid-template-areas:
+    "num body arrow"
+    ".   stack arrow"
+    ".   kind arrow";
+  column-gap: var(--spacing-md);
+  row-gap: var(--spacing-sm);
+  align-items: start;
   padding: var(--spacing-lg) var(--spacing-md);
   border-bottom: 1px solid var(--color-ink);
   text-decoration: none;
@@ -47,14 +52,19 @@
 
   &:hover {
     background: color-mix(in srgb, var(--color-ink), transparent 95%);
-    padding-left: var(--spacing-lg);
-    padding-right: 6px;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
   }
 }
 
 .row-num {
+  grid-area: num;
   font: var(--font-mono-14px);
   color: var(--color-rust);
+}
+
+.row-body {
+  grid-area: body;
 }
 
 .row-name {
@@ -70,12 +80,14 @@
 }
 
 .row-stack {
+  grid-area: stack;
   font: var(--font-mono-12px);
   letter-spacing: 0.06em;
   color: var(--color-ink-muted);
 }
 
 .row-kind {
+  grid-area: kind;
   font: var(--font-mono-12px);
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -83,46 +95,35 @@
 }
 
 .row-arrow {
+  grid-area: arrow;
+  align-self: start;
   font: var(--font-mono-18px);
   color: var(--color-rust);
   text-align: right;
 }
 
-@media (width <= 820px) {
+@media (width > 820px) {
   .row {
-    grid-template-columns: 36px 1fr auto;
-    grid-template-areas:
-      "num body arrow"
-      ".   stack arrow"
-      ".   kind arrow";
-    column-gap: var(--spacing-md);
-    row-gap: var(--spacing-sm);
-    align-items: start;
+    grid-template-columns: 54px 1.5fr 1fr 150px 32px;
+    grid-template-areas: none;
+    gap: 28px;
+    align-items: center;
   }
 
-  .row-num {
-    grid-area: num;
-  }
-
-  .row-body {
-    grid-area: body;
-  }
-
-  .row-stack {
-    grid-area: stack;
-  }
-
+  .row-num,
+  .row-body,
+  .row-stack,
   .row-kind {
-    grid-area: kind;
+    grid-area: auto;
   }
 
   .row-arrow {
-    grid-area: arrow;
-    align-self: start;
+    grid-area: auto;
+    align-self: auto;
   }
 
   .row:hover {
-    padding-left: var(--spacing-md);
-    padding-right: var(--spacing-md);
+    padding-left: var(--spacing-lg);
+    padding-right: 6px;
   }
 }

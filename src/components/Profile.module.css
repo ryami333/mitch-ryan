@@ -51,13 +51,13 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 80px;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-2xl);
   align-items: start;
 
-  @media (width <= 900px) {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-2xl);
+  @media (width > 900px) {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 80px;
   }
 }
 
@@ -87,15 +87,15 @@
 
 .sheet-row {
   display: grid;
-  grid-template-columns: 130px 1fr;
-  gap: var(--spacing-md);
+  grid-template-columns: 110px 1fr;
+  gap: 12px;
   padding: var(--spacing-md) 0;
   border-bottom: 1px solid var(--color-paper-alt);
   font: var(--font-mono-14px);
 
-  @media (width <= 460px) {
-    grid-template-columns: 110px 1fr;
-    gap: 12px;
+  @media (width > 460px) {
+    grid-template-columns: 130px 1fr;
+    gap: var(--spacing-md);
   }
 }
 
