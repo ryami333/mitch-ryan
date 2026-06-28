@@ -12,13 +12,21 @@
   --font-mono-14px-bold: 600 var(--font-size-14px) / 1.5 var(--font-family-mono);
   --font-mono-18px: 400 var(--font-size-18px) / 1.5 var(--font-family-mono);
 
-  --font-display-18px: 400 var(--font-size-18px) / 1.62 var(--font-family-display);
-  --font-display-21px: 400 var(--font-size-21px) / 1.55 var(--font-family-display);
-  --font-display-24px: 500 var(--font-size-24px) / 1.5 var(--font-family-display);
-  --font-display-26px: 600 var(--font-size-26px) / 1.5 var(--font-family-display);
+  --font-display-18px: 400 var(--font-size-18px) / 1.62
+    var(--font-family-display);
+  --font-display-21px: 400 var(--font-size-21px) / 1.55
+    var(--font-family-display);
+  --font-display-24px: 500 var(--font-size-24px) / 1.5
+    var(--font-family-display);
+  --font-display-26px: 600 var(--font-size-26px) / 1.5
+    var(--font-family-display);
 
-  --font-display-sm: 600 var(--font-size-display-sm) / 1.5 var(--font-family-display);
-  --font-display-md: 600 var(--font-size-display-md) / 1.04 var(--font-family-display);
-  --font-display-lg: 600 var(--font-size-display-lg) / 1 var(--font-family-display);
-  --font-display-xl: 600 var(--font-size-display-xl) / 0.88 var(--font-family-display);
+  --font-display-sm: 600 var(--font-size-display-sm) / 1.5
+    var(--font-family-display);
+  --font-display-md: 600 var(--font-size-display-md) / 1.04
+    var(--font-family-display);
+  --font-display-lg: 600 var(--font-size-display-lg) / 1
+    var(--font-family-display);
+  --font-display-xl: 600 var(--font-size-display-xl) / 0.88
+    var(--font-family-display);
 }
