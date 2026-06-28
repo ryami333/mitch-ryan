@@ -1,0 +1,22 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - nvm install 24 && nvm use 24
+        - corepack enable
+        - corepack prepare yarn@4.17.0 --activate
+        - yarn install --immutable
+    build:
+      commands:
+        - yarn build
+  artifacts:
+    # Nitro's aws-amplify preset writes the compute bundle + deploy-manifest here.
+    baseDirectory: .amplify-hosting
+    files:
+      - "**/*"
+  cache:
+    paths:
+      # Yarn 4 global+local cache and installed modules speed up subsequent builds.
+      - .yarn/cache/**/*
+      - node_modules/**/*
