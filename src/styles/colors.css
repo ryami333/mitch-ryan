@@ -1,0 +1,21 @@
+:root {
+  /* ----------------------------------------------------------------- */
+  /* COLOURS — editorial "paper & ink" palette */
+  /* ----------------------------------------------------------------- */
+
+  --color-paper: #d7d2c4;
+  --color-paper-alt: #efe9dd;
+  --color-ink: #1a1714;
+  --color-rust: #9a5238;
+  --color-clay: #c87a52;
+
+  /* Ink tints (text on a paper background) */
+  --color-ink-strong: #2c2820;
+  --color-ink-muted: #4a463d;
+  --color-ink-faint: #6b655a;
+  --color-ink-ghost: #8a8478;
+
+  /* Cream tints (text on an ink background) */
+  --color-cream-muted: #cbc4b4;
+  --color-cream-faint: #8f897c;
+}
