@@ -76,7 +76,7 @@
 }
 
 .body {
-  font-size: var(--font-size-19px);
+  font-size: var(--font-size-18px);
   line-height: 1.62;
   color: var(--color-cream-muted);
   margin: 0 0 20px;
