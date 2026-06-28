@@ -53,19 +53,13 @@ export default function Hero() {
         </div>
 
         <figure className={cx("portrait")}>
-          <div className={cx("portrait-frame")}>
-            <img
-              src="/images/portrait.jpg"
-              alt="Mitch Ryan"
-              width={380}
-              height={506}
-              className={cx("portrait-img")}
-            />
-          </div>
-          <figcaption className={cx("portrait-caption")}>
-            <span>Fig.01 — Self</span>
-            <span className={cx("caption-accent")}>Berlin, DE</span>
-          </figcaption>
+          <img
+            src="/images/portrait.jpg"
+            alt="Mitch Ryan"
+            width={380}
+            height={506}
+            className={cx("portrait-img")}
+          />
         </figure>
       </div>
 

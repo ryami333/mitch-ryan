@@ -114,30 +114,11 @@
   }
 }
 
-.portrait-frame {
-  position: relative;
-  border: 1px solid var(--color-ink);
-  padding: var(--spacing-sm);
-  background: #e6dfd0;
-}
-
 .portrait-img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 380 / 506;
+  aspect-ratio: 1;
   object-fit: cover;
-}
-
-.portrait-caption {
-  display: flex;
-  justify-content: space-between;
-  font: var(--font-mono-12px);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-ink-faint);
-}
-
-.caption-accent {
-  color: var(--color-rust);
+  border-radius: 50%;
 }
