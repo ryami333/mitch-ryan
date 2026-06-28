@@ -61,7 +61,9 @@ export default function Work() {
     <section id="work" className={cx("work")}>
       <div className={cx("inner")}>
         <div className={cx("head")}>
-          <Eyebrow transformUppercase>01 — Selected Work</Eyebrow>
+          <Eyebrow color="rust" transformUppercase>
+            01 — Selected Work
+          </Eyebrow>
           <div className={cx("count")}>05 — Index</div>
         </div>
         <h2 className={cx("title")}>Things I&rsquo;ve built.</h2>

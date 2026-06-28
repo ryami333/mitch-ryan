@@ -20,7 +20,7 @@ export default function Contact() {
         className={cx("bg")}
       />
       <div className={cx("inner")}>
-        <Eyebrow transformUppercase className={cx("eyebrow")}>
+        <Eyebrow color="rust" transformUppercase className={cx("eyebrow")}>
           03 — Contact
         </Eyebrow>
         <div className={cx("prompt")}>Got something worth building?</div>

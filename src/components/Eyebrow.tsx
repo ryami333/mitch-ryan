@@ -6,14 +6,14 @@ const cx = classNames.bind(styles);
 
 interface EyebrowProps {
   children: ReactNode;
-  color?: "rust" | "clay";
+  color: "rust" | "clay";
   transformUppercase?: boolean;
   className?: string;
 }
 
 export default function Eyebrow({
   children,
-  color = "rust",
+  color,
   transformUppercase = false,
   className,
 }: EyebrowProps) {
