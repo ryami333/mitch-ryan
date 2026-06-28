@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  font-family: var(--font-mono);
+  font-family: var(--font-family-mono);
   font-size: var(--font-size-12px);
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -89,7 +89,7 @@
   flex-wrap: wrap;
   gap: 28px;
   margin-top: var(--spacing-2xl);
-  font-family: var(--font-mono);
+  font-family: var(--font-family-mono);
   font-size: var(--font-size-14px);
 }
 
@@ -137,7 +137,7 @@
 .portrait-caption {
   display: flex;
   justify-content: space-between;
-  font-family: var(--font-mono);
+  font-family: var(--font-family-mono);
   font-size: var(--font-size-12px);
   letter-spacing: 0.14em;
   text-transform: uppercase;

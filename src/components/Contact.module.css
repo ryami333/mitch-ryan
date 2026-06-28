@@ -63,7 +63,7 @@
 .social {
   display: flex;
   gap: 28px;
-  font-family: var(--font-mono);
+  font-family: var(--font-family-mono);
   font-size: var(--font-size-14px);
 }
 
@@ -83,7 +83,7 @@
 }
 
 .colophon {
-  font-family: var(--font-mono);
+  font-family: var(--font-family-mono);
   font-size: var(--font-size-12px);
   letter-spacing: 0.1em;
   text-transform: uppercase;

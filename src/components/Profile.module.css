@@ -85,7 +85,7 @@
 
 .sheet {
   border-top: 1px solid var(--color-paper-alt);
-  font-family: var(--font-mono);
+  font-family: var(--font-family-mono);
   margin: 0;
 }
 
