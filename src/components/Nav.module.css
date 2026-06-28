@@ -13,8 +13,7 @@
 }
 
 .brand {
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-14px);
+  font: var(--font-mono-14px);
   font-weight: 600;
   letter-spacing: 0.26em;
   text-transform: uppercase;
@@ -26,8 +25,7 @@
   display: flex;
   gap: var(--spacing-xl);
   align-items: center;
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-12px);
+  font: var(--font-mono-12px);
   letter-spacing: 0.16em;
   text-transform: uppercase;
 

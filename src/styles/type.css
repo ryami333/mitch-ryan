@@ -5,4 +5,9 @@
 
   --font-family-display: "Berlin Type", system-ui, sans-serif;
   --font-family-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* `font` shorthands: font-size / line-height font-family */
+  --font-mono-12px: var(--font-size-12px) / 1.5 var(--font-family-mono);
+  --font-mono-14px: var(--font-size-14px) / 1.5 var(--font-family-mono);
+  --font-mono-18px: var(--font-size-18px) / 1.5 var(--font-family-mono);
 }

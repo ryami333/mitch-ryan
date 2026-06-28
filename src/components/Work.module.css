@@ -16,8 +16,7 @@
 }
 
 .count {
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-12px);
+  font: var(--font-mono-12px);
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--color-ink-faint);
@@ -55,8 +54,7 @@
 }
 
 .row-num {
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-14px);
+  font: var(--font-mono-14px);
   color: var(--color-rust);
 }
 
@@ -68,31 +66,26 @@
 }
 
 .row-desc {
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-14px);
-  line-height: 1.5;
+  font: var(--font-mono-14px);
   color: var(--color-ink-faint);
   max-width: 42ch;
 }
 
 .row-stack {
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-12px);
+  font: var(--font-mono-12px);
   letter-spacing: 0.06em;
   color: var(--color-ink-muted);
 }
 
 .row-kind {
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-12px);
+  font: var(--font-mono-12px);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-ink-ghost);
 }
 
 .row-arrow {
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-18px);
+  font: var(--font-mono-18px);
   color: var(--color-rust);
   text-align: right;
 }

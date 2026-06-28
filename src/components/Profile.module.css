@@ -85,7 +85,6 @@
 
 .sheet {
   border-top: 1px solid var(--color-paper-alt);
-  font-family: var(--font-family-mono);
   margin: 0;
 }
 
@@ -95,7 +94,7 @@
   gap: var(--spacing-md);
   padding: var(--spacing-md) 0;
   border-bottom: 1px solid var(--color-paper-alt);
-  font-size: var(--font-size-14px);
+  font: var(--font-mono-14px);
 
   @media (max-width: 460px) {
     grid-template-columns: 110px 1fr;
