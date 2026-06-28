@@ -1,4 +1,7 @@
+import classNames from "classnames/bind";
 import styles from "./Work.module.css";
+
+const cx = classNames.bind(styles);
 
 interface Project {
   n: string;
@@ -54,31 +57,31 @@ const PROJECTS: Project[] = [
 
 export default function Work() {
   return (
-    <section id="work" className={styles.work}>
-      <div className={styles.inner}>
-        <div className={styles.head}>
-          <div className={styles.eyebrow}>01 — Selected Work</div>
-          <div className={styles.count}>05 — Index</div>
+    <section id="work" className={cx("work")}>
+      <div className={cx("inner")}>
+        <div className={cx("head")}>
+          <div className={cx("eyebrow")}>01 — Selected Work</div>
+          <div className={cx("count")}>05 — Index</div>
         </div>
-        <h2 className={styles.title}>Things I&rsquo;ve built.</h2>
+        <h2 className={cx("title")}>Things I&rsquo;ve built.</h2>
 
-        <div className={styles.list}>
+        <div className={cx("list")}>
           {PROJECTS.map((p) => (
             <a
               key={p.n}
               href={p.href}
               target="_blank"
               rel="noreferrer"
-              className={styles.row}
+              className={cx("row")}
             >
-              <span className={styles.rowNum}>{p.n}</span>
-              <div className={styles.rowBody}>
-                <div className={styles.rowName}>{p.name}</div>
-                <div className={styles.rowDesc}>{p.desc}</div>
+              <span className={cx("rowNum")}>{p.n}</span>
+              <div className={cx("rowBody")}>
+                <div className={cx("rowName")}>{p.name}</div>
+                <div className={cx("rowDesc")}>{p.desc}</div>
               </div>
-              <div className={styles.rowStack}>{p.stack}</div>
-              <div className={styles.rowKind}>{p.kind}</div>
-              <span className={styles.rowArrow}>↗</span>
+              <div className={cx("rowStack")}>{p.stack}</div>
+              <div className={cx("rowKind")}>{p.kind}</div>
+              <span className={cx("rowArrow")}>↗</span>
             </a>
           ))}
         </div>

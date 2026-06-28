@@ -1,4 +1,7 @@
+import classNames from "classnames/bind";
 import styles from "./Contact.module.css";
+
+const cx = classNames.bind(styles);
 
 const SOCIALS = [
   { label: "GitHub", href: "https://github.com/ryami333" },
@@ -8,35 +11,35 @@ const SOCIALS = [
 
 export default function Contact() {
   return (
-    <section id="contact" className={styles.contact}>
+    <section id="contact" className={cx("contact")}>
       <img
         src="/images/contact-bg.jpg"
         alt=""
         aria-hidden="true"
-        className={styles.bg}
+        className={cx("bg")}
       />
-      <div className={styles.inner}>
-        <div className={styles.eyebrow}>03 — Contact</div>
-        <div className={styles.prompt}>Got something worth building?</div>
-        <a href="mailto:ohai@mitch-ryan.com" className={styles.email}>
+      <div className={cx("inner")}>
+        <div className={cx("eyebrow")}>03 — Contact</div>
+        <div className={cx("prompt")}>Got something worth building?</div>
+        <a href="mailto:ohai@mitch-ryan.com" className={cx("email")}>
           ohai@mitch-ryan.com
         </a>
 
-        <div className={styles.footer}>
-          <div className={styles.social}>
+        <div className={cx("footer")}>
+          <div className={cx("social")}>
             {SOCIALS.map(({ label, href }) => (
               <a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noreferrer"
-                className={styles.socialLink}
+                className={cx("socialLink")}
               >
                 {label}
               </a>
             ))}
           </div>
-          <div className={styles.colophon}>
+          <div className={cx("colophon")}>
             © 2026 Mitch Ryan — Berlin, DE
             <br />
             Set in Space Grotesk &amp; JetBrains Mono

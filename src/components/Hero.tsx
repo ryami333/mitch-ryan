@@ -1,5 +1,8 @@
 import { Link } from "@tanstack/react-router";
+import classNames from "classnames/bind";
 import styles from "./Hero.module.css";
+
+const cx = classNames.bind(styles);
 
 const SOCIALS = [
   { label: "GitHub", href: "https://github.com/ryami333" },
@@ -10,34 +13,34 @@ const SOCIALS = [
 
 export default function Hero() {
   return (
-    <section id="top" className={styles.hero}>
-      <div className={styles.metaTop}>
-        <span className={styles.metaStrong}>Homepage — 2026</span>
+    <section id="top" className={cx("hero")}>
+      <div className={cx("metaTop")}>
+        <span className={cx("metaStrong")}>Homepage — 2026</span>
         <span>Developer — Berlin, DE</span>
       </div>
 
-      <div className={styles.grid}>
-        <div className={styles.lead}>
-          <div className={styles.role}>
+      <div className={cx("grid")}>
+        <div className={cx("lead")}>
+          <div className={cx("role")}>
             Head of Development — Diesdas Digital
           </div>
-          <h1 className={styles.title}>
+          <h1 className={cx("title")}>
             Mitch
             <br />
             Ryan.
           </h1>
-          <p className={styles.intro}>
+          <p className={cx("intro")}>
             Ten-plus years building software across the full spectrum — from
             landing pages and brochureware to enterprise apps, CMSes, CRMs and
             the occasional mobile game. New Zealander by origin, Berlin-based
             permanent resident.
           </p>
-          <div className={styles.social}>
+          <div className={cx("social")}>
             {SOCIALS.map(({ label, href }) => (
               <a
                 key={label}
                 href={href}
-                className={styles.socialLink}
+                className={cx("socialLink")}
                 {...(href.startsWith("http")
                   ? { target: "_blank", rel: "noreferrer" }
                   : {})}
@@ -48,26 +51,26 @@ export default function Hero() {
           </div>
         </div>
 
-        <figure className={styles.portrait}>
-          <div className={styles.portraitFrame}>
+        <figure className={cx("portrait")}>
+          <div className={cx("portraitFrame")}>
             <img
               src="/images/portrait.jpg"
               alt="Mitch Ryan"
               width={380}
               height={506}
-              className={styles.portraitImg}
+              className={cx("portraitImg")}
             />
           </div>
-          <figcaption className={styles.portraitCaption}>
+          <figcaption className={cx("portraitCaption")}>
             <span>Fig.01 — Self</span>
-            <span className={styles.captionAccent}>Berlin, DE</span>
+            <span className={cx("captionAccent")}>Berlin, DE</span>
           </figcaption>
         </figure>
       </div>
 
-      <div className={styles.metaBottom}>
+      <div className={cx("metaBottom")}>
         <span>Full-stack · Interactive media</span>
-        <Link to="/" hash="work" className={styles.metaLink}>
+        <Link to="/" hash="work" className={cx("metaLink")}>
           Selected work ↓
         </Link>
       </div>

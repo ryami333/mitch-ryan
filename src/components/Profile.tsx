@@ -31,41 +31,41 @@ const ROWS: Row[] = [
 
 export default function Profile() {
   return (
-    <section id="profile" className={styles.profile}>
+    <section id="profile" className={cx("profile")}>
       <img
         src="/images/profile-bg.jpg"
         alt=""
         aria-hidden="true"
-        className={styles.bg}
+        className={cx("bg")}
       />
-      <div className={styles.scanlines} aria-hidden="true" />
-      <div className={styles.topRule} aria-hidden="true" />
+      <div className={cx("scanlines")} aria-hidden="true" />
+      <div className={cx("topRule")} aria-hidden="true" />
 
-      <div className={styles.inner}>
-        <div className={styles.eyebrow}>02 — Profile</div>
+      <div className={cx("inner")}>
+        <div className={cx("eyebrow")}>02 — Profile</div>
 
-        <div className={styles.grid}>
+        <div className={cx("grid")}>
           <div>
-            <h2 className={styles.title}>
+            <h2 className={cx("title")}>
               A decade-plus of building software, end to end.
             </h2>
-            <p className={styles.body}>
+            <p className={cx("body")}>
               From landing pages and brochureware to enterprise apps, CMSes,
               CRMs and the occasional mobile game — I&rsquo;ve worked across the
               whole stack and most of the surface area in between. New Zealander
               by origin, now a Berlin-based permanent resident.
             </p>
-            <p className={styles.body}>
+            <p className={cx("body")}>
               These days I lead development at Diesdas Digital, and care most
               about fast, legible tools and the small details that make them
               pleasant to live in.
             </p>
           </div>
 
-          <dl className={styles.sheet}>
+          <dl className={cx("sheet")}>
             {ROWS.map((row) => (
-              <div key={row.key} className={styles.sheetRow}>
-                <dt className={styles.sheetKey}>{row.key}</dt>
+              <div key={row.key} className={cx("sheetRow")}>
+                <dt className={cx("sheetKey")}>{row.key}</dt>
                 <dd className={cx("sheetVal", { accent: row.accent })}>
                   {row.value}
                 </dd>

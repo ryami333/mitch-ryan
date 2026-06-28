@@ -1,4 +1,7 @@
+import classNames from "classnames/bind";
 import styles from "./Marquee.module.css";
+
+const cx = classNames.bind(styles);
 
 const ITEMS = [
   "TypeScript",
@@ -16,11 +19,11 @@ const ITEMS = [
 
 function Group({ hidden = false }: { hidden?: boolean }) {
   return (
-    <div className={styles.group} aria-hidden={hidden || undefined}>
+    <div className={cx("group")} aria-hidden={hidden || undefined}>
       {ITEMS.map((item) => (
-        <span key={item} className={styles.item}>
+        <span key={item} className={cx("item")}>
           {item}
-          <span className={styles.diamond}>◆</span>
+          <span className={cx("diamond")}>◆</span>
         </span>
       ))}
     </div>
@@ -29,8 +32,8 @@ function Group({ hidden = false }: { hidden?: boolean }) {
 
 export default function Marquee() {
   return (
-    <div className={styles.marquee}>
-      <div className={styles.track}>
+    <div className={cx("marquee")}>
+      <div className={cx("track")}>
         <Group />
         <Group hidden />
       </div>

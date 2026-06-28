@@ -1,20 +1,23 @@
 import { Link } from "@tanstack/react-router";
+import classNames from "classnames/bind";
 import styles from "./Nav.module.css";
+
+const cx = classNames.bind(styles);
 
 export default function Nav() {
   return (
-    <nav className={styles.nav}>
-      <Link to="/" hash="top" className={styles.brand}>
+    <nav className={cx("nav")}>
+      <Link to="/" hash="top" className={cx("brand")}>
         Mitch Ryan
       </Link>
-      <div className={styles.links}>
-        <Link to="/" hash="work" className={styles.link}>
+      <div className={cx("links")}>
+        <Link to="/" hash="work" className={cx("link")}>
           Work
         </Link>
-        <Link to="/" hash="profile" className={styles.link}>
+        <Link to="/" hash="profile" className={cx("link")}>
           Profile
         </Link>
-        <Link to="/" hash="contact" className={styles.link}>
+        <Link to="/" hash="contact" className={cx("link")}>
           Contact
         </Link>
       </div>
