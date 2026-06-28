@@ -42,11 +42,7 @@ export default function Contact() {
               </a>
             ))}
           </div>
-          <div className={cx("colophon")}>
-            © 2026 Mitch Ryan — Berlin, DE
-            <br />
-            Set in Berlin Type &amp; JetBrains Mono
-          </div>
+          <div className={cx("colophon")}>© 2026 Mitch Ryan — Berlin, DE</div>
         </div>
       </div>
     </section>
