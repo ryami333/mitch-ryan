@@ -86,9 +86,8 @@ dist
 # Nitro
 .nitro
 
-# Wrangler / Cloudflare
-.wrangler
-.dev.vars
+# AWS Amplify (Nitro aws-amplify preset build output)
+.amplify-hosting
 .dev.vars.*
 
 # TanStack Router (generated)
