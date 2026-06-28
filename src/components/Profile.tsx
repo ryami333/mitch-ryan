@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import classNames from "classnames/bind";
+import Eyebrow from "./Eyebrow";
 import styles from "./Profile.module.css";
 
 const cx = classNames.bind(styles);
@@ -42,7 +43,9 @@ export default function Profile() {
       <div className={cx("top-rule")} aria-hidden="true" />
 
       <div className={cx("inner")}>
-        <div className={cx("eyebrow")}>02 — Profile</div>
+        <Eyebrow color="clay" className={cx("eyebrow")}>
+          02 — Profile
+        </Eyebrow>
 
         <div className={cx("grid")}>
           <div>

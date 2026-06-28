@@ -46,11 +46,6 @@
 }
 
 .eyebrow {
-  font-family: var(--font-mono);
-  font-size: var(--font-size-12px);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-clay);
   margin-bottom: 40px;
 }
 

@@ -1,4 +1,5 @@
 import classNames from "classnames/bind";
+import Eyebrow from "./Eyebrow";
 import styles from "./Contact.module.css";
 
 const cx = classNames.bind(styles);
@@ -19,7 +20,7 @@ export default function Contact() {
         className={cx("bg")}
       />
       <div className={cx("inner")}>
-        <div className={cx("eyebrow")}>03 — Contact</div>
+        <Eyebrow className={cx("eyebrow")}>03 — Contact</Eyebrow>
         <div className={cx("prompt")}>Got something worth building?</div>
         <a href="mailto:ohai@mitch-ryan.com" className={cx("email")}>
           ohai@mitch-ryan.com

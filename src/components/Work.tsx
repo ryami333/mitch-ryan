@@ -1,4 +1,5 @@
 import classNames from "classnames/bind";
+import Eyebrow from "./Eyebrow";
 import styles from "./Work.module.css";
 
 const cx = classNames.bind(styles);
@@ -60,7 +61,7 @@ export default function Work() {
     <section id="work" className={cx("work")}>
       <div className={cx("inner")}>
         <div className={cx("head")}>
-          <div className={cx("eyebrow")}>01 — Selected Work</div>
+          <Eyebrow>01 — Selected Work</Eyebrow>
           <div className={cx("count")}>05 — Index</div>
         </div>
         <h2 className={cx("title")}>Things I&rsquo;ve built.</h2>

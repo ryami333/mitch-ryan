@@ -15,14 +15,6 @@
   margin-bottom: var(--spacing-sm);
 }
 
-.eyebrow {
-  font-family: var(--font-mono);
-  font-size: var(--font-size-12px);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-rust);
-}
-
 .count {
   font-family: var(--font-mono);
   font-size: var(--font-size-12px);
