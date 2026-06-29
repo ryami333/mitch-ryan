@@ -1,7 +1,8 @@
 .container {
   background: var(--color-ink);
   overflow: hidden;
-  padding: var(--spacing-md) 0;
+  padding-block: var(--spacing-md);
+  padding-inline: 0;
 }
 
 .track {
@@ -23,8 +24,10 @@
 .item {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-xl);
-  padding: 0 var(--spacing-xl);
+  row-gap: var(--spacing-xl);
+  column-gap: var(--spacing-xl);
+  padding-block: 0;
+  padding-inline: var(--spacing-xl);
   font: var(--font-mono-14px);
   letter-spacing: 0.18em;
   text-transform: uppercase;

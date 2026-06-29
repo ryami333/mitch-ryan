@@ -10,7 +10,8 @@
   2. Remove default margin
 */
 * {
-  margin: 0;
+  margin-block: 0;
+  margin-inline: 0;
 }
 /*
   Typographic tweaks!

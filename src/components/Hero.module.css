@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 56px var(--gutter) 72px;
+  padding-block: 56px 72px;
+  padding-inline: var(--gutter);
 
   @media (width > 900px) {
     padding-block: 0;
@@ -39,12 +40,14 @@
   display: flex;
   align-items: center;
   width: min(100%, var(--max-width));
-  margin: var(--spacing-xl) auto;
+  margin-block: var(--spacing-xl);
+  margin-inline: auto;
 
   @media (width > 900px) {
     flex-grow: 1;
     grid-template-columns: auto minmax(0, 1fr);
-    gap: var(--spacing-3xl);
+    row-gap: var(--spacing-3xl);
+    column-gap: var(--spacing-3xl);
   }
 }
 
@@ -57,7 +60,8 @@
 
   @media (width > 900px) {
     grid-template-columns: auto minmax(0, 1fr);
-    gap: var(--spacing-3xl);
+    row-gap: var(--spacing-3xl);
+    column-gap: var(--spacing-3xl);
   }
 }
 
@@ -68,21 +72,24 @@
 .title {
   font: var(--font-display-xl);
   letter-spacing: -0.035em;
-  margin: 0 0 var(--spacing-xl);
+  margin-block: 0 var(--spacing-xl);
+  margin-inline: 0;
 }
 
 .intro {
   font: var(--font-display-21px);
   max-width: 46ch;
   color: var(--color-ink-strong);
-  margin: 0;
+  margin-block: 0;
+  margin-inline: 0;
   text-wrap: pretty;
 }
 
 .social {
   display: flex;
   flex-wrap: wrap;
-  gap: 28px;
+  row-gap: 28px;
+  column-gap: 28px;
   margin-top: var(--spacing-2xl);
   font: var(--font-mono-14px);
 }
@@ -103,7 +110,8 @@
 }
 
 .portrait {
-  margin: 0;
+  margin-block: 0;
+  margin-inline: 0;
   display: flex;
   align-self: stretch;
   justify-self: stretch;

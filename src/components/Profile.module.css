@@ -2,7 +2,8 @@
   position: relative;
   background: var(--color-ink);
   color: var(--color-paper-alt);
-  padding: 96px var(--gutter) 104px;
+  padding-block: 96px 104px;
+  padding-inline: var(--gutter);
   overflow: hidden;
 }
 
@@ -42,7 +43,8 @@
 .inner {
   position: relative;
   max-width: var(--max-width);
-  margin: 0 auto;
+  margin-block: 0;
+  margin-inline: auto;
 }
 
 .eyebrow {
@@ -52,26 +54,30 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--spacing-2xl);
+  row-gap: var(--spacing-2xl);
+  column-gap: var(--spacing-2xl);
   align-items: start;
 
   @media (width > 900px) {
     grid-template-columns: 1.05fr 0.95fr;
-    gap: 80px;
+    row-gap: 80px;
+    column-gap: 80px;
   }
 }
 
 .title {
   font: var(--font-display-md);
   letter-spacing: -0.025em;
-  margin: 0 0 var(--spacing-xl);
+  margin-block: 0 var(--spacing-xl);
+  margin-inline: 0;
   text-wrap: balance;
 }
 
 .body {
   font: var(--font-display-18px);
   color: var(--color-cream-muted);
-  margin: 0 0 20px;
+  margin-block: 0 20px;
+  margin-inline: 0;
   max-width: 50ch;
   text-wrap: pretty;
 
@@ -82,20 +88,24 @@
 
 .sheet {
   border-top: 1px solid var(--color-paper-alt);
-  margin: 0;
+  margin-block: 0;
+  margin-inline: 0;
 }
 
 .sheet-row {
   display: grid;
   grid-template-columns: 110px 1fr;
-  gap: 12px;
-  padding: var(--spacing-md) 0;
+  row-gap: 12px;
+  column-gap: 12px;
+  padding-block: var(--spacing-md);
+  padding-inline: 0;
   border-bottom: 1px solid var(--color-paper-alt);
   font: var(--font-mono-14px);
 
   @media (width > 460px) {
     grid-template-columns: 130px 1fr;
-    gap: var(--spacing-md);
+    row-gap: var(--spacing-md);
+    column-gap: var(--spacing-md);
   }
 }
 
@@ -106,7 +116,8 @@
 
 .sheet-val {
   color: var(--color-paper-alt);
-  margin: 0;
+  margin-block: 0;
+  margin-inline: 0;
   line-height: 1.5;
 }
 

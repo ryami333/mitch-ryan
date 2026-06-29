@@ -1,11 +1,13 @@
 .container {
   background: var(--color-paper-alt);
-  padding: 88px var(--gutter) 96px;
+  padding-block: 88px 96px;
+  padding-inline: var(--gutter);
 }
 
 .inner {
   max-width: var(--max-width);
-  margin: 0 auto;
+  margin-block: 0;
+  margin-inline: auto;
 }
 
 .head {
@@ -25,7 +27,8 @@
 .title {
   font: var(--font-display-sm);
   letter-spacing: -0.02em;
-  margin: 0 0 40px;
+  margin-block: 0 40px;
+  margin-inline: 0;
 }
 
 .list {
@@ -42,7 +45,8 @@
   column-gap: var(--spacing-md);
   row-gap: var(--spacing-sm);
   align-items: start;
-  padding: var(--spacing-lg) var(--spacing-md);
+  padding-block: var(--spacing-lg);
+  padding-inline: var(--spacing-md);
   border-bottom: 1px solid var(--color-ink);
   text-decoration: none;
   color: var(--color-ink);
@@ -59,7 +63,8 @@
   @media (width > 820px) {
     grid-template-columns: 54px 1.5fr 1fr 150px 32px;
     grid-template-areas: none;
-    gap: 28px;
+    row-gap: 28px;
+    column-gap: 28px;
     align-items: center;
 
     &:hover {

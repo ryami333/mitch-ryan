@@ -5,7 +5,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-md) var(--gutter);
+  padding-block: var(--spacing-md);
+  padding-inline: var(--gutter);
   background: color-mix(in srgb, var(--color-paper), transparent 18%);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -22,14 +23,16 @@
 
 .links {
   display: flex;
-  gap: var(--spacing-md);
+  row-gap: var(--spacing-md);
+  column-gap: var(--spacing-md);
   align-items: center;
   font: var(--font-mono-12px);
   letter-spacing: 0.16em;
   text-transform: uppercase;
 
   @media (width > 600px) {
-    gap: var(--spacing-xl);
+    row-gap: var(--spacing-xl);
+    column-gap: var(--spacing-xl);
   }
 }
 

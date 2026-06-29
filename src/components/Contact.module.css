@@ -1,7 +1,8 @@
 .container {
   position: relative;
   background: var(--color-paper);
-  padding: 104px var(--gutter) 56px;
+  padding-block: 104px 56px;
+  padding-inline: var(--gutter);
   overflow: hidden;
 }
 
@@ -19,7 +20,8 @@
 .inner {
   position: relative;
   max-width: var(--max-width);
-  margin: 0 auto;
+  margin-block: 0;
+  margin-inline: auto;
 }
 
 .eyebrow {
@@ -52,14 +54,16 @@
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
-  gap: var(--spacing-lg);
+  row-gap: var(--spacing-lg);
+  column-gap: var(--spacing-lg);
   border-top: 1px solid var(--color-ink);
   padding-top: var(--spacing-lg);
 }
 
 .social {
   display: flex;
-  gap: 28px;
+  row-gap: 28px;
+  column-gap: 28px;
   font: var(--font-mono-14px);
 }
 
