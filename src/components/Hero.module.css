@@ -118,8 +118,7 @@
   border-top: 1px solid var(--color-ink);
   padding-block: var(--spacing-md);
   color: var(--color-ink-faint);
-  font: var(--font-mono-12px);
-  letter-spacing: 0.14em;
+  @apply --font-mono-12px-ls14;
   text-transform: uppercase;
 }
 

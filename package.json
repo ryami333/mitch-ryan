@@ -8,6 +8,7 @@
     "@babel/core": "^8.0.1",
     "@babel/plugin-transform-runtime": "^8.0.1",
     "@babel/runtime": "^8.0.0",
+    "@csstools/postcss-global-data": "^4.0.0",
     "@prettier/plugin-oxc": "^0.2.0",
     "@rolldown/plugin-babel": "^0.2.3",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",

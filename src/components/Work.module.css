@@ -17,8 +17,7 @@
 
   .count {
     color: var(--color-ink-faint);
-    font: var(--font-mono-12px);
-    letter-spacing: 0.16em;
+    @apply --font-mono-12px-ls16;
     text-transform: uppercase;
   }
 }
@@ -103,8 +102,7 @@
   .row-stack {
     grid-area: stack;
     color: var(--color-ink-muted);
-    font: var(--font-mono-12px);
-    letter-spacing: 0.06em;
+    @apply --font-mono-12px-ls06;
 
     @media (width > 820px) {
       grid-area: auto;
@@ -114,8 +112,7 @@
   .row-kind {
     grid-area: kind;
     color: var(--color-ink-ghost);
-    font: var(--font-mono-12px);
-    letter-spacing: 0.12em;
+    @apply --font-mono-12px-ls12;
     text-transform: uppercase;
 
     @media (width > 820px) {

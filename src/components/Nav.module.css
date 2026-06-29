@@ -15,8 +15,7 @@
 
 .brand {
   color: var(--color-ink);
-  font: var(--font-mono-14px-bold);
-  letter-spacing: 0.26em;
+  @apply --font-mono-14px-bold-ls26;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -25,8 +24,7 @@
   display: flex;
   column-gap: var(--spacing-md);
   align-items: center;
-  font: var(--font-mono-12px);
-  letter-spacing: 0.16em;
+  @apply --font-mono-12px-ls16;
   text-transform: uppercase;
 
   @media (width > 600px) {

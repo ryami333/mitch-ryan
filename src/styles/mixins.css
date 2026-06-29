@@ -1,0 +1,52 @@
+/**
+ * Shared mono-font + letter-spacing declaration blocks.
+ *
+ * Injected into every CSS Module's PostCSS run via postcss-global-data (see
+ * postcss.config.mjs) and expanded by preset-env's `mixins` feature; this file
+ * emits no CSS of its own. Apply a block inside a rule with, e.g.,
+ * `@apply --font-mono-12px-ls16;`.
+ *
+ * Naming: `--font-mono-{size}-ls{NN}`, where NN is the letter-spacing in
+ * hundredths of an em (ls16 → `letter-spacing: 0.16em`). The font half reuses
+ * the `--font-mono-*` tokens from type.css.
+ */
+
+@mixin --font-mono-12px-ls06() {
+  font: var(--font-mono-12px);
+  letter-spacing: 0.06em;
+}
+
+@mixin --font-mono-12px-ls10() {
+  font: var(--font-mono-12px);
+  letter-spacing: 0.1em;
+}
+
+@mixin --font-mono-12px-ls12() {
+  font: var(--font-mono-12px);
+  letter-spacing: 0.12em;
+}
+
+@mixin --font-mono-12px-ls14() {
+  font: var(--font-mono-12px);
+  letter-spacing: 0.14em;
+}
+
+@mixin --font-mono-12px-ls16() {
+  font: var(--font-mono-12px);
+  letter-spacing: 0.16em;
+}
+
+@mixin --font-mono-14px-ls04() {
+  font: var(--font-mono-14px);
+  letter-spacing: 0.04em;
+}
+
+@mixin --font-mono-14px-ls18() {
+  font: var(--font-mono-14px);
+  letter-spacing: 0.18em;
+}
+
+@mixin --font-mono-14px-bold-ls26() {
+  font: var(--font-mono-14px-bold);
+  letter-spacing: 0.26em;
+}

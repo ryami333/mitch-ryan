@@ -28,8 +28,7 @@
   padding-inline: var(--spacing-xl);
   padding-block: 0;
   color: var(--color-paper-alt);
-  font: var(--font-mono-14px);
-  letter-spacing: 0.18em;
+  @apply --font-mono-14px-ls18;
   text-transform: uppercase;
   white-space: nowrap;
 }

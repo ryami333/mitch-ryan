@@ -63,9 +63,9 @@ const config = {
     ],
 
     /**
-     * Permit the `@mixin` / `@apply` at-rules enabled via the preset-env
-     * "mixins" feature (see postcss.config.mjs), which Stylelint doesn't
-     * recognise natively.
+     * Permit the preset-env `mixins` at-rules (see postcss.config.mjs):
+     * `@mixin` definitions in src/styles/mixins.css and `@apply` at each
+     * call site.
      */
     "at-rule-no-unknown": [
       true,
