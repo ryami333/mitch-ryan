@@ -54,7 +54,9 @@ const config = {
             case "padding":
               return `Don't use the "${name}" shorthand — use the logical longhands instead (e.g. ${name}-inline / ${name}-block).`;
             default:
-              throw new Error(`Unhandled property "${name}" in property-disallowed-list message.`);
+              throw new Error(
+                `Unhandled property "${name}" in property-disallowed-list message.`,
+              );
           }
         },
       },

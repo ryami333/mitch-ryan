@@ -1,35 +1,35 @@
 .container {
-  position: relative;
-  min-height: calc(100vh);
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
-  padding-block: 56px 72px;
   padding-inline: var(--gutter);
+  padding-block: 56px 72px;
+  min-height: calc(100vh);
 
   @media (width > 900px) {
-    padding-block: unset;
     display: flex;
     flex-direction: column;
+    padding-block: unset;
   }
 }
 
 .meta-bottom {
   display: flex;
   justify-content: space-between;
-  font: var(--font-mono-12px);
-  text-transform: uppercase;
-  color: var(--color-ink-faint);
   align-items: center;
   border-top: 1px solid var(--color-ink);
   padding-block: var(--spacing-md);
+  color: var(--color-ink-faint);
+  font: var(--font-mono-12px);
   letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .meta-link {
+  transition: color 0.18s;
   color: var(--color-ink);
   text-decoration: none;
-  transition: color 0.18s;
 
   &:hover {
     color: var(--color-rust);
@@ -39,23 +39,23 @@
 .grid {
   display: flex;
   align-items: center;
-  width: min(100%, var(--max-width));
-  margin-block: var(--spacing-xl);
   margin-inline: auto;
+  margin-block: var(--spacing-xl);
+  width: min(100%, var(--max-width));
 
   @media (width > 900px) {
-    flex-grow: 1;
     grid-template-columns: auto minmax(0, 1fr);
     column-gap: var(--spacing-3xl);
+    flex-grow: 1;
   }
 }
 
 .lead {
   display: grid;
   grid-template-columns: 100%;
-  width: 100%;
   row-gap: 40px;
   align-items: center;
+  width: 100%;
 
   @media (width > 900px) {
     grid-template-columns: auto minmax(0, 1fr);
@@ -68,48 +68,48 @@
 }
 
 .title {
+  margin-block-end: var(--spacing-xl);
   font: var(--font-display-xl);
   letter-spacing: -0.035em;
-  margin-block-end: var(--spacing-xl);
 }
 
 .intro {
-  font: var(--font-display-21px);
   max-width: 46ch;
   color: var(--color-ink-strong);
+  font: var(--font-display-21px);
   text-wrap: pretty;
 }
 
 .social {
   display: flex;
-  flex-wrap: wrap;
-  row-gap: 28px;
   column-gap: 28px;
+  row-gap: 28px;
+  flex-wrap: wrap;
   margin-top: var(--spacing-2xl);
   font: var(--font-mono-14px);
 }
 
 .social-link {
-  color: var(--color-ink);
-  text-decoration: none;
-  border-bottom: 1px solid var(--color-ink);
-  padding-bottom: var(--spacing-xs);
   transition:
     color 0.18s,
     border-color 0.18s;
+  border-bottom: 1px solid var(--color-ink);
+  padding-bottom: var(--spacing-xs);
+  color: var(--color-ink);
+  text-decoration: none;
 
   &:hover {
-    color: var(--color-rust);
     border-bottom-color: var(--color-rust);
+    color: var(--color-rust);
   }
 }
 
 .portrait {
   display: flex;
+  position: relative;
+  flex-direction: column;
   align-self: stretch;
   justify-self: stretch;
-  flex-direction: column;
-  position: relative;
 
   @media (width > 900px) {
     max-width: none;
@@ -118,17 +118,17 @@
 
 .portrait-img {
   display: block;
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
   border-radius: 50%;
+  aspect-ratio: 1;
+  width: 100%;
+  object-fit: cover;
 
   @media (width > 900px) {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     width: unset;
     max-width: 100%;
+    height: 100%;
   }
 }

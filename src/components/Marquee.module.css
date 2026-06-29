@@ -1,14 +1,14 @@
 .container {
   background: var(--color-ink);
-  overflow: hidden;
-  padding-block: var(--spacing-md);
   padding-inline: 0;
+  padding-block: var(--spacing-md);
+  overflow: hidden;
 }
 
 .track {
   display: flex;
-  width: max-content;
   animation: mr-marquee 34s linear infinite;
+  width: max-content;
 
   @media (prefers-reduced-motion: reduce) {
     animation: none;
@@ -17,20 +17,20 @@
 
 .group {
   display: flex;
-  align-items: center;
   flex: none;
+  align-items: center;
 }
 
 .item {
   display: inline-flex;
-  align-items: center;
   column-gap: var(--spacing-xl);
-  padding-block: 0;
+  align-items: center;
   padding-inline: var(--spacing-xl);
+  padding-block: 0;
+  color: var(--color-paper-alt);
   font: var(--font-mono-14px);
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-paper-alt);
   white-space: nowrap;
 }
 

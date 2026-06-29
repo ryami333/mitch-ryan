@@ -1,12 +1,12 @@
 .container {
   background: var(--color-paper-alt);
-  padding-block: 88px 96px;
   padding-inline: var(--gutter);
+  padding-block: 88px 96px;
 }
 
 .inner {
-  max-width: var(--max-width);
   margin-inline: auto;
+  max-width: var(--max-width);
 }
 
 .head {
@@ -16,17 +16,17 @@
   margin-bottom: var(--spacing-sm);
 
   .count {
+    color: var(--color-ink-faint);
     font: var(--font-mono-12px);
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--color-ink-faint);
   }
 }
 
 .title {
+  margin-block-end: 40px;
   font: var(--font-display-sm);
   letter-spacing: -0.02em;
-  margin-block-end: 40px;
 }
 
 .list {
@@ -43,19 +43,19 @@
   column-gap: var(--spacing-md);
   row-gap: var(--spacing-sm);
   align-items: start;
-  padding-block: var(--spacing-lg);
-  padding-inline: var(--spacing-md);
-  border-bottom: 1px solid var(--color-ink);
-  text-decoration: none;
-  color: var(--color-ink);
   transition:
     background 0.18s,
     padding 0.18s;
+  border-bottom: 1px solid var(--color-ink);
+  padding-inline: var(--spacing-md);
+  padding-block: var(--spacing-lg);
+  color: var(--color-ink);
+  text-decoration: none;
 
   &:hover {
     background: color-mix(in srgb, var(--color-ink), transparent 95%);
-    padding-left: var(--spacing-md);
     padding-right: var(--spacing-md);
+    padding-left: var(--spacing-md);
   }
 
   @media (width > 820px) {
@@ -65,15 +65,15 @@
     align-items: center;
 
     &:hover {
-      padding-left: var(--spacing-lg);
       padding-right: 6px;
+      padding-left: var(--spacing-lg);
     }
   }
 
   .row-num {
     grid-area: num;
-    font: var(--font-mono-14px);
     color: var(--color-rust);
+    font: var(--font-mono-14px);
 
     @media (width > 820px) {
       grid-area: auto;
@@ -88,23 +88,23 @@
     }
 
     .row-name {
+      margin-bottom: 6px;
       font: var(--font-display-26px);
       letter-spacing: -0.01em;
-      margin-bottom: 6px;
     }
 
     .row-desc {
-      font: var(--font-mono-14px);
-      color: var(--color-ink-faint);
       max-width: 42ch;
+      color: var(--color-ink-faint);
+      font: var(--font-mono-14px);
     }
   }
 
   .row-stack {
     grid-area: stack;
+    color: var(--color-ink-muted);
     font: var(--font-mono-12px);
     letter-spacing: 0.06em;
-    color: var(--color-ink-muted);
 
     @media (width > 820px) {
       grid-area: auto;
@@ -113,10 +113,10 @@
 
   .row-kind {
     grid-area: kind;
+    color: var(--color-ink-ghost);
     font: var(--font-mono-12px);
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--color-ink-ghost);
 
     @media (width > 820px) {
       grid-area: auto;
@@ -126,8 +126,8 @@
   .row-arrow {
     grid-area: arrow;
     align-self: start;
-    font: var(--font-mono-18px);
     color: var(--color-rust);
+    font: var(--font-mono-18px);
     text-align: right;
 
     @media (width > 820px) {

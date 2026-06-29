@@ -1,24 +1,24 @@
 .container {
+  display: flex;
   position: sticky;
   top: 0;
-  z-index: 30;
-  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-block: var(--spacing-md);
-  padding-inline: var(--gutter);
-  background: color-mix(in srgb, var(--color-paper), transparent 18%);
+  z-index: 30;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-ink);
+  background: color-mix(in srgb, var(--color-paper), transparent 18%);
+  padding-inline: var(--gutter);
+  padding-block: var(--spacing-md);
 }
 
 .brand {
+  color: var(--color-ink);
   font: var(--font-mono-14px-bold);
   letter-spacing: 0.26em;
-  text-transform: uppercase;
-  color: var(--color-ink);
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .links {
@@ -35,9 +35,9 @@
 }
 
 .link {
+  transition: color 0.18s;
   color: var(--color-ink-muted);
   text-decoration: none;
-  transition: color 0.18s;
 
   &:hover {
     color: var(--color-rust);

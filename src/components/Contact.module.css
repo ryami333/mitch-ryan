@@ -1,26 +1,26 @@
 .container {
   position: relative;
   background: var(--color-paper);
-  padding-block: 104px 56px;
   padding-inline: var(--gutter);
+  padding-block: 104px 56px;
   overflow: hidden;
 }
 
 .bg {
   position: absolute;
+  opacity: 0.16;
+  filter: grayscale(1) contrast(1.05);
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.16;
-  filter: grayscale(1) contrast(1.05);
   pointer-events: none;
 }
 
 .inner {
   position: relative;
-  max-width: var(--max-width);
   margin-inline: auto;
+  max-width: var(--max-width);
 }
 
 .eyebrow {
@@ -28,20 +28,20 @@
 }
 
 .prompt {
-  font: var(--font-display-24px);
-  color: var(--color-ink-strong);
   margin-bottom: var(--spacing-md);
+  color: var(--color-ink-strong);
+  font: var(--font-display-24px);
 }
 
 .email {
   display: inline-block;
+  transition: color 0.18s;
+  margin-bottom: var(--spacing-3xl);
+  color: var(--color-ink);
   font: var(--font-display-lg);
   letter-spacing: -0.03em;
-  color: var(--color-ink);
   text-decoration: none;
-  margin-bottom: var(--spacing-3xl);
   overflow-wrap: break-word;
-  transition: color 0.18s;
 
   &:hover {
     color: var(--color-rust);
@@ -50,11 +50,11 @@
 
 .footer {
   display: flex;
+  column-gap: var(--spacing-lg);
+  row-gap: var(--spacing-lg);
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
-  flex-wrap: wrap;
-  row-gap: var(--spacing-lg);
-  column-gap: var(--spacing-lg);
   border-top: 1px solid var(--color-ink);
   padding-top: var(--spacing-lg);
 }
@@ -66,25 +66,25 @@
 }
 
 .social-link {
-  color: var(--color-ink);
-  text-decoration: none;
-  border-bottom: 1px solid var(--color-ink);
-  padding-bottom: var(--spacing-xs);
   transition:
     color 0.18s,
     border-color 0.18s;
+  border-bottom: 1px solid var(--color-ink);
+  padding-bottom: var(--spacing-xs);
+  color: var(--color-ink);
+  text-decoration: none;
 
   &:hover {
-    color: var(--color-rust);
     border-bottom-color: var(--color-rust);
+    color: var(--color-rust);
   }
 }
 
 .colophon {
+  color: var(--color-ink-faint);
   font: var(--font-mono-12px);
   line-height: 1.7;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-ink-faint);
   text-align: right;
+  text-transform: uppercase;
 }

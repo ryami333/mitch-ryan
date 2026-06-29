@@ -8,17 +8,17 @@ html {
 
 html,
 body {
-  padding-block: 0;
-  padding-inline: 0;
-  margin-block: 0;
   margin-inline: 0;
+  margin-block: 0;
   background: var(--color-paper);
+  padding-inline: 0;
+  padding-block: 0;
 }
 
 body {
+  overflow-x: clip;
   color: var(--color-ink);
   font-family: var(--font-family-display);
-  overflow-x: clip;
 }
 
 *,

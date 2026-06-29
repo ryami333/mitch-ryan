@@ -1,6 +1,6 @@
 .container {
-  width: 100%;
   background: var(--color-paper);
-  color: var(--color-ink);
+  width: 100%;
   overflow-x: clip;
+  color: var(--color-ink);
 }

@@ -4,21 +4,21 @@
 /* ------------------------------------------------------------------- */
 
 @font-face {
-  font-family: "Berlin Type";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
   src:
     url("/fonts/BerlinTypeWeb-Regular.woff2") format("woff2"),
     url("/fonts/BerlinTypeWeb-Regular.woff") format("woff");
+  font-family: "Berlin Type";
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Berlin Type";
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
   src:
     url("/fonts/BerlinTypeWeb-Bold.woff2") format("woff2"),
     url("/fonts/BerlinTypeWeb-Bold.woff") format("woff");
+  font-family: "Berlin Type";
+  font-display: swap;
 }
