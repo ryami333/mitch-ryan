@@ -30,7 +30,9 @@ export default function Contact() {
         <Eyebrow color="rust" transformUppercase className={cx("eyebrow")}>
           <h2 id={headingId}>03 — Contact</h2>
         </Eyebrow>
-        <h3 className={cx("prompt")}>Got something worth building?</h3>
+        <h3 className={cx("prompt")}>
+          Would you like to build something together?
+        </h3>
         <a href="mailto:ohai@mitch-ryan.com" className={cx("email")}>
           ohai@mitch-ryan.com
         </a>
