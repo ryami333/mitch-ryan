@@ -15,6 +15,7 @@ Package manager is **Yarn 4** (`packageManager: yarn@4.17.0`); Node `^24.18.0`.
 - `yarn build` — production build to `.amplify-hosting/` (Nitro aws-amplify preset)
 - `yarn preview` — run the built compute server locally (`node .amplify-hosting/compute/default/server.js`)
 - `yarn lint` — ESLint over the repo
+- `yarn lint:css` — Stylelint over `src/**/*.css` (config in `stylelint.config.cjs`)
 - `yarn typecheck` — `tsc` (no-emit type check)
 
 There is no test runner configured.
@@ -46,6 +47,10 @@ There is no test runner configured.
   colors in `colors.css`, layout/rules in `tokens.css`. Use these variables rather than
   hardcoding values — the palette is an editorial "paper & ink" theme (rust/clay accents).
 - PostCSS uses `postcss-preset-env` with CSS **nesting rules** enabled.
+- **Linting** via Stylelint (`yarn lint:css`, config `stylelint.config.cjs`, extends
+  `stylelint-config-recommended`). Notable rules: prefer **nesting** where possible
+  (`csstools/use-nesting`), use **range-context** media features (`(width >= 600px)`, not
+  `(min-width: 600px)`), and the CSS Modules `:global` pseudo-class is permitted.
 - Self-hosted "Berlin Type" font + Google-hosted JetBrains Mono (see `fonts.css` and the
   preload/preconnect links in `__root.tsx`).
 
