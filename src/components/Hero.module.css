@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: calc(100vh - 61px);
+  min-height: calc(100vh);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,14 +10,9 @@
 .meta-bottom {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
   font: var(--font-mono-12px);
-  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-ink-faint);
-}
-
-.meta-bottom {
   align-items: center;
   border-top: 1px solid var(--color-ink);
   padding-top: var(--spacing-md);
