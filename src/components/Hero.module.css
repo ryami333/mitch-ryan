@@ -118,7 +118,7 @@
 
   @media (--width-gt-900px) {
     justify-content: center;
-    align-items: center;
+    align-items: end;
     /**
      * Establish a size-query container so the image can size itself to the
      * smaller of the cell's two dimensions via `cqmin` (see .portrait-img).
