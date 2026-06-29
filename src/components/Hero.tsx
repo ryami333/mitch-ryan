@@ -56,8 +56,6 @@ export default function Hero() {
           <img
             src="/images/portrait.jpg"
             alt="Mitch Ryan"
-            width={380}
-            height={506}
             className={cx("portrait-img")}
           />
         </figure>

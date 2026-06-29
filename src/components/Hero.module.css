@@ -106,9 +106,10 @@
 .portrait {
   margin: 0;
   display: flex;
+  align-self: stretch;
+  justify-self: stretch;
   flex-direction: column;
-  gap: var(--spacing-md);
-  max-width: 400px;
+  position: relative;
 
   @media (width > 900px) {
     max-width: none;
@@ -116,9 +117,12 @@
 }
 
 .portrait-img {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
-  width: 100%;
-  height: auto;
+  height: 100%;
+  max-width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 50%;
