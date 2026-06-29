@@ -28,53 +28,55 @@ export default function Hero() {
       >
         <Nav />
       </div>
-      <div className={cx("grid")}>
-        <div className={cx("lead")}>
-          <div>
-            <Eyebrow color="rust" className={cx("role")}>
-              Head of Development — Diesdas Digital
-            </Eyebrow>
-            <h1 className={cx("title")}>
-              Mitch
-              <br />
-              Ryan.
-            </h1>
-            <p className={cx("intro")}>
-              Ten-plus years building software across the full spectrum — from
-              landing pages and brochureware to enterprise apps, CMSes, CRMs and
-              the occasional mobile game. New Zealander by origin, Berlin-based
-              permanent resident.
-            </p>
-            <div className={cx("social")}>
-              {SOCIALS.map(({ label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  className={cx("social-link")}
-                  {...(href.startsWith("http")
-                    ? { target: "_blank", rel: "noreferrer" }
-                    : {})}
-                >
-                  {label}
-                </a>
-              ))}
+      <div className={cx("inner")}>
+        <div className={cx("grid")}>
+          <div className={cx("lead")}>
+            <div>
+              <Eyebrow color="rust" className={cx("role")}>
+                Head of Development — Diesdas Digital
+              </Eyebrow>
+              <h1 className={cx("title")}>
+                Mitch
+                <br />
+                Ryan.
+              </h1>
+              <p className={cx("intro")}>
+                Ten-plus years building software across the full spectrum — from
+                landing pages and brochureware to enterprise apps, CMSes, CRMs
+                and the occasional mobile game. New Zealander by origin,
+                Berlin-based permanent resident.
+              </p>
+              <div className={cx("social")}>
+                {SOCIALS.map(({ label, href }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    className={cx("social-link")}
+                    {...(href.startsWith("http")
+                      ? { target: "_blank", rel: "noreferrer" }
+                      : {})}
+                  >
+                    {label}
+                  </a>
+                ))}
+              </div>
             </div>
+            <figure className={cx("portrait")}>
+              <img
+                src="/images/portrait.jpg"
+                alt="Mitch Ryan"
+                className={cx("portrait-img")}
+              />
+            </figure>
           </div>
-          <figure className={cx("portrait")}>
-            <img
-              src="/images/portrait.jpg"
-              alt="Mitch Ryan"
-              className={cx("portrait-img")}
-            />
-          </figure>
         </div>
-      </div>
 
-      <div className={cx("meta-bottom")}>
-        <span>Full-stack · Interactive media</span>
-        <Link to="/" hash="work" className={cx("meta-link")}>
-          Selected work ↓
-        </Link>
+        <div className={cx("meta-bottom")}>
+          <span>Full-stack · Interactive media</span>
+          <Link to="/" hash="work" className={cx("meta-link")}>
+            Selected work ↓
+          </Link>
+        </div>
       </div>
     </section>
   );
