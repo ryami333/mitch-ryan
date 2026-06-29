@@ -45,6 +45,7 @@
   &:hover,
   &:focus-visible {
     color: var(--color-rust);
+    text-decoration: underline;
   }
 }
 
@@ -76,8 +77,8 @@
 
   &:hover,
   &:focus-visible {
-    border-bottom-color: var(--color-rust);
     color: var(--color-rust);
+    text-decoration: underline;
   }
 }
 

@@ -40,5 +40,6 @@
   &:hover,
   &:focus-visible {
     color: var(--color-rust);
+    text-decoration: underline;
   }
 }
