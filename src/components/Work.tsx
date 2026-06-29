@@ -61,11 +61,7 @@ export default function Work() {
   const headingId = useId();
 
   return (
-    <section
-      id="work"
-      aria-labelledby={headingId}
-      className={cx("container")}
-    >
+    <section id="work" aria-labelledby={headingId} className={cx("container")}>
       <div className={cx("inner")}>
         <div className={cx("head")}>
           <Eyebrow color="rust" transformUppercase>
