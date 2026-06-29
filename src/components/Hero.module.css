@@ -7,7 +7,6 @@
   padding: 56px var(--gutter) 72px;
 }
 
-.meta-top,
 .meta-bottom {
   display: flex;
   justify-content: space-between;
@@ -18,22 +17,11 @@
   color: var(--color-ink-faint);
 }
 
-.meta-top {
-  border-bottom: 1px solid var(--color-ink);
-  padding-bottom: var(--spacing-md);
-  margin-bottom: auto;
-}
-
 .meta-bottom {
   align-items: center;
   border-top: 1px solid var(--color-ink);
   padding-top: var(--spacing-md);
   letter-spacing: 0.14em;
-}
-
-.meta-strong {
-  color: var(--color-ink);
-  font-weight: 500;
 }
 
 .meta-link {

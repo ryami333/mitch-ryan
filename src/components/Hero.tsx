@@ -15,11 +15,6 @@ const SOCIALS = [
 export default function Hero() {
   return (
     <section id="top" className={cx("hero")}>
-      <div className={cx("meta-top")}>
-        <span className={cx("meta-strong")}>Homepage — 2026</span>
-        <span>Developer — Berlin, DE</span>
-      </div>
-
       <div className={cx("grid")}>
         <div className={cx("lead")}>
           <Eyebrow color="rust" className={cx("role")}>
