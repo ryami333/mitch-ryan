@@ -16,7 +16,16 @@ const SOCIALS = [
 export default function Hero() {
   return (
     <section id="top" className={cx("container")}>
-      <div inert aria-hidden="true" className={cx("shadow-nav")}>
+      <div
+        /**
+         * This is only here to provide a vertical offset equivalent to the
+         * height of the Nav component, it's not meant to be visible OR
+         * interactive, hence the inert and aria-hidden attributes.
+         */
+        inert
+        aria-hidden="true"
+        className={cx("shadow-nav")}
+      >
         <Nav />
       </div>
       <div className={cx("grid")}>
