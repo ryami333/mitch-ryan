@@ -14,7 +14,7 @@ const SOCIALS = [
 
 export default function Hero() {
   return (
-    <section id="top" className={cx("hero")}>
+    <section id="top" className={cx("container")}>
       <div className={cx("grid")}>
         <div className={cx("lead")}>
           <Eyebrow color="rust" className={cx("role")}>
