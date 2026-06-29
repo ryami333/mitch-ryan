@@ -28,7 +28,7 @@ const PROJECTS: Project[] = [
     href: "https://github.com/ryami333/mtask",
     name: "mtask",
     desc: "Keyboard-led desktop todo app for an audience of one. Minimal, fast, Sublime-inspired chrome.",
-    stack: "Electron · React · TypeScript",
+    stack: "Electron · React · Typescript",
     kind: "Desktop Tool",
   },
   {
@@ -36,7 +36,7 @@ const PROJECTS: Project[] = [
     href: "https://github.com/ryami333/next-image-transformer",
     name: "next-image-transformer",
     desc: "Self-hosted, Sharp-powered runtime image transforms for Next.js — Imgix/Cloudinary, but inside your app.",
-    stack: "Next.js · Sharp · TypeScript",
+    stack: "Next.js · Sharp · Typescript",
     kind: "Library",
   },
   {
@@ -44,15 +44,15 @@ const PROJECTS: Project[] = [
     href: "https://github.com/ryami333/graphql-codegen-enum-tuple-plugin",
     name: "enum-tuple-plugin",
     desc: "GraphQL Codegen plugin that emits each enum as a readonly runtime tuple of its members.",
-    stack: "GraphQL · Codegen · TypeScript",
+    stack: "GraphQL · Codegen · Typescript",
     kind: "Codegen Plugin",
   },
   {
     n: "05",
     href: "https://github.com/ryami333/water-warner",
     name: "water-warner",
-    desc: "A desktop hydration reminder — a small Electron & TypeScript experiment.",
-    stack: "Electron · TypeScript",
+    desc: "A desktop hydration reminder — a small Electron & Typescript experiment.",
+    stack: "Electron · Typescript",
     kind: "Experiment",
   },
 ];

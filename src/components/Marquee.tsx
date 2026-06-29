@@ -4,7 +4,7 @@ import styles from "./Marquee.module.css";
 const cx = classNames.bind(styles);
 
 const ITEMS = [
-  "TypeScript",
+  "Typescript",
   "React",
   "Next.js",
   "Node.js",

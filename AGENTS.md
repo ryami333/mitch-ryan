@@ -70,7 +70,7 @@ There is no test runner configured.
 
 ## Conventions
 
-- TypeScript is **strict**, with `checkJs` on. ESLint additionally bans `any`,
+- Typescript is **strict**, with `checkJs` on. ESLint additionally bans `any`,
   non-null assertions, unused vars, and undescribed `@ts-ignore`.
 - React Compiler is enabled — avoid manual `useMemo`/`useCallback` for things it handles.
 - Code that runs in both SSR and the browser must guard server-only globals (e.g.
