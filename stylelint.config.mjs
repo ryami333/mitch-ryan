@@ -63,6 +63,18 @@ const config = {
     ],
 
     /**
+     * Permit the `@mixin` / `@apply` at-rules enabled via the preset-env
+     * "mixins" feature (see postcss.config.mjs), which Stylelint doesn't
+     * recognise natively.
+     */
+    "at-rule-no-unknown": [
+      true,
+      {
+        ignoreAtRules: ["mixin", "apply"],
+      },
+    ],
+
+    /**
      * Seeing as we're using CSS Modules, we need to permit the use of the
      * "special" pseudo selector `:global`.
      */

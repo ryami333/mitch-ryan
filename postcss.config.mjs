@@ -11,6 +11,14 @@ const config = {
          * https://preset-env.cssdb.org/features/#nesting-rules
          */
         "nesting-rules": true,
+        /**
+         * Enable `@mixin` / `@apply` (also Stage 2). Define reusable
+         * declaration blocks with `@mixin --name() { … }` and apply them with
+         * `@apply --name`.
+         *
+         * https://preset-env.cssdb.org/features/#mixins
+         */
+        mixins: true,
       },
     },
   },
