@@ -138,7 +138,7 @@
   padding-inline: var(--gutter);
   padding-block: var(--spacing-md);
   color: var(--color-ink-faint);
-  @apply --font-mono-12px-ls14;
+  @apply --font-mono-12px-ls10;
   text-transform: uppercase;
 }
 
