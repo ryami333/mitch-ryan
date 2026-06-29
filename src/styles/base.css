@@ -16,7 +16,7 @@ body {
 body {
   color: var(--color-ink);
   font-family: var(--font-family-display);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 *,
