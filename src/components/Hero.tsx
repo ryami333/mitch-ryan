@@ -48,14 +48,7 @@ export default function Hero() {
               </p>
               <div className={cx("social")}>
                 {SOCIALS.map(({ label, href }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    className={cx("social-link")}
-                    {...(href.startsWith("http")
-                      ? { target: "_blank", rel: "noreferrer" }
-                      : {})}
-                  >
+                  <a key={label} href={href} className={cx("social-link")}>
                     {label}
                   </a>
                 ))}
