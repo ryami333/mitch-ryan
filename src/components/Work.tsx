@@ -64,7 +64,6 @@ export default function Work() {
           <Eyebrow color="rust" transformUppercase>
             01 — Selected Work
           </Eyebrow>
-          <div className={cx("count")}>05 — Index</div>
         </div>
         <h2 className={cx("title")}>Things I&rsquo;ve built.</h2>
 
