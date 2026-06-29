@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useId, type ReactNode } from "react";
 import classNames from "classnames/bind";
 import Eyebrow from "./Eyebrow";
 import styles from "./Profile.module.css";
@@ -31,8 +31,14 @@ const ROWS: Row[] = [
 ];
 
 export default function Profile() {
+  const headingId = useId();
+
   return (
-    <section id="profile" className={cx("container")}>
+    <section
+      id="profile"
+      aria-labelledby={headingId}
+      className={cx("container")}
+    >
       <img
         src="/images/profile-bg.jpg"
         alt=""
@@ -44,14 +50,14 @@ export default function Profile() {
 
       <div className={cx("inner")}>
         <Eyebrow color="clay" transformUppercase className={cx("eyebrow")}>
-          02 — Profile
+          <h2 id={headingId}>02 — Profile</h2>
         </Eyebrow>
 
         <div className={cx("grid")}>
           <div>
-            <h2 className={cx("title")}>
+            <h3 className={cx("title")}>
               A decade-plus of building software, end to end.
-            </h2>
+            </h3>
             <p className={cx("body")}>
               From landing pages and brochureware to enterprise apps, CMSes,
               CRMs and the occasional mobile game — I&rsquo;ve worked across the

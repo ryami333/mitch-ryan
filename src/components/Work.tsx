@@ -1,3 +1,4 @@
+import { useId } from "react";
 import classNames from "classnames/bind";
 import Eyebrow from "./Eyebrow";
 import styles from "./Work.module.css";
@@ -57,15 +58,21 @@ const PROJECTS: Project[] = [
 ];
 
 export default function Work() {
+  const headingId = useId();
+
   return (
-    <section id="work" className={cx("container")}>
+    <section
+      id="work"
+      aria-labelledby={headingId}
+      className={cx("container")}
+    >
       <div className={cx("inner")}>
         <div className={cx("head")}>
           <Eyebrow color="rust" transformUppercase>
-            01 — Selected Work
+            <h2 id={headingId}>01 — Selected Work</h2>
           </Eyebrow>
         </div>
-        <h2 className={cx("title")}>Things I&rsquo;ve built.</h2>
+        <h3 className={cx("title")}>Things I&rsquo;ve built.</h3>
 
         <div className={cx("list")}>
           {PROJECTS.map((p) => (

@@ -1,3 +1,4 @@
+import { useId } from "react";
 import { Link } from "@tanstack/react-router";
 import classNames from "classnames/bind";
 import Eyebrow from "./Eyebrow";
@@ -14,8 +15,10 @@ const SOCIALS = [
 ];
 
 export default function Hero() {
+  const headingId = useId();
+
   return (
-    <section id="top" className={cx("container")}>
+    <section id="top" aria-labelledby={headingId} className={cx("container")}>
       <div
         /**
          * This is only here to provide a vertical offset equivalent to the
@@ -35,7 +38,7 @@ export default function Hero() {
               <Eyebrow color="rust" className={cx("role")}>
                 Head of Development — Diesdas Digital
               </Eyebrow>
-              <h1 className={cx("title")}>
+              <h1 id={headingId} className={cx("title")}>
                 Mitch
                 <br />
                 Ryan.

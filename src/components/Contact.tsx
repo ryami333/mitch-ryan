@@ -1,3 +1,4 @@
+import { useId } from "react";
 import classNames from "classnames/bind";
 import Eyebrow from "./Eyebrow";
 import styles from "./Contact.module.css";
@@ -11,8 +12,14 @@ const SOCIALS = [
 ];
 
 export default function Contact() {
+  const headingId = useId();
+
   return (
-    <section id="contact" className={cx("container")}>
+    <section
+      id="contact"
+      aria-labelledby={headingId}
+      className={cx("container")}
+    >
       <img
         src="/images/contact-bg.jpg"
         alt=""
@@ -21,9 +28,9 @@ export default function Contact() {
       />
       <div className={cx("inner")}>
         <Eyebrow color="rust" transformUppercase className={cx("eyebrow")}>
-          03 — Contact
+          <h2 id={headingId}>03 — Contact</h2>
         </Eyebrow>
-        <div className={cx("prompt")}>Got something worth building?</div>
+        <h3 className={cx("prompt")}>Got something worth building?</h3>
         <a href="mailto:ohai@mitch-ryan.com" className={cx("email")}>
           ohai@mitch-ryan.com
         </a>
