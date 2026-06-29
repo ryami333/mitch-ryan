@@ -59,8 +59,8 @@ There is no test runner configured.
   `@media (--name)` whose definition lives in another file resolves to nothing
   and ships silently broken. **Any new shared-definition file must be added to
   that `files` list.** These files are loaded only via global-data; don't
-  `@import` them in `main.css`. Prefer custom properties for shared *values*;
-  reach for mixins only for repeated *declaration blocks*.
+  `@import` them in `main.css`. Prefer custom properties for shared _values_;
+  reach for mixins only for repeated _declaration blocks_.
 - **Linting** via Stylelint (`yarn lint:css`, config `stylelint.config.cjs`, extends
   `stylelint-config-recommended`). Notable rules: prefer **nesting** where possible
   (`csstools/use-nesting`), use **range-context** media features (`(width >= 600px)`, not
