@@ -10,7 +10,6 @@
   }
 
   &[data-uppercase="true"] {
-    letter-spacing: 0.2em;
     text-transform: uppercase;
   }
 }

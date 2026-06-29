@@ -65,7 +65,6 @@
 .title {
   margin-block-end: var(--spacing-xl);
   font: var(--font-display-md);
-  letter-spacing: -0.025em;
   text-wrap: balance;
 }
 
@@ -102,7 +101,6 @@
 
 .sheet-key {
   color: var(--color-cream-faint);
-  letter-spacing: 0.08em;
 }
 
 .sheet-val {

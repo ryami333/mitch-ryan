@@ -19,7 +19,6 @@
 .title {
   margin-block-end: 40px;
   font: var(--font-display-sm);
-  letter-spacing: -0.02em;
 }
 
 .list {
@@ -85,7 +84,6 @@
     .row-name {
       margin-bottom: 6px;
       font: var(--font-display-26px);
-      letter-spacing: -0.01em;
     }
 
     .row-desc {

@@ -67,7 +67,6 @@
 .title {
   margin-block-end: var(--spacing-xl);
   font: var(--font-display-xl);
-  letter-spacing: -0.035em;
 }
 
 .intro {

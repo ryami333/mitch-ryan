@@ -39,7 +39,6 @@
   margin-bottom: var(--spacing-3xl);
   color: var(--color-ink);
   font: var(--font-display-lg);
-  letter-spacing: -0.03em;
   text-decoration: none;
   overflow-wrap: break-word;
 
