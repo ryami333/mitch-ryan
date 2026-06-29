@@ -69,13 +69,7 @@ export default function Work() {
 
         <div className={cx("list")}>
           {PROJECTS.map((p) => (
-            <a
-              key={p.n}
-              href={p.href}
-              target="_blank"
-              rel="noreferrer"
-              className={cx("row")}
-            >
+            <a key={p.n} href={p.href} rel="noreferrer" className={cx("row")}>
               <span className={cx("row-num")}>{p.n}</span>
               <div className={cx("row-body")}>
                 <div className={cx("row-name")}>{p.name}</div>

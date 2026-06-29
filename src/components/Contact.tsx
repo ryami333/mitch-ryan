@@ -34,7 +34,6 @@ export default function Contact() {
               <a
                 key={label}
                 href={href}
-                target="_blank"
                 rel="noreferrer"
                 className={cx("social-link")}
               >
