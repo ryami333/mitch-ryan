@@ -36,6 +36,31 @@ const config = {
     "csstools/use-nesting": "always",
 
     /**
+     * Ban shorthands in favour of explicit longhands. The longhands and
+     * shorthands have distinct property names, so listing the bare shorthands
+     * here leaves `margin-inline`, `row-gap`, … untouched:
+     *
+     *   - `margin` / `padding` → logical longhands (`margin-inline`, `margin-block`, …)
+     *   - `gap` → `row-gap` / `column-gap`
+     */
+    "property-disallowed-list": [
+      ["margin", "padding", "gap"],
+      {
+        message: (name) => {
+          switch (name) {
+            case "gap":
+              return `Don't use the "gap" shorthand — use "row-gap" / "column-gap" instead.`;
+            case "margin":
+            case "padding":
+              return `Don't use the "${name}" shorthand — use the logical longhands instead (e.g. ${name}-inline / ${name}-block).`;
+            default:
+              throw new Error(`Unhandled property "${name}" in property-disallowed-list message.`);
+          }
+        },
+      },
+    ],
+
+    /**
      * Seeing as we're using CSS Modules, we need to permit the use of the
      * "special" pseudo selector `:global`.
      */
