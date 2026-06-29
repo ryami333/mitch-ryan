@@ -46,16 +46,21 @@ There is no test runner configured.
   loaded as a stylesheet link in `__root.tsx`). Design tokens are CSS custom properties:
   colors in `colors.css`, layout/rules in `tokens.css`. Use these variables rather than
   hardcoding values — the palette is an editorial "paper & ink" theme (rust/clay accents).
-- PostCSS uses `postcss-preset-env` with CSS **nesting rules** and **mixins**
-  (both Stage 2 cssdb features). Mixin definitions live in `src/styles/mixins.css`
-  (`@mixin --name() { … }`); apply one in a rule with `@apply --name;`. Because
-  Vite processes each CSS Module in isolation, the definitions are injected into
-  every file's PostCSS run by `@csstools/postcss-global-data` (the `files` option
-  in postcss.config.mjs) — without it, an `@apply`/`@custom-media` whose
-  definition lives in another file resolves to nothing and ships silently broken.
-  Any new shared definition file (e.g. for `@custom-media`) must be added to that
-  `files` list. Prefer custom properties for shared *values*; reach for mixins
-  only for repeated *declaration blocks*.
+- PostCSS uses `postcss-preset-env` with three Stage 2 cssdb features: CSS
+  **nesting rules**, **mixins**, and **custom media queries**. Shared definitions
+  live in dedicated files under `src/styles/`: mixins in `mixins.css`
+  (`@mixin --name() { … }`, applied with `@apply --name;`) and named breakpoints
+  in `breakpoints.css` (`@custom-media --name (…)`, used as `@media (--name)`).
+  All site breakpoints are defined in `breakpoints.css` — use them rather than
+  inlining raw `@media (width > …)` queries.
+- Because Vite processes each CSS Module in isolation, those definition files are
+  injected into every file's PostCSS run by `@csstools/postcss-global-data` (the
+  `files` option in postcss.config.mjs) — without it, an `@apply` or
+  `@media (--name)` whose definition lives in another file resolves to nothing
+  and ships silently broken. **Any new shared-definition file must be added to
+  that `files` list.** These files are loaded only via global-data; don't
+  `@import` them in `main.css`. Prefer custom properties for shared *values*;
+  reach for mixins only for repeated *declaration blocks*.
 - **Linting** via Stylelint (`yarn lint:css`, config `stylelint.config.cjs`, extends
   `stylelint-config-recommended`). Notable rules: prefer **nesting** where possible
   (`csstools/use-nesting`), use **range-context** media features (`(width >= 600px)`, not

@@ -56,7 +56,7 @@
   row-gap: var(--spacing-2xl);
   align-items: start;
 
-  @media (width > 900px) {
+  @media (--width-gt-900px) {
     grid-template-columns: 1.05fr 0.95fr;
     column-gap: 80px;
   }
@@ -94,7 +94,7 @@
   padding-block: var(--spacing-md);
   font: var(--font-mono-14px);
 
-  @media (width > 460px) {
+  @media (--width-gt-460px) {
     grid-template-columns: 130px 1fr;
     column-gap: var(--spacing-md);
   }

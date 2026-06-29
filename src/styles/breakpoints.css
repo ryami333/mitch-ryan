@@ -1,0 +1,19 @@
+/**
+ * Named breakpoints — the single source of truth for the site's responsive
+ * width thresholds.
+ *
+ * Injected into every CSS Module's PostCSS run via postcss-global-data (see
+ * postcss.config.mjs) and resolved by preset-env's `custom-media-queries`
+ * feature; this file emits no CSS of its own. Use one in a rule with, e.g.,
+ * `@media (--width-gt-900px) { … }`.
+ *
+ * The breakpoints are min-width style (`width > N`), matching the mobile-first
+ * base styles. Names encode the comparator and threshold (`gt` = `width > N`)
+ * so a value change stays a single edit here.
+ */
+
+@custom-media --width-gt-460px (width > 460px);
+@custom-media --width-gt-600px (width > 600px);
+@custom-media --width-gt-720px (width > 720px);
+@custom-media --width-gt-820px (width > 820px);
+@custom-media --width-gt-900px (width > 900px);

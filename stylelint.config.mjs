@@ -63,14 +63,15 @@ const config = {
     ],
 
     /**
-     * Permit the preset-env `mixins` at-rules (see postcss.config.mjs):
-     * `@mixin` definitions in src/styles/mixins.css and `@apply` at each
-     * call site.
+     * Permit the preset-env at-rules that Stylelint doesn't recognise natively
+     * (see postcss.config.mjs): `@mixin` definitions in src/styles/mixins.css
+     * with `@apply` at each call site, and `@custom-media` definitions in
+     * src/styles/breakpoints.css.
      */
     "at-rule-no-unknown": [
       true,
       {
-        ignoreAtRules: ["mixin", "apply"],
+        ignoreAtRules: ["mixin", "apply", "custom-media"],
       },
     ],
 

@@ -27,7 +27,7 @@
   @apply --font-mono-12px-ls16;
   text-transform: uppercase;
 
-  @media (width > 600px) {
+  @media (--width-gt-600px) {
     column-gap: var(--spacing-xl);
   }
 }
