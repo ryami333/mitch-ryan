@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import classNames from "classnames/bind";
 import Eyebrow from "./Eyebrow";
 import styles from "./Hero.module.css";
+import Nav from "./Nav";
 
 const cx = classNames.bind(styles);
 
@@ -15,6 +16,9 @@ const SOCIALS = [
 export default function Hero() {
   return (
     <section id="top" className={cx("container")}>
+      <div inert aria-hidden="true" className={cx("shadow-nav")}>
+        <Nav />
+      </div>
       <div className={cx("grid")}>
         <div className={cx("lead")}>
           <div>
