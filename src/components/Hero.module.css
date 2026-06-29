@@ -46,7 +46,6 @@
   @media (width > 900px) {
     flex-grow: 1;
     grid-template-columns: auto minmax(0, 1fr);
-    row-gap: var(--spacing-3xl);
     column-gap: var(--spacing-3xl);
   }
 }
@@ -60,7 +59,6 @@
 
   @media (width > 900px) {
     grid-template-columns: auto minmax(0, 1fr);
-    row-gap: var(--spacing-3xl);
     column-gap: var(--spacing-3xl);
   }
 }

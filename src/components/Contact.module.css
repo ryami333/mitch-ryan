@@ -61,7 +61,6 @@
 
 .social {
   display: flex;
-  row-gap: 28px;
   column-gap: 28px;
   font: var(--font-mono-14px);
 }

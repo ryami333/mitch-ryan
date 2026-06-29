@@ -23,7 +23,6 @@
 
 .links {
   display: flex;
-  row-gap: var(--spacing-md);
   column-gap: var(--spacing-md);
   align-items: center;
   font: var(--font-mono-12px);
@@ -31,7 +30,6 @@
   text-transform: uppercase;
 
   @media (width > 600px) {
-    row-gap: var(--spacing-xl);
     column-gap: var(--spacing-xl);
   }
 }

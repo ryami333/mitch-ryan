@@ -24,7 +24,6 @@
 .item {
   display: inline-flex;
   align-items: center;
-  row-gap: var(--spacing-xl);
   column-gap: var(--spacing-xl);
   padding-block: 0;
   padding-inline: var(--spacing-xl);

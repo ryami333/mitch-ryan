@@ -61,7 +61,6 @@
   @media (width > 820px) {
     grid-template-columns: 54px 1.5fr 1fr 150px 32px;
     grid-template-areas: none;
-    row-gap: 28px;
     column-gap: 28px;
     align-items: center;
 
