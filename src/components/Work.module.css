@@ -45,7 +45,8 @@
   color: var(--color-ink);
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background: color-mix(in srgb, var(--color-ink), transparent 95%);
     padding-right: var(--spacing-md);
     padding-left: var(--spacing-md);
@@ -57,7 +58,8 @@
     column-gap: 28px;
     align-items: center;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       padding-right: 6px;
       padding-left: var(--spacing-lg);
     }

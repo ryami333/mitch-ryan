@@ -43,7 +43,8 @@
   text-decoration: none;
   overflow-wrap: break-word;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     color: var(--color-rust);
   }
 }
@@ -74,7 +75,8 @@
   color: var(--color-ink);
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     border-bottom-color: var(--color-rust);
     color: var(--color-rust);
   }
