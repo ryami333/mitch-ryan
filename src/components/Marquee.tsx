@@ -23,7 +23,9 @@ function Group({ hidden = false }: { hidden?: boolean }) {
       {ITEMS.map((item) => (
         <span key={item} className={cx("item")}>
           {item}
-          <span className={cx("diamond")}>◆</span>
+          <span aria-hidden="true" className={cx("diamond")}>
+            ◆
+          </span>
         </span>
       ))}
     </div>
