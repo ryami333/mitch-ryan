@@ -58,7 +58,7 @@ const PROJECTS: Project[] = [
 
 export default function Work() {
   return (
-    <section id="work" className={cx("work")}>
+    <section id="work" className={cx("container")}>
       <div className={cx("inner")}>
         <div className={cx("head")}>
           <Eyebrow color="rust" transformUppercase>

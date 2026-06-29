@@ -32,7 +32,7 @@ const ROWS: Row[] = [
 
 export default function Profile() {
   return (
-    <section id="profile" className={cx("profile")}>
+    <section id="profile" className={cx("container")}>
       <img
         src="/images/profile-bg.jpg"
         alt=""

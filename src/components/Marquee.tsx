@@ -32,7 +32,7 @@ function Group({ hidden = false }: { hidden?: boolean }) {
 
 export default function Marquee() {
   return (
-    <div className={cx("marquee")}>
+    <div className={cx("container")}>
       <div className={cx("track")}>
         <Group />
         <Group hidden />

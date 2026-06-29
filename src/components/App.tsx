@@ -11,7 +11,7 @@ const cx = classNames.bind(styles);
 
 export default function App() {
   return (
-    <div className={cx("page")}>
+    <div className={cx("container")}>
       <Nav />
       <main>
         <Hero />

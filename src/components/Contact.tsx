@@ -12,7 +12,7 @@ const SOCIALS = [
 
 export default function Contact() {
   return (
-    <section id="contact" className={cx("contact")}>
+    <section id="contact" className={cx("container")}>
       <img
         src="/images/contact-bg.jpg"
         alt=""

@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 
 export default function Nav() {
   return (
-    <nav className={cx("nav")}>
+    <nav className={cx("container")}>
       <Link to="/" hash="top" className={cx("brand")}>
         Mitch Ryan – Developer — Berlin, DE
       </Link>
