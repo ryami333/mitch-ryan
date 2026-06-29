@@ -14,13 +14,16 @@
 }
 
 .inner {
+  display: flex;
+  row-gap: var(--spacing-xl);
+  flex-direction: column;
   padding-inline: var(--gutter);
 
   @media (--width-gt-900px) {
     display: flex;
     position: relative;
+    row-gap: unset;
     flex-grow: 1;
-    flex-direction: column;
     justify-content: center;
   }
 }
@@ -139,6 +142,8 @@
   padding-block: var(--spacing-md);
   color: var(--color-ink-faint);
   @apply --font-mono-12px-ls10;
+  row-gap: var(--spacing-md);
+  flex-wrap: wrap;
   text-transform: uppercase;
 }
 
