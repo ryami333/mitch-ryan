@@ -6,7 +6,6 @@
 
 .inner {
   max-width: var(--max-width);
-  margin-block: 0;
   margin-inline: auto;
 }
 
@@ -27,8 +26,7 @@
 .title {
   font: var(--font-display-sm);
   letter-spacing: -0.02em;
-  margin-block: 0 40px;
-  margin-inline: 0;
+  margin-block-end: 40px;
 }
 
 .list {

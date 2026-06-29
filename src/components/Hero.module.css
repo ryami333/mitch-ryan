@@ -8,7 +8,7 @@
   padding-inline: var(--gutter);
 
   @media (width > 900px) {
-    padding-block: 0;
+    padding-block: unset;
     display: flex;
     flex-direction: column;
   }
@@ -72,16 +72,13 @@
 .title {
   font: var(--font-display-xl);
   letter-spacing: -0.035em;
-  margin-block: 0 var(--spacing-xl);
-  margin-inline: 0;
+  margin-block-end: var(--spacing-xl);
 }
 
 .intro {
   font: var(--font-display-21px);
   max-width: 46ch;
   color: var(--color-ink-strong);
-  margin-block: 0;
-  margin-inline: 0;
   text-wrap: pretty;
 }
 
@@ -110,8 +107,6 @@
 }
 
 .portrait {
-  margin-block: 0;
-  margin-inline: 0;
   display: flex;
   align-self: stretch;
   justify-self: stretch;
