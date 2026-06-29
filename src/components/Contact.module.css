@@ -84,7 +84,7 @@
 
 .colophon {
   color: var(--color-ink-faint);
-  @apply --font-mono-12px-ls10;
+  @apply --font-mono-14px-ls10;
   line-height: 1.7;
   text-align: right;
   text-transform: uppercase;

@@ -4,17 +4,12 @@
  * Injected into every CSS Module's PostCSS run via postcss-global-data (see
  * postcss.config.mjs) and expanded by preset-env's `mixins` feature; this file
  * emits no CSS of its own. Apply a block inside a rule with, e.g.,
- * `@apply --font-mono-12px-ls10;`.
+ * `@apply --font-mono-14px-ls10;`.
  *
  * Naming: `--font-mono-{size}-ls{NN}`, where NN is the letter-spacing in
  * hundredths of an em (ls10 → `letter-spacing: 0.1em`). The font half reuses
  * the `--font-mono-*` tokens from type.css.
  */
-
-@mixin --font-mono-12px-ls10() {
-  font: var(--font-mono-12px);
-  letter-spacing: 0.1em;
-}
 
 @mixin --font-mono-14px-ls10() {
   font: var(--font-mono-14px);

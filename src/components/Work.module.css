@@ -96,7 +96,7 @@
   .row-stack {
     grid-area: stack;
     color: var(--color-ink-muted);
-    @apply --font-mono-12px-ls10;
+    @apply --font-mono-14px-ls10;
 
     @media (--width-gt-820px) {
       grid-area: auto;
@@ -106,7 +106,7 @@
   .row-kind {
     grid-area: kind;
     color: var(--color-ink-ghost);
-    @apply --font-mono-12px-ls10;
+    @apply --font-mono-14px-ls10;
     text-transform: uppercase;
 
     @media (--width-gt-820px) {

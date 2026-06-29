@@ -24,7 +24,7 @@
   display: flex;
   column-gap: var(--spacing-md);
   align-items: center;
-  @apply --font-mono-12px-ls10;
+  @apply --font-mono-14px-ls10;
   text-transform: uppercase;
 
   @media (--width-gt-600px) {
