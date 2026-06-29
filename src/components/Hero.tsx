@@ -53,6 +53,10 @@ export default function Hero() {
                 {SOCIALS.map(({ label, href }) => (
                   <a key={label} href={href} className={cx("social-link")}>
                     {label}
+                    {` `}
+                    <span aria-hidden="true" className={cx("arrow")}>
+                      ↗
+                    </span>
                   </a>
                 ))}
               </div>
