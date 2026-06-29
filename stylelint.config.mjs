@@ -1,7 +1,6 @@
 /** @type {import('stylelint').Config} */
 const config = {
   extends: "stylelint-config-recommended",
-  ignoreFiles: ["src/assets/css/vendor/*"],
   plugins: ["stylelint-use-nesting"],
   rules: {
     /**
