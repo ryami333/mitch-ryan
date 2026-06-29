@@ -8,7 +8,7 @@ export default function Nav() {
   return (
     <nav className={cx("container")}>
       <Link to="/" hash="top" className={cx("brand")}>
-        Mitch Ryan – Developer — Berlin, DE
+        Mitch Ryan • Developer • Berlin, DE
       </Link>
       <div className={cx("links")}>
         <Link to="/" hash="work" className={cx("link")}>
