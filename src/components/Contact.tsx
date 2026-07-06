@@ -25,13 +25,13 @@ export default function Contact() {
         src={imageUrlBuilder({
           source: "/images/contact-bg.jpg",
           w: 1280,
-          fmt: "avif",
+          fmt: "webp",
           q: 90,
         })}
         srcSet={[360, 640, 768, 960, 1280, 1600, 1920, 2560]
           .map(
             (w) =>
-              `${imageUrlBuilder({ source: "/images/contact-bg.jpg", w, fmt: "avif", q: 90 })} ${w}w`,
+              `${imageUrlBuilder({ source: "/images/contact-bg.jpg", w, fmt: "webp", q: 90 })} ${w}w`,
           )
           .join(", ")}
         sizes="100vw"
