@@ -10,5 +10,5 @@ export const env = createEnv({
   server: {
     IMAGE_SOURCE_ORIGIN: z.url(),
   },
-  runtimeEnv: import.meta.env,
+  runtimeEnv: process.env,
 });
