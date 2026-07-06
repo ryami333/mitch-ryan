@@ -38,9 +38,7 @@ export default defineConfig({
       // `src/routes/api/image.ts` is wired to `/api/image` explicitly here — an
       // explicit `handlers` entry rather than pointing `serverDir` at `src`,
       // which would make Nitro try to serve `index.tsx`/`__root.tsx` too.
-      handlers: [
-        { route: "/api/image", handler: "./src/routes/api/image.ts" },
-      ],
+      handlers: [{ route: "/api/image", handler: "./src/routes/api/image.ts" }],
       /**
        * Bundle src/assets as Nitro server assets so files like the Ausweis logo
        * are emitted into .output and readable at runtime via
