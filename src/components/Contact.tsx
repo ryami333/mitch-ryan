@@ -1,6 +1,7 @@
 import { useId } from "react";
 import classNames from "classnames/bind";
 import Eyebrow from "./Eyebrow";
+import { imageUrlBuilder } from "../lib/imageUrlBuilder";
 import styles from "./Contact.module.css";
 
 const cx = classNames.bind(styles);
@@ -21,7 +22,19 @@ export default function Contact() {
       className={cx("container")}
     >
       <img
-        src="/images/contact-bg.jpg"
+        src={imageUrlBuilder({
+          source: "/images/contact-bg.jpg",
+          w: 1280,
+          fmt: "avif",
+          q: 90,
+        })}
+        srcSet={[360, 640, 768, 960, 1280, 1600, 1920, 2560]
+          .map(
+            (w) =>
+              `${imageUrlBuilder({ source: "/images/contact-bg.jpg", w, fmt: "avif", q: 90 })} ${w}w`,
+          )
+          .join(", ")}
+        sizes="100vw"
         alt=""
         aria-hidden="true"
         className={cx("bg")}
