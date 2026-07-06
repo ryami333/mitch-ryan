@@ -1,3 +1,5 @@
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { fromWebHandler } from "h3";
 import { createImageTransformRouteHandler } from "runtime-image-transformer/server";
 import sharp from "sharp";
@@ -10,6 +12,13 @@ import { env } from "../../lib/env.mjs";
  * disk.
  */
 const sourceOrigin = env.IMAGE_SOURCE_ORIGIN;
-const handler = createImageTransformRouteHandler({ sourceOrigin, sharp });
+const handler = createImageTransformRouteHandler({
+  sourceOrigin,
+  sharp,
+  // The default cacheDir is `process.cwd()/.transform-cache`, which on the
+  // Amplify compute Lambda is the read-only `/var/task`. Only the OS temp dir
+  // (`/tmp` on Lambda) is writable; it also persists across warm invocations.
+  cacheDir: join(tmpdir(), "image-transform-cache"),
+});
 
 export default fromWebHandler((request) => handler(request));
