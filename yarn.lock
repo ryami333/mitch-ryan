@@ -1932,6 +1932,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@t3-oss/env-core@npm:^0.13.11":
+  version: 0.13.11
+  resolution: "@t3-oss/env-core@npm:0.13.11"
+  peerDependencies:
+    arktype: ^2.1.0
+    typescript: ">=5.0.0"
+    valibot: ^1.0.0-beta.7 || ^1.0.0
+    zod: ^3.24.0 || ^4.0.0
+  peerDependenciesMeta:
+    arktype:
+      optional: true
+    typescript:
+      optional: true
+    valibot:
+      optional: true
+    zod:
+      optional: true
+  checksum: 10c0/acb1d5c8f184f0004612b0ed1ef965f3fd014b945b3192057f1500ba760ded8d4c988e6cfed3c63070ccde3b8f7dc27f90044d29474325c5025e44fd3c607441
+  languageName: node
+  linkType: hard
+
 "@tanstack/history@npm:1.162.0":
   version: 1.162.0
   resolution: "@tanstack/history@npm:1.162.0"
@@ -4100,6 +4121,7 @@ __metadata:
     "@csstools/postcss-global-data": "npm:^4.0.0"
     "@prettier/plugin-oxc": "npm:^0.2.0"
     "@rolldown/plugin-babel": "npm:^0.2.3"
+    "@t3-oss/env-core": "npm:^0.13.11"
     "@tanstack/react-router": "npm:^1.170.16"
     "@tanstack/react-start": "npm:^1.168.26"
     "@trivago/prettier-plugin-sort-imports": "npm:^6.0.2"

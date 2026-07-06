@@ -11,6 +11,7 @@
     "@csstools/postcss-global-data": "^4.0.0",
     "@prettier/plugin-oxc": "^0.2.0",
     "@rolldown/plugin-babel": "^0.2.3",
+    "@t3-oss/env-core": "^0.13.11",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/lodash": "^4.17.24",
     "@types/node": "24.13.2",
