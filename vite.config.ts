@@ -31,7 +31,7 @@ export default defineConfig({
       // supports (Amplify has no Node 24 runtime yet — see note below about
       // the gap with this project's `engines: node ^24.18.0`).
       awsAmplify: {
-        runtime: "nodejs22.x",
+        runtime: "nodejs24.x",
       },
       replace: {
         "process.env.IMAGE_SOURCE_ORIGIN": JSON.stringify(
