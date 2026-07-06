@@ -153,3 +153,5 @@ vite.config.ts.timestamp-*
 .vite/
 
 .claude
+
+.transform-cache
