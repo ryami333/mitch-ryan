@@ -10,5 +10,11 @@ export const env = createEnv({
   server: {
     IMAGE_SOURCE_ORIGIN: z.url(),
   },
-  runtimeEnv: process.env,
+  /**
+   * We need to use the explicitly-keyed variant rather than `runtimeEnv: process.env`
+   * because ENV vars will get baked in at build-time.
+   */
+  runtimeEnv: {
+    IMAGE_SOURCE_ORIGIN: process.env.IMAGE_SOURCE_ORIGIN,
+  },
 });

@@ -3,6 +3,7 @@ import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import viteReact, { reactCompilerPreset } from "@vitejs/plugin-react";
 import { nitro } from "nitro/vite";
 import { defineConfig } from "vite";
+import { env } from "./src/lib/env.mjs";
 
 export default defineConfig({
   server: {
@@ -31,6 +32,11 @@ export default defineConfig({
       // the gap with this project's `engines: node ^24.18.0`).
       awsAmplify: {
         runtime: "nodejs22.x",
+      },
+      replace: {
+        "process.env.IMAGE_SOURCE_ORIGIN": JSON.stringify(
+          env.IMAGE_SOURCE_ORIGIN,
+        ),
       },
       // Register the runtime image-transform endpoint. This stack has no
       // file-based server routes (TanStack Start doesn't provide them, and Nitro
