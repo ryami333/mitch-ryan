@@ -26,10 +26,6 @@ export default defineConfig({
       // dir plus a Lambda-style compute handler — which Amplify consumes
       // directly (see amplify.yml).
       preset: "aws-amplify",
-      // Pin the compute Lambda runtime; the preset otherwise defaults to
-      // nodejs20.x. nodejs22.x is the newest runtime Amplify Web Compute
-      // supports (Amplify has no Node 24 runtime yet — see note below about
-      // the gap with this project's `engines: node ^24.18.0`).
       awsAmplify: {
         runtime: "nodejs24.x",
       },
