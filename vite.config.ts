@@ -3,7 +3,8 @@ import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import viteReact, { reactCompilerPreset } from "@vitejs/plugin-react";
 import { nitro } from "nitro/vite";
 import { defineConfig } from "vite";
-import { env } from "./src/lib/env.mjs";
+import { IMAGE_OPTIMIZATION_PATH, IMAGE_WIDTHS } from "./src/lib/imageConfig";
+import { devImageOptimization } from "./vite/devImageOptimization";
 
 export default defineConfig({
   server: {
@@ -15,6 +16,9 @@ export default defineConfig({
     },
   },
   plugins: [
+    // Dev-only: emulates Amplify's managed image optimizer (see the plugin and
+    // `awsAmplify.imageOptimization` below). Excluded from the production build.
+    devImageOptimization(),
     tanstackStart({ srcDirectory: "src" }),
     viteReact(),
     babel({
@@ -28,19 +32,25 @@ export default defineConfig({
       preset: "aws-amplify",
       awsAmplify: {
         runtime: "nodejs24.x",
+        // Offload image optimization to Amplify's managed, CloudFront-backed
+        // optimizer (the same service that powers Next.js `<Image>`). It serves
+        // `IMAGE_OPTIMIZATION_PATH` in production; the `devImageOptimization`
+        // plugin above emulates it during `yarn dev`. This keeps Sharp out of
+        // the compute Lambda entirely — see `src/lib/imageConfig.ts`.
+        imageOptimization: {
+          path: IMAGE_OPTIMIZATION_PATH,
+          cacheControl: "public, max-age=31536000, immutable",
+        },
+        imageSettings: {
+          sizes: [...IMAGE_WIDTHS],
+          formats: ["image/webp"],
+          // Only same-origin sources (`/images/*`); no external hosts allowed.
+          domains: [],
+          remotePatterns: [],
+          minimumCacheTTL: 31536000,
+          dangerouslyAllowSVG: false,
+        },
       },
-      replace: {
-        "process.env.IMAGE_SOURCE_ORIGIN": JSON.stringify(
-          env.IMAGE_SOURCE_ORIGIN,
-        ),
-      },
-      // Register the runtime image-transform endpoint. This stack has no
-      // file-based server routes (TanStack Start doesn't provide them, and Nitro
-      // only scans its own `serverDir`), so the handler at
-      // `src/routes/api/image.ts` is wired to `/api/image` explicitly here — an
-      // explicit `handlers` entry rather than pointing `serverDir` at `src`,
-      // which would make Nitro try to serve `index.tsx`/`__root.tsx` too.
-      handlers: [{ route: "/api/image", handler: "./src/routes/api/image.ts" }],
       /**
        * Bundle src/assets as Nitro server assets so files like the Ausweis logo
        * are emitted into .output and readable at runtime via

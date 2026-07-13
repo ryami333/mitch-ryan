@@ -1,6 +1,7 @@
 import { useId } from "react";
 import classNames from "classnames/bind";
 import Eyebrow from "./Eyebrow";
+import { IMAGE_WIDTHS } from "../lib/imageConfig";
 import { imageUrlBuilder } from "../lib/imageUrlBuilder";
 import styles from "./Contact.module.css";
 
@@ -25,15 +26,12 @@ export default function Contact() {
         src={imageUrlBuilder({
           source: "/images/contact-bg.jpg",
           w: 1280,
-          fmt: "webp",
           q: 90,
         })}
-        srcSet={[360, 640, 768, 960, 1280, 1600, 1920, 2560]
-          .map(
-            (w) =>
-              `${imageUrlBuilder({ source: "/images/contact-bg.jpg", w, fmt: "webp", q: 90 })} ${w}w`,
-          )
-          .join(", ")}
+        srcSet={IMAGE_WIDTHS.map(
+          (w) =>
+            `${imageUrlBuilder({ source: "/images/contact-bg.jpg", w, q: 90 })} ${w}w`,
+        ).join(", ")}
         sizes="100vw"
         alt=""
         aria-hidden="true"
